@@ -1,7 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://me6t3ltctxw6"]
+[gd_scene load_steps=6 format=3 uid="uid://me6t3ltctxw6"]
 
 [ext_resource type="PackedScene" uid="uid://ct4oayuwaygvk" path="res://entities/player.tscn" id="1_mor0p"]
 [ext_resource type="PackedScene" uid="uid://465e56tfclvq" path="res://entities/platform.tscn" id="1_qsexw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qsexw"]
+
+[sub_resource type="Sky" id="Sky_3vmoj"]
+sky_material = SubResource("ProceduralSkyMaterial_qsexw")
+
+[sub_resource type="Environment" id="Environment_x7wfn"]
+background_mode = 2
+background_energy_multiplier = 1.5
+sky = SubResource("Sky_3vmoj")
+ambient_light_source = 3
+ambient_light_color = Color(1, 0.45403963, 0.7020054, 1)
+ssil_enabled = true
+ssil_radius = 16.0
+ssil_intensity = 3.0
+sdfgi_use_occlusion = true
+fog_enabled = true
+adjustment_enabled = true
 
 [node name="Node3D" type="Node3D"]
 
@@ -31,3 +49,6 @@ platform_size = Vector3(2, 0.5, 2)
 [node name="Platform5" parent="." instance=ExtResource("1_qsexw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, -10)
 platform_size = Vector3(2, 0.5, 2)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_x7wfn")
