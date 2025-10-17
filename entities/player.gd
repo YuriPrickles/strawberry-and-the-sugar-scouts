@@ -8,7 +8,10 @@ extends CharacterBody3D
 @export var JUMP_VELOCITY = 8
 @export var FALL_VELOCITY = 16
 @export var FLOAT_VELOCITY = 3
+@export var COYOTE_TIME = 0.2
+@export var JUMP_BUFFER_TIMER = 0.14
 @export var JUMP_CHAIN_GRACE_TIMER = 0.1
+@export var SUPERDASH_GRACE_TIMER = 0.2
 @export var look_sensitivity = 1500
 
 var saved_delta = 0.16
@@ -17,6 +20,7 @@ var juffer:Timer = Timer.new()
 var coyote_time:Timer = Timer.new()
 var dash_cooldown_timer:Timer = Timer.new()
 var jump_chain_grace:Timer = Timer.new()
+var superdash_grace:Timer = Timer.new()
 
 var is_going_up:bool = false
 var is_jumping: bool = false
@@ -37,14 +41,19 @@ func _init() -> void:
 	juffer.one_shot = true
 	dash_cooldown_timer.one_shot = true
 	jump_chain_grace.one_shot = true
-	coyote_time.wait_time = 0.14
-	juffer.wait_time = 0.2
+	superdash_grace.one_shot = true
+	
+	coyote_time.wait_time = COYOTE_TIME
+	juffer.wait_time = JUMP_BUFFER_TIMER
 	dash_cooldown_timer.wait_time = DASH_COOLDOWN
-	jump_chain_grace.wait_time = DASH_COOLDOWN
+	jump_chain_grace.wait_time = JUMP_CHAIN_GRACE_TIMER
+	superdash_grace.wait_time = SUPERDASH_GRACE_TIMER
+	
 	coyote_time.name = "CoyoteTimer"
 	juffer.name = "Juffer"
 	dash_cooldown_timer.name = "DashCDTimer"
 	jump_chain_grace.name = "JumpChainGraceTimer"
+	superdash_grace.name = "SuperdashGraceTimer"
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -93,6 +102,7 @@ func dash(dash_input:bool, direction):
 		velocity.z = direction.z * DASH_SPEED
 		dashes -= 1
 		dash_cooldown_timer.start()
+		superdash_grace.start()
 		await get_tree().create_timer(0.1).timeout
 		dashing = false
 
@@ -132,18 +142,21 @@ func handle_juffer(want_to_jump:bool) -> void:
 
 func jump():
 	juffer.stop()
+	coyote_time.stop()
+	
 	if jump_chain_grace.time_left > 0 and not jump_chain_grace.is_stopped() and any_move_input:
 		jump_chain = min(jump_chain + 1, max_jump_chain)
 	else:
 		jump_chain = 1
 	jump_chain_grace.stop()
+	
 	is_jumping = true
-	coyote_time.stop()
+	
 	if not dashing:
 		velocity.x += velocity.x * 0.4
 		velocity.z += velocity.z * 0.4
-	else:
-		print("Superdash!")
+	if not superdash_grace.is_stopped():
+		print(superdash_grace.time_left)
 		velocity.x = last_saved_direction.x * 56
 		velocity.z = last_saved_direction.z * 56
 	velocity.y = JUMP_VELOCITY * 2 * (1 + ((jump_chain - 1) * 0.4))
@@ -178,3 +191,4 @@ func add_timers():
 	get_tree().root.add_child.call_deferred(coyote_time)
 	get_tree().root.add_child.call_deferred(dash_cooldown_timer)
 	get_tree().root.add_child.call_deferred(jump_chain_grace)
+	get_tree().root.add_child.call_deferred(superdash_grace)
