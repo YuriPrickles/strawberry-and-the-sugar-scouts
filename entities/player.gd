@@ -1,20 +1,21 @@
+class_name Player
 extends CharacterBody3D
 
 @onready var CameraPivot = $CameraPivot
 
-@export var SPEED = 7
-@export var DASH_SPEED = 24
-@export var DASH_COOLDOWN = 0.2
-@export var JUMP_VELOCITY = 8
-@export var FALL_VELOCITY = 16
-@export var FLOAT_VELOCITY = 3
-@export var COYOTE_TIME = 0.2
-@export var JUMP_BUFFER_TIMER = 0.14
-@export var JUMP_CHAIN_GRACE_TIMER = 0.1
-@export var SUPERDASH_GRACE_TIMER = 0.2
-@export var look_sensitivity = 1500
+var SPEED = 7
+var DASH_SPEED = 24
+var DASH_COOLDOWN = 0.2
+var JUMP_VELOCITY = 8
+var FALL_VELOCITY = 16
+var FLOAT_VELOCITY = 3
+var COYOTE_TIME = 0.2
+var JUMP_BUFFER_TIMER = 0.14
+var JUMP_CHAIN_GRACE_TIMER = 0.1
+var SUPERDASH_GRACE_TIMER = 0.2
+var look_sensitivity = 1500
 
-var saved_delta = 0.16
+var saved_delta = 0.0167
 
 var juffer:Timer = Timer.new()
 var coyote_time:Timer = Timer.new()

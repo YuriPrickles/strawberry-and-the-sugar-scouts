@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://khtyojs3w74o"]
+
+[ext_resource type="Script" uid="uid://dcas3gg2p4pnq" path="res://entities/spawn_point.gd" id="1_obsg2"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_d4kh5"]
+
+[node name="SpawnPoint" type="Node3D"]
+script = ExtResource("1_obsg2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_d4kh5")
