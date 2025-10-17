@@ -179,8 +179,9 @@ func handle_coyote_time() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventJoypadMotion:
-		rotation.y -= event.relative.x / look_sensitivity
-		CameraPivot.rotation.x -= event.relative.y / look_sensitivity
+		var joystick_vector = Input.get_vector("gp_look_left", "gp_look_right", "gp_look_up", "gp_look_down")
+		rotation.y -= joystick_vector.x
+		CameraPivot.rotation.x -= joystick_vector.y
 		CameraPivot.rotation.x = clamp(CameraPivot.rotation.x, deg_to_rad(-90), deg_to_rad(0))
 	if event is InputEventMouseMotion:
 		rotation.y -= event.relative.x / look_sensitivity
