@@ -50,5 +50,9 @@ platform_size = Vector3(2, 0.5, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, -10)
 platform_size = Vector3(2, 0.5, 2)
 
+[node name="Platform6" parent="." instance=ExtResource("1_qsexw")]
+transform = Transform3D(0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0, 1, -13, 4, -1)
+platform_size = Vector3(5, 0.5, 5)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_x7wfn")
