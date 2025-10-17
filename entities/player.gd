@@ -2,59 +2,113 @@ extends CharacterBody3D
 
 @onready var CameraPivot = $CameraPivot
 
-const SPEED = 5
-const JUMP_VELOCITY = 7
-const FALL_VELOCITY = 32
-const look_sensitivity = 1500
+@export var SPEED = 7
+@export var DASH_SPEED = 24
+@export var DASH_COOLDOWN = 0.2
+@export var JUMP_VELOCITY = 8
+@export var FALL_VELOCITY = 16
+@export var FLOAT_VELOCITY = 3
+@export var JUMP_CHAIN_GRACE_TIMER = 0.1
+@export var look_sensitivity = 1500
 
-var jump_released
+var saved_delta = 0.16
+
 var juffer:Timer = Timer.new()
 var coyote_time:Timer = Timer.new()
+var dash_cooldown_timer:Timer = Timer.new()
+var jump_chain_grace:Timer = Timer.new()
 
 var is_going_up:bool = false
 var is_jumping: bool = false
 var last_frame_on_floor:bool = false
+var jump_chain = 0
+var max_jump_chain = 2
+
+var any_move_input:bool = false
+var last_saved_direction:Vector3 = Vector3(1,0,0)
+var dashes = 1
+var max_dashes = 1
+var dashing = false
+
+var floating = false
 
 func _init() -> void:
 	coyote_time.one_shot = true
 	juffer.one_shot = true
+	dash_cooldown_timer.one_shot = true
+	jump_chain_grace.one_shot = true
 	coyote_time.wait_time = 0.14
 	juffer.wait_time = 0.2
+	dash_cooldown_timer.wait_time = DASH_COOLDOWN
+	jump_chain_grace.wait_time = DASH_COOLDOWN
 	coyote_time.name = "CoyoteTimer"
 	juffer.name = "Juffer"
+	dash_cooldown_timer.name = "DashCDTimer"
+	jump_chain_grace.name = "JumpChainGraceTimer"
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	add_timers()
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	
+	handle_float(Input.is_action_pressed("float"))
+	saved_delta = delta
 	if not is_on_floor():
-		velocity += get_gravity() * delta
-		if velocity.y <= 0.4:
-			velocity.y -= FALL_VELOCITY * delta
-
-	# Handle jump.
-	handle_jump(Input.is_action_just_pressed("jump"))
-	if Input.is_action_just_released("jump"):
-		velocity.y = 0
-	jump_released = !Input.is_action_pressed("jump")
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("left", "right", "forward", "backward")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:  
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		if not dashing:
+			velocity += get_gravity() * delta * 4
+			if is_falling():
+				if floating:
+					velocity.y = -FLOAT_VELOCITY
+				else:
+					velocity.y -= FALL_VELOCITY * delta
+		else:
+			velocity.y = clamp(velocity.y, 0, INF)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		dashes = max_dashes
+		
+	handle_jump(Input.is_action_just_pressed("jump"))
+	dash(Input.is_action_just_pressed("dash"),last_saved_direction)
+	
+	var input_dir := Input.get_vector("left", "right", "forward", "backward")
+	
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if not dashing:
+		if direction:
+			velocity.x = move_toward(velocity.x, direction.x * SPEED, SPEED * 0.3) 
+			velocity.z = move_toward(velocity.z, direction.z * SPEED, SPEED * 0.3)
+			last_saved_direction = direction
+			any_move_input = true
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.z = move_toward(velocity.z, 0, SPEED)
+			any_move_input = false
 
 	move_and_slide()
+	
+func dash(dash_input:bool, direction):
+	if dashes > 0 and dash_input and dash_cooldown_timer.is_stopped():
+		dashing = true
+		velocity.x = direction.x * DASH_SPEED
+		velocity.z = direction.z * DASH_SPEED
+		dashes -= 1
+		dash_cooldown_timer.start()
+		await get_tree().create_timer(0.1).timeout
+		dashing = false
+
+func is_falling():
+	return velocity.y <= 0.4 and not is_on_floor()
+
+func handle_float(float_input:bool):
+	if is_falling() and float_input:
+		floating = true
+	else:
+		floating = false
 
 #region Jump Logic
 func handle_jump(want_to_jump:bool) -> void:
 	if just_landed():
+		jump_chain_grace.start()
 		is_jumping = false
 	
 	if is_allowed_to_jump(want_to_jump):
@@ -63,7 +117,7 @@ func handle_jump(want_to_jump:bool) -> void:
 	handle_juffer(want_to_jump)
 	handle_coyote_time()
 		
-	is_going_up = velocity.y < 0 and not is_on_floor()
+	is_going_up = velocity.y > 0 and not is_on_floor()
 	last_frame_on_floor = is_on_floor()
 
 func just_landed() -> bool:
@@ -78,9 +132,21 @@ func handle_juffer(want_to_jump:bool) -> void:
 
 func jump():
 	juffer.stop()
+	if jump_chain_grace.time_left > 0 and not jump_chain_grace.is_stopped() and any_move_input:
+		jump_chain = min(jump_chain + 1, max_jump_chain)
+	else:
+		jump_chain = 1
+	jump_chain_grace.stop()
 	is_jumping = true
 	coyote_time.stop()
-	velocity.y = JUMP_VELOCITY
+	if not dashing:
+		velocity.x += velocity.x * 0.4
+		velocity.z += velocity.z * 0.4
+	else:
+		print("Superdash!")
+		velocity.x = last_saved_direction.x * 56
+		velocity.z = last_saved_direction.z * 56
+	velocity.y = JUMP_VELOCITY * 2 * (1 + ((jump_chain - 1) * 0.4))
 
 func is_allowed_to_jump(want_to_jump:bool) -> bool:
 	return want_to_jump and (is_on_floor() or not coyote_time.is_stopped())
@@ -99,6 +165,10 @@ func handle_coyote_time() -> void:
 #endregion
 
 func _input(event: InputEvent) -> void:
+	if event is InputEventJoypadMotion:
+		rotation.y -= event.relative.x / look_sensitivity
+		CameraPivot.rotation.x -= event.relative.y / look_sensitivity
+		CameraPivot.rotation.x = clamp(CameraPivot.rotation.x, deg_to_rad(-90), deg_to_rad(0))
 	if event is InputEventMouseMotion:
 		rotation.y -= event.relative.x / look_sensitivity
 		CameraPivot.rotation.x -= event.relative.y / look_sensitivity
@@ -106,3 +176,5 @@ func _input(event: InputEvent) -> void:
 func add_timers():
 	get_tree().root.add_child.call_deferred(juffer)
 	get_tree().root.add_child.call_deferred(coyote_time)
+	get_tree().root.add_child.call_deferred(dash_cooldown_timer)
+	get_tree().root.add_child.call_deferred(jump_chain_grace)
