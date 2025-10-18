@@ -31,7 +31,7 @@ func _process(_delta: float) -> void:
 		for i in spawn_points.size():
 			spawn_points[i].set_spawn_marker(str(i))
 		for rm in room_transitions:
-			rm.set_room_trans_marker(rm.destination_room.instantiate().name)
+			rm.set_room_trans_marker(rm.dest_room.name)
 	else:
 		for i in spawn_points.size():
 			spawn_points[i].set_spawn_marker("")

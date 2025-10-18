@@ -16,7 +16,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 7, 1)
 
 [node name="RoomTransition" parent="." index="4" instance=ExtResource("3_eo4pb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 3, 13)
-destination_room = ExtResource("4_fmtx1")
+destination_room_path = "uid://l2fo5g5ah255"
 
 [node name="SpawnPoint2" parent="." index="5" instance=ExtResource("5_854p5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 3, 10)
