@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5n3s4jyk65c0"]
+
+[ext_resource type="Script" uid="uid://cyfqk30rgcedb" path="res://entities/checkpoint.gd" id="1_wpuaw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gptjp"]
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(0.39039972, 0.5129901, 0.7104332, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_d4kh5"]
+material = SubResource("StandardMaterial3D_gptjp")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0cnko"]
+radius = 1.0
+
+[node name="Checkpoint" type="Node3D"]
+script = ExtResource("1_wpuaw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+mesh = SubResource("TorusMesh_d4kh5")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_0cnko")
+
+[connection signal="body_entered" from="MeshInstance3D/Area3D" to="." method="_on_area_3d_body_entered"]

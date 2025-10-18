@@ -16,3 +16,9 @@ func respawn_player():
 func _ready() -> void:
 	get_player()._init()
 	pass # Replace with function body.
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("debug_respawn"):
+		var player = get_player()
+		player.position = spawn_point
+		pass

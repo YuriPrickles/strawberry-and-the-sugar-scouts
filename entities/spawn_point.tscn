@@ -8,4 +8,12 @@
 script = ExtResource("1_obsg2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 mesh = SubResource("TorusMesh_d4kh5")
+
+[node name="SpawnMarker" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+pixel_size = 0.05
+billboard = 1
+alpha_cut = 1
+text = "[]"

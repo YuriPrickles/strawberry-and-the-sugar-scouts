@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Strawberry and the Sugar Scouts"
-run/main_scene="uid://doe1r3kxhbvno"
+run/main_scene="uid://bquellbp04h6n"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://db4n4e1i2elsh"]
+
+[ext_resource type="PackedScene" uid="uid://bquellbp04h6n" path="res://rooms/testroom1.tscn" id="1_axgwx"]
+[ext_resource type="PackedScene" uid="uid://l2fo5g5ah255" path="res://rooms/testroom2.tscn" id="2_ys0t5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_axgwx"]
+
+[sub_resource type="Sky" id="Sky_3vmoj"]
+sky_material = SubResource("ProceduralSkyMaterial_axgwx")
+
+[sub_resource type="Environment" id="Environment_ys0t5"]
+background_mode = 2
+background_energy_multiplier = 1.5
+sky = SubResource("Sky_3vmoj")
+ambient_light_source = 3
+ambient_light_color = Color(1, 0.45403963, 0.7020054, 1)
+ssil_enabled = true
+ssil_radius = 16.0
+ssil_intensity = 3.0
+sdfgi_use_occlusion = true
+fog_enabled = true
+adjustment_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ys0t5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -8.9407e-08, 1, 0, -1, -8.9407e-08, 0, 20, 0)
+shadow_enabled = true
+
+[node name="Testroom1" parent="." instance=ExtResource("1_axgwx")]
+
+[node name="Testroom2" parent="." instance=ExtResource("2_ys0t5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 2, 17)
