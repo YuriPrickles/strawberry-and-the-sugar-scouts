@@ -12,16 +12,16 @@ func _ready() -> void:
 	if Engine.is_editor_hint(): return
 	if spawn_points.size() <= 0:
 		assert(false, "Please assign at least one Spawn Point to the room!")
+		assert(false, "How the hell does this happen? You're given a DefaultSpawn!")
 	entered_spawn_point = spawn_points[0] if entered_spawn_point == null else entered_spawn_point
 	State.set_spawn_point(entered_spawn_point.position)
 	respawn_room()
-	pass # Replace with function body.
+
 
 func respawn_room():
 	var player = State.get_player()
-	player.position = entered_spawn_point.position
+	player.position = State.spawn_point
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		room_transitions.clear()
@@ -31,7 +31,8 @@ func _process(_delta: float) -> void:
 		for i in spawn_points.size():
 			spawn_points[i].set_spawn_marker(str(i))
 		for rm in room_transitions:
-			rm.set_room_trans_marker(rm.dest_room.name)
+			if rm.dest_room != null:
+				rm.set_room_trans_marker(rm.dest_room.name)
 	else:
 		for i in spawn_points.size():
 			spawn_points[i].set_spawn_marker("")

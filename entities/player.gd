@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody3D
 
-@onready var CameraPivot = $CameraPivot
+@onready var CameraPivot:Marker3D = $CameraPivot
 
 var SPEED = 7
 var DASH_SPEED = 24
@@ -34,8 +34,9 @@ var last_saved_direction:Vector3 = Vector3(1,0,0)
 var dashes = 1
 var max_dashes = 1
 var dashing = false
-
 var floating = false
+
+var can_move = true
 
 func _init() -> void:
 	coyote_time.one_shot = true
@@ -61,7 +62,7 @@ func _ready() -> void:
 	add_timers()
 
 func _physics_process(delta: float) -> void:
-	
+	if not can_move: return
 	handle_float(Input.is_action_pressed("float"))
 	saved_delta = delta
 	if not is_on_floor():
@@ -93,7 +94,6 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 			any_move_input = false
-
 	move_and_slide()
 	
 func dash(dash_input:bool, direction):
@@ -179,15 +179,17 @@ func handle_coyote_time() -> void:
 #endregion
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventJoypadMotion:
-		var joystick_vector = Input.get_vector("gp_look_left", "gp_look_right", "gp_look_up", "gp_look_down")
-		rotation.y -= joystick_vector.x
-		CameraPivot.rotation.x -= joystick_vector.y
-		CameraPivot.rotation.x = clamp(CameraPivot.rotation.x, deg_to_rad(-90), deg_to_rad(0))
-	if event is InputEventMouseMotion:
-		rotation.y -= event.relative.x / look_sensitivity
-		CameraPivot.rotation.x -= event.relative.y / look_sensitivity
-		CameraPivot.rotation.x = clamp(CameraPivot.rotation.x, deg_to_rad(-90), deg_to_rad(0))
+	if not State.no_cam_control:
+		if event is InputEventJoypadMotion:
+			var joystick_vector = Input.get_vector("gp_look_left", "gp_look_right", "gp_look_up", "gp_look_down")
+			rotation.y -= joystick_vector.x
+			CameraPivot.rotation.x -= joystick_vector.y
+			CameraPivot.rotation.x = clamp(CameraPivot.rotation.x, deg_to_rad(-90), deg_to_rad(0))
+		if event is InputEventMouseMotion:
+			CameraPivot.rotation.x -= event.relative.y / look_sensitivity
+			CameraPivot.rotation.x = clamp(CameraPivot.rotation.x, deg_to_rad(-90), deg_to_rad(0))
+			rotation.y -= event.relative.x / look_sensitivity
+
 func add_timers():
 	get_tree().root.add_child.call_deferred(juffer)
 	get_tree().root.add_child.call_deferred(coyote_time)

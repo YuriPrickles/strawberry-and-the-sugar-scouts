@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtint1wq42p6c"]
+
+[ext_resource type="Script" uid="uid://0c32nxhrxuxr" path="res://entities/level_entry.gd" id="1_somci"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4wu8"]
+albedo_color = Color(0.9999997, 0.8821031, 0.54363173, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_y4wu8"]
+material = SubResource("StandardMaterial3D_y4wu8")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_y4wu8"]
+resource_local_to_scene = true
+radius = 1.0
+
+[node name="LevelEntry" type="Node3D"]
+script = ExtResource("1_somci")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_y4wu8")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+shape = SubResource("SphereShape3D_y4wu8")
+debug_color = Color(0.7, 0.63, 0, 0.41960785)
+
+[connection signal="body_entered" from="MeshInstance3D/Area3D" to="." method="_on_area_3d_body_entered"]

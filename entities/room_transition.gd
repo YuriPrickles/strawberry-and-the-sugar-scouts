@@ -19,7 +19,12 @@ func set_room_trans_marker(number:String):
 	room_trans_marker.text = "%s\nSpawnIDX:%s" % [number,spawn_point_on_entry]
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
+	if Transitioner.doing_transition: return
 	if body is Player:
 		dest_room.entered_spawn_point = dest_room.spawn_points[spawn_point_on_entry]
-		get_tree().root.add_child(dest_room)
-		get_parent().queue_free()
+		Transitioner.do_transition(0.5)
+		State.get_player().can_move = false
+		await State.faded_in
+		LevelManager.change_rooms(dest_room)
+		await State.faded_out
+		State.get_player().can_move = true
