@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dv6rcseihrnv3"]
 
-[ext_resource type="Script" uid="uid://fnmi2kr6w6r5" path="res://entities/npc.gd" id="1_kdwfn"]
+[ext_resource type="Script" uid="uid://fnmi2kr6w6r5" path="res://entities/levelbuilding/npc.gd" id="1_kdwfn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xsaw1"]
 

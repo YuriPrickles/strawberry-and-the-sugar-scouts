@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://pxp73vkmmqbo"]
+
+[ext_resource type="Script" uid="uid://bl5gyb8k1saem" path="res://entities/levelbuilding/kill_trigger.gd" id="1_an8h6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_chtaq"]
+
+[node name="KillTrigger" type="Node3D"]
+script = ExtResource("1_an8h6")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_chtaq")
+debug_color = Color(0.9916622, 0, 0.2686876, 0.41960785)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

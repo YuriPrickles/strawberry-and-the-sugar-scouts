@@ -32,9 +32,19 @@ func set_spawn_point(spawn:Vector3):
 	spawn_point = spawn
 func get_spawn_point():
 	return spawn_point
-func respawn_player():
-	get_player().position = get_spawn_point()
 
+##Used for respawning the player without resetting the room (For unrecoverable falls)
+func respawn_player():
+	get_tree().paused = true
+	unpausable = true
+	var tween = create_tween()
+	tween.tween_property(get_player(),"position",Vector3(get_player().position.x,get_spawn_point().y,get_player().position.z),1).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SPRING)
+	await tween.finished
+	var tween2 = create_tween()
+	tween2.tween_property(get_player(),"position",Vector3(get_spawn_point().x,get_player().position.y,get_spawn_point().z),1).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUINT)
+	await tween2.finished
+	unpausable = false
+	get_tree().paused = false
 func save_camera_rotation():
 	saved_camera_rotation = get_player().CameraPivot.rotation
 
@@ -52,6 +62,7 @@ func reset_player_to_normal(reset_cam_rotation:bool = true):
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	loaded_language_file.load_language()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	get_player()._init()

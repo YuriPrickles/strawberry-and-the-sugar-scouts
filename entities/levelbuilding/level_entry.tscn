@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtint1wq42p6c"]
 
-[ext_resource type="Script" uid="uid://0c32nxhrxuxr" path="res://entities/level_entry.gd" id="1_somci"]
+[ext_resource type="Script" uid="uid://0c32nxhrxuxr" path="res://entities/levelbuilding/level_entry.gd" id="1_somci"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4wu8"]
 albedo_color = Color(0.9999997, 0.8821031, 0.54363173, 1)

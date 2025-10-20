@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://doe1r3kxhbvno"]
+[gd_scene load_steps=8 format=3 uid="uid://doe1r3kxhbvno"]
 
 [ext_resource type="MeshLibrary" uid="uid://qvh4b5fjos1v" path="res://meshlibs/test_meshlib.tres" id="1_ea16h"]
-[ext_resource type="Script" uid="uid://dp3kyxixyhgvt" path="res://entities/base_room.gd" id="2_pajsp"]
-[ext_resource type="PackedScene" uid="uid://khtyojs3w74o" path="res://entities/spawn_point.tscn" id="3_ea16h"]
+[ext_resource type="Script" uid="uid://dp3kyxixyhgvt" path="res://entities/levelbuilding/base_room.gd" id="2_pajsp"]
+[ext_resource type="PackedScene" uid="uid://khtyojs3w74o" path="res://entities/levelbuilding/spawn_point.tscn" id="3_ea16h"]
+[ext_resource type="PackedScene" uid="uid://pxp73vkmmqbo" path="res://entities/levelbuilding/kill_trigger.tscn" id="4_23oby"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ea16h"]
 
@@ -41,3 +42,7 @@ shadow_enabled = true
 
 [node name="DefaultSpawn" parent="." instance=ExtResource("3_ea16h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="KillTrigger" parent="." instance=ExtResource("4_23oby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+trigger_size = Vector3(900, 1, 900)

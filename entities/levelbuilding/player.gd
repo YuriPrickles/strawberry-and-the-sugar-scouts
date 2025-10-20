@@ -10,9 +10,10 @@ var JUMP_VELOCITY = 8
 var FALL_VELOCITY = 16
 var FLOAT_VELOCITY = 3
 var COYOTE_TIME = 0.08
-var JUMP_BUFFER_TIMER = 0.14
-var JUMP_CHAIN_GRACE_TIMER = 0.1
-var SUPERDASH_GRACE_TIMER = 0.2
+var JUMP_BUFFER_TIME = 0.14
+var JUMP_CHAIN_GRACE_TIME = 0.1
+var SUPERDASH_GRACE_TIME = 0.2
+var INVINCIBILITY_TIME = 0.5
 var look_sensitivity = 1500
 
 var saved_delta = 0.0167
@@ -22,6 +23,7 @@ var coyote_time:Timer = Timer.new()
 var dash_cooldown_timer:Timer = Timer.new()
 var jump_chain_grace:Timer = Timer.new()
 var superdash_grace:Timer = Timer.new()
+var inv_frames_timer:Timer = Timer.new()
 
 var is_going_up:bool = false
 var is_jumping: bool = false
@@ -36,6 +38,10 @@ var max_dashes = 1
 var dashing = false
 var floating = false
 
+var last_safe_position:Vector3
+var health:int = 4
+var max_health:int = 4
+
 var can_move = true
 
 func _init() -> void:
@@ -44,18 +50,21 @@ func _init() -> void:
 	dash_cooldown_timer.one_shot = true
 	jump_chain_grace.one_shot = true
 	superdash_grace.one_shot = true
+	inv_frames_timer.one_shot = true
 	
 	coyote_time.wait_time = COYOTE_TIME
-	juffer.wait_time = JUMP_BUFFER_TIMER
+	juffer.wait_time = JUMP_BUFFER_TIME
 	dash_cooldown_timer.wait_time = DASH_COOLDOWN
-	jump_chain_grace.wait_time = JUMP_CHAIN_GRACE_TIMER
-	superdash_grace.wait_time = SUPERDASH_GRACE_TIMER
+	jump_chain_grace.wait_time = JUMP_CHAIN_GRACE_TIME
+	superdash_grace.wait_time = SUPERDASH_GRACE_TIME
+	inv_frames_timer.wait_time = INVINCIBILITY_TIME
 	
 	coyote_time.name = "CoyoteTimer"
 	juffer.name = "Juffer"
 	dash_cooldown_timer.name = "DashCDTimer"
 	jump_chain_grace.name = "JumpChainGraceTimer"
 	superdash_grace.name = "SuperdashGraceTimer"
+	inv_frames_timer.name = "InvincibilityTimer"
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -95,7 +104,26 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 			any_move_input = false
 	move_and_slide()
-	
+
+func hurt(unrecoverable:bool):
+	health -= 1
+	if health < 0:
+		await kill()
+		return
+	HUD.update_health()
+	if unrecoverable:
+		State.respawn_player()
+
+func kill():
+	get_tree().paused = true
+	Transitioner.do_transition(0.1)
+	await State.faded_in
+	LevelManager.get_current_level().respawn_room(true)
+	health = max_health
+	HUD.update_health()
+	await State.faded_out
+	get_tree().paused = false
+
 func dash(dash_input:bool, direction):
 	if dashes > 0 and dash_input and dash_cooldown_timer.is_stopped():
 		dashing = true
@@ -157,7 +185,6 @@ func jump():
 		velocity.x += velocity.x * 0.4
 		velocity.z += velocity.z * 0.4
 	if not superdash_grace.is_stopped():
-		print(superdash_grace.time_left)
 		velocity.x = last_saved_direction.x * 56
 		velocity.z = last_saved_direction.z * 56
 	velocity.y = JUMP_VELOCITY * 2 * (1 + ((jump_chain - 1) * 0.4))
@@ -196,3 +223,4 @@ func add_timers():
 	get_tree().root.add_child.call_deferred(dash_cooldown_timer)
 	get_tree().root.add_child.call_deferred(jump_chain_grace)
 	get_tree().root.add_child.call_deferred(superdash_grace)
+	get_tree().root.add_child.call_deferred(inv_frames_timer)

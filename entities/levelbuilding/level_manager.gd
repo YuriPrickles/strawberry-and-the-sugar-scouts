@@ -2,6 +2,7 @@ extends Node
 
 @export var loaded_level:Level = preload("res://data/level_data/hub.tres")
 
+
 func set_loaded_level(lvl:Level):
 	loaded_level = lvl
 

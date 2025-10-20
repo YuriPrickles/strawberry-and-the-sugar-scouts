@@ -27,7 +27,6 @@ func _input(_event: InputEvent) -> void:
 		else:
 			label.set_visible_characters(label.get_total_character_count() + 1)
 	pass
-##
 func displayText(text, defaultBBCode=true):
 	move_to_front()
 	show()

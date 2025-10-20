@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://me6t3ltctxw6"]
 
-[ext_resource type="PackedScene" uid="uid://ct4oayuwaygvk" path="res://entities/player.tscn" id="1_mor0p"]
-[ext_resource type="PackedScene" uid="uid://465e56tfclvq" path="res://entities/platform.tscn" id="1_qsexw"]
+[ext_resource type="PackedScene" uid="uid://ct4oayuwaygvk" path="res://entities/levelbuilding/player.tscn" id="1_mor0p"]
+[ext_resource type="PackedScene" uid="uid://465e56tfclvq" path="res://entities/levelbuilding/platform.tscn" id="1_qsexw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qsexw"]
 

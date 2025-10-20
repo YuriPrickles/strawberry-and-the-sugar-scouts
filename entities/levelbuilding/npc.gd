@@ -46,7 +46,7 @@ func _on_interact_zone_body_exited(body: Node3D) -> void:
 		player_nearby = false
 
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("interact") and player_nearby and !State.using_textbox:
+	if Input.is_action_just_pressed("interact") and State.get_player().is_on_floor() and player_nearby and !State.using_textbox:
 		State.freeze_player()
 		var player = State.get_player()
 		var saved_rotation = player.rotation

@@ -22,8 +22,9 @@ func _ready() -> void:
 ##Respawns the player, putting them back at the spawn point.
 ##[br][br]
 ##Also resets any non-persistent entities.
-func respawn_room():
+func respawn_room(also_reset_spawn:bool = false):
 	var player = State.get_player()
+	if also_reset_spawn: State.set_spawn_point(entered_spawn_point.position)
 	player.position = State.spawn_point
 
 func _process(_delta: float) -> void:

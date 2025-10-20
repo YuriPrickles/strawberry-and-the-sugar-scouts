@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5n3s4jyk65c0"]
 
-[ext_resource type="Script" uid="uid://cyfqk30rgcedb" path="res://entities/checkpoint.gd" id="1_wpuaw"]
+[ext_resource type="Script" uid="uid://cyfqk30rgcedb" path="res://entities/levelbuilding/checkpoint.gd" id="1_wpuaw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gptjp"]
 vertex_color_use_as_albedo = true
