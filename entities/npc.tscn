@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv6rcseihrnv3"]
+
+[ext_resource type="Script" uid="uid://fnmi2kr6w6r5" path="res://entities/npc.gd" id="1_kdwfn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xsaw1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsaw1"]
+albedo_color = Color(0.80866665, 0.59000003, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xsaw1"]
+material = SubResource("StandardMaterial3D_xsaw1")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kdwfn"]
+radius = 2.0
+
+[node name="NPC" type="CharacterBody3D"]
+script = ExtResource("1_kdwfn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_xsaw1")
+debug_color = Color(0.41999993, 0, 0.7, 0.41960785)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+mesh = SubResource("CapsuleMesh_xsaw1")
+
+[node name="InteractZone" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_kdwfn")
+debug_color = Color(0.2099998, 0, 0.7, 0.41960785)
+
+[node name="ActionPrompt" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+pixel_size = 0.02
+billboard = 1
+alpha_cut = 1
+text = "[E] Talk"
+
+[connection signal="body_entered" from="InteractZone" to="." method="_on_interact_zone_body_entered"]
+[connection signal="body_exited" from="InteractZone" to="." method="_on_interact_zone_body_exited"]

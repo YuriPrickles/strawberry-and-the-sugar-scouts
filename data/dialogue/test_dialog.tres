@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=2 format=3 uid="uid://cjw5ryos0hhgl"]
+
+[ext_resource type="Script" uid="uid://dkle1yph6bef6" path="res://data/base_scripts/base_dialogue.gd" id="1_7m0mv"]
+
+[resource]
+script = ExtResource("1_7m0mv")
+dialogue_key = "TEST_DIALOGUE"
+dialogue_lines = Array[String](["You can kill me. For everything you did to keep me alive this long, you may slay me and take the enchanter."])
+metadata/_custom_type_script = "uid://dkle1yph6bef6"

@@ -5,12 +5,19 @@ signal faded_in
 @warning_ignore("unused_signal")
 signal faded_out
 
+enum InputType{
+	KEYBOARD,
+	GAMEPAD
+}
+
 var unpausable:bool
 var any_ui_open:bool
 
 var no_cam_control:bool
 
 var spawn_point:Vector3
+
+var input_type:InputType
 
 func get_player() -> Player:
 	return GlobalPlayer
@@ -35,7 +42,11 @@ func _ready() -> void:
 	get_player()._init()
 	pass # Replace with function body.
 
-func _input(_event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey or InputEventMouse:
+		input_type = InputType.KEYBOARD
+	if event is InputEventJoypadButton or InputEventJoypadMotion:
+		input_type = InputType.GAMEPAD
 	if Input.is_action_just_pressed("pause"):
 		if Transitioner.doing_transition: return
 		if any_ui_open: return
