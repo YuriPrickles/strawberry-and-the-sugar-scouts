@@ -3,6 +3,7 @@ class_name RoomTransition
 extends Node3D
 
 @onready var room_trans_marker:Label3D = $RoomTransMarker
+##The file path for a [code].tscn[/code] file for a [Room]
 @export_file var destination_room_path:String
 ##Please refer to the numbers above spawn points.[br]
 ##These represent their indexes in the [code]spawn_points[/code] array in a [Room].

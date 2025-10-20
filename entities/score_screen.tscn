@@ -95,6 +95,7 @@ alignment = 1
 [node name="ReturnText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/ReturnButton/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
+mouse_behavior_recursive = 1
 bbcode_enabled = true
 text = "[font_size=60][center]Return to Hub"
 fit_content = true

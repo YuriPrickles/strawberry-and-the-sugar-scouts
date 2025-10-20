@@ -5,7 +5,10 @@ extends Node
 func set_loaded_level(lvl:Level):
 	loaded_level = lvl
 
+##Loading a level will put the player in the starting room of the level.
 func load_level():
+	if loaded_level == null:
+		assert(false,"No level loaded!")
 	if get_child_count() > 0:
 		for r in get_children():
 			r.queue_free()
@@ -20,6 +23,7 @@ func _ready() -> void:
 func get_current_level() -> Room:
 	return get_child(0)
 
+##Used mainly for room transitions.
 func change_rooms(room:Room):
 	get_current_level().queue_free()
 	add_child(room)

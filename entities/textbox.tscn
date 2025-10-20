@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://dudk2y5aftq34"]
+
+[ext_resource type="Script" uid="uid://cranmga3gdcw" path="res://entities/textbox.gd" id="1_o7pym"]
+
+[node name="Textbox" type="Control"]
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_o7pym")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.3137255)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Text" type="RichTextLabel" parent="MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[font_size=40]Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!Textbox text!"
+fit_content = true
+scroll_active = false

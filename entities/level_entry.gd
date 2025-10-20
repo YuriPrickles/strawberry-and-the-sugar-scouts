@@ -1,5 +1,5 @@
 extends Node3D
-
+##The level for [LevelManager] to load when this is touched.
 @export var level_to_load:Level
 
 func _on_area_3d_body_entered(body: Node3D) -> void:

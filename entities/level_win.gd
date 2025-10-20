@@ -1,6 +1,7 @@
 @tool
 extends Node3D
 
+##The mesh for the dessert used to represent the end of the level.
 @export var dessert_mesh:Mesh = preload("res://meshes/level_win_placeholder.tres")
 
 @onready var mesh_instance = $MeshInstance3D

@@ -2,22 +2,26 @@
 class_name Room
 extends GridMap
 
-
+##Add all your room's spawn points to this array.[br]
+##This will give them their own IDs, which are their indices in the array.
+##[br][br]
+##For consistency, put your complimentary DefaultSpawn in index 0.
 @export var spawn_points:Array[SpawnPoint]
 var room_transitions:Array[RoomTransition]
+##When this room is instantiated, it will be set to the spawn point in index 0.
 var entered_spawn_point:SpawnPoint = null
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if Engine.is_editor_hint(): return
 	if spawn_points.size() <= 0:
-		assert(false, "Please assign at least one Spawn Point to the room!")
-		assert(false, "How the hell does this happen? You're given a DefaultSpawn!")
+		assert(false, "Please assign at least one Spawn Point to the room!\nHow does this happen? You're given a DefaultSpawn!")
 	entered_spawn_point = spawn_points[0] if entered_spawn_point == null else entered_spawn_point
 	State.set_spawn_point(entered_spawn_point.position)
 	respawn_room()
 
-
+##Respawns the player, putting them back at the spawn point.
+##[br][br]
+##Also resets any non-persistent entities.
 func respawn_room():
 	var player = State.get_player()
 	player.position = State.spawn_point

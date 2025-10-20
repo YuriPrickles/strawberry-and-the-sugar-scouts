@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 State="*res://scripts/State.gd"
+Dialogue="*res://scripts/Dialogue.gd"
 LevelManager="*res://entities/level_manager.tscn"
 GlobalPlayer="*res://entities/player.tscn"
 PauseMenu="*res://entities/pause_menu.tscn"

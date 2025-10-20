@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Language" load_steps=3 format=3 uid="uid://br5ehs8epudqt"]
+[gd_resource type="Resource" script_class="Language" load_steps=4 format=3 uid="uid://br5ehs8epudqt"]
 
 [ext_resource type="Script" uid="uid://dkle1yph6bef6" path="res://data/base_scripts/base_dialogue.gd" id="1_fjm0d"]
 [ext_resource type="Script" uid="uid://b4rud6sn3uos3" path="res://data/base_scripts/base_language.gd" id="1_k3gox"]
+[ext_resource type="Resource" uid="uid://cjw5ryos0hhgl" path="res://data/dialogue/english/test_dialog.tres" id="2_mctf6"]
 
 [resource]
 script = ExtResource("1_k3gox")
+dialogue_array = Array[ExtResource("1_fjm0d")]([ExtResource("2_mctf6")])
 metadata/_custom_type_script = "uid://b4rud6sn3uos3"
