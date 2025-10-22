@@ -9,6 +9,7 @@ var soundFreq = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	State.any_ui_open = true
 	pass # Replace with function body.
 
 
@@ -22,8 +23,9 @@ func _input(_event: InputEvent) -> void:
 	if ((Input.is_action_just_pressed("interact"))
 	):
 		if label.get_visible_characters() >= label.get_total_character_count():
-			queue_free()
+			State.any_ui_open = false
 			State.textbox_close.emit()
+			queue_free()
 		else:
 			label.set_visible_characters(label.get_total_character_count() + 1)
 	pass

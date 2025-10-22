@@ -65,5 +65,6 @@ func _input(_event: InputEvent) -> void:
 		tween2.tween_property(playerCam, "rotation", State.saved_camera_rotation, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 		tween2.tween_property(player,"rotation", saved_rotation, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 		tween2.tween_property(self,"rotation", saved_rotation_self, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-		tween2.tween_callback(State.reset_player_to_normal.bind(false))
+		await tween2.finished
+		State.reset_player_to_normal(false)
 		

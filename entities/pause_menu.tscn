@@ -45,7 +45,7 @@ fit_content = true
 scroll_active = false
 
 [node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 200)
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ContinueButton"]
@@ -62,12 +62,12 @@ alignment = 1
 layout_mode = 2
 mouse_filter = 2
 bbcode_enabled = true
-text = "[font_size=80][center]Continue"
+text = "[font_size=60][center]Continue"
 fit_content = true
 scroll_active = false
 
 [node name="RetryButton" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 200)
+custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/RetryButton"]
@@ -84,12 +84,12 @@ alignment = 1
 layout_mode = 2
 mouse_filter = 2
 bbcode_enabled = true
-text = "[font_size=80][center]Retry"
+text = "[font_size=60][center]Retry[font_size=30] (-1 Pie Slice)"
 fit_content = true
 scroll_active = false
 
 [node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 200)
+custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/RestartButton"]
@@ -106,12 +106,12 @@ alignment = 1
 layout_mode = 2
 mouse_filter = 2
 bbcode_enabled = true
-text = "[font_size=80][center]Retry From Start"
+text = "[font_size=60][center]Restart Level"
 fit_content = true
 scroll_active = false
 
 [node name="ReturnButton" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 200)
+custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ReturnButton"]
@@ -128,7 +128,7 @@ alignment = 1
 layout_mode = 2
 mouse_filter = 2
 bbcode_enabled = true
-text = "[font_size=80][center]Return to Hub"
+text = "[font_size=60][center]Return to Hub"
 fit_content = true
 scroll_active = false
 

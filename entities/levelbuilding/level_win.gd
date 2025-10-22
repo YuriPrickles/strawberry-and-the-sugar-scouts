@@ -19,6 +19,7 @@ func _process(_delta: float) -> void:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player and not touched:
+		LevelManager.stop_session_timer()
 		var player = State.get_player()
 		player.can_move = false
 		State.no_cam_control = true

@@ -1,8 +1,29 @@
-[gd_resource type="Resource" script_class="Level" load_steps=2 format=3 uid="uid://gtn6phdulbdx"]
+[gd_resource type="Resource" script_class="Level" load_steps=6 format=3 uid="uid://gtn6phdulbdx"]
 
 [ext_resource type="Script" uid="uid://bghfgv4d0bsl8" path="res://data/base_scripts/base_level.gd" id="2_0eux3"]
+[ext_resource type="Script" uid="uid://dnujdc322bs8r" path="res://data/base_scripts/base_speedrun_data.gd" id="2_cdr5p"]
+
+[sub_resource type="Resource" id="Resource_cdr5p"]
+script = ExtResource("2_cdr5p")
+seconds = 5
+metadata/_custom_type_script = "uid://dnujdc322bs8r"
+
+[sub_resource type="Resource" id="Resource_0eux3"]
+script = ExtResource("2_cdr5p")
+seconds = 8
+metadata/_custom_type_script = "uid://dnujdc322bs8r"
+
+[sub_resource type="Resource" id="Resource_limxu"]
+script = ExtResource("2_cdr5p")
+seconds = 15
+metadata/_custom_type_script = "uid://dnujdc322bs8r"
 
 [resource]
 script = ExtResource("2_0eux3")
 room_list = Array[String](["uid://bquellbp04h6n", "uid://l2fo5g5ah255"])
+speedrun_bonus = Dictionary[int, ExtResource("2_cdr5p")]({
+0: SubResource("Resource_cdr5p"),
+1: SubResource("Resource_0eux3"),
+2: SubResource("Resource_limxu")
+})
 metadata/_custom_type_script = "uid://bghfgv4d0bsl8"

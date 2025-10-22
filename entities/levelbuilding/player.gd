@@ -105,24 +105,28 @@ func _physics_process(delta: float) -> void:
 			any_move_input = false
 	move_and_slide()
 
-func hurt(unrecoverable:bool):
+func hurt(unrecoverable:bool=false):
 	health -= 1
+	LevelManager.current_session.damage_taken += 1
 	if health < 0:
 		await kill()
 		return
 	HUD.update_health()
 	if unrecoverable:
-		State.respawn_player()
+		await State.respawn_player()
 
 func kill():
+	LevelManager.set_session_timer_ignore_pauses(true)
 	get_tree().paused = true
 	Transitioner.do_transition(0.1)
 	await State.faded_in
 	LevelManager.get_current_level().respawn_room(true)
 	health = max_health
+	LevelManager.current_session.deaths += 1
 	HUD.update_health()
 	await State.faded_out
 	get_tree().paused = false
+	LevelManager.set_session_timer_ignore_pauses(false)
 
 func dash(dash_input:bool, direction):
 	if dashes > 0 and dash_input and dash_cooldown_timer.is_stopped():

@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://cr2g8e8u5f1wc"]
-
-[ext_resource type="Script" uid="uid://d0l8frwnu1yii" path="res://entities/levelbuilding/level_manager.gd" id="1_55dg3"]
-[ext_resource type="Resource" uid="uid://7gt485kkpgwi" path="res://data/level_data/hub.tres" id="2_a82jy"]
-
-[node name="LevelManager" type="Node"]
-script = ExtResource("1_55dg3")
-loaded_level = ExtResource("2_a82jy")

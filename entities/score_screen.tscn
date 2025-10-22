@@ -78,6 +78,22 @@ text = "[font_size=80][center]Level Complete!"
 fit_content = true
 scroll_active = false
 
+[node name="SpeedrunText" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[font_size=48]Time: 00:00:00:00 [font_size=32](Rank)"
+fit_content = true
+scroll_active = false
+
+[node name="PiesLostText" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[font_size=48]Pies Lost: 0 [font_size=32](0 Slices)"
+fit_content = true
+scroll_active = false
+
 [node name="ReturnButton" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 160)
 layout_mode = 2

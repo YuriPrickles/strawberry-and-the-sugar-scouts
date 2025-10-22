@@ -1,4 +1,6 @@
 extends Node
+##The helpful little general-purpose singleton/autoload/global class.[br][br]
+##If something is not big enough to need its own script in another place and is a common function, it goes here.
 
 @warning_ignore("unused_signal")
 signal faded_in
@@ -14,9 +16,15 @@ enum InputType{
 var unpausable:bool
 var any_ui_open:bool
 
+##The player will not be able to move the camera if this is true.
 var no_cam_control:bool
+##Used to save the camera rotation before messing with it, so that there's somewhere for it to return.
 var saved_camera_rotation:Vector3
+
+##Unused. I really wanted to use the deprecated thing for documentation heehee
+##@deprecated
 var interacting_with:Variant
+
 
 var spawn_point:Vector3
 
@@ -35,6 +43,7 @@ func get_spawn_point():
 
 ##Used for respawning the player without resetting the room (For unrecoverable falls)
 func respawn_player():
+	LevelManager.set_session_timer_ignore_pauses(true)
 	get_tree().paused = true
 	unpausable = true
 	var tween = create_tween()
@@ -45,13 +54,25 @@ func respawn_player():
 	await tween2.finished
 	unpausable = false
 	get_tree().paused = false
+	LevelManager.set_session_timer_ignore_pauses(false)
+
+##Restores the player's health.
+func reset_player_stats():
+	get_player().health = get_player().max_health
+	HUD.update_health()
+
+##Save the camera rotation. Useful if needed to tween back to it later.
 func save_camera_rotation():
 	saved_camera_rotation = get_player().CameraPivot.rotation
 
+##Stop camera and player movement and disallow pausing.
 func freeze_player():
 	get_player().can_move = false
 	no_cam_control = true
 	unpausable = true
+
+##This function will return control to the Player and the camera.[br]
+##Use [code]false[/code] for when you just messed with the camera to return it to a neutral position.
 func reset_player_to_normal(reset_cam_rotation:bool = true):
 	get_player().can_move = true
 	if reset_cam_rotation: get_player().CameraPivot.rotation.y = deg_to_rad(0)
@@ -78,6 +99,10 @@ func _input(event: InputEvent) -> void:
 		PauseMenu.visible = !PauseMenu.visible if not unpausable else false
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if PauseMenu.visible else Input.MOUSE_MODE_CAPTURED
 		get_tree().paused = !get_tree().paused if not unpausable else false
+		if get_tree().paused and not PauseMenu.visible:
+			get_tree().paused = true
+			PauseMenu.visible = true
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 ##Returns all InputEvents of the action.
 func get_keybinds(action_name:String) -> Array[InputEvent]:
@@ -89,7 +114,7 @@ func get_keybinds(action_name:String) -> Array[InputEvent]:
 ##Remember to do [code]State.using_textbox = false[/code] on your own![br]
 ##This is to allow more flexibility on making sure that no janky textbox rereading loop happens.
 ##[br][br]
-##For example, the [NPC] class puts [code]State.using_textbox = false[/code] in a tween callback.
+##For example, the State singleton has it in the [method State.reset_player_to_normal] function.
 func create_textbox(dialogue:Array[String]):
 	using_textbox = true
 	for line in dialogue:
