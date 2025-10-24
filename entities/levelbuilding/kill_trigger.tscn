@@ -14,3 +14,4 @@ shape = SubResource("BoxShape3D_chtaq")
 debug_color = Color(0.9916622, 0, 0.2686876, 0.41960785)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

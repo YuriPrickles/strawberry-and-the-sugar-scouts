@@ -49,21 +49,24 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact") and State.get_player().is_on_floor() and player_nearby and !State.using_textbox:
 		State.freeze_player()
 		var player = State.get_player()
-		var saved_rotation = player.rotation
+		var playerModel = State.get_player().StrawberryModel
+		var saved_rotation = playerModel.rotation
 		var saved_rotation_self = rotation
 		var playerCam = player.CameraPivot
 		var pos1:Vector2 = Vector2(position.x, position.z)
 		var pos2:Vector2 = Vector2(player.position.x, player.position.z)
 		var direction = -(pos1 - pos2)
+		State.save_camera_rotation()
+		var target_player_rotation = fmod(atan2(direction.x,direction.y) + PI,TAU) - PI
 		var tween = create_tween().set_parallel(true)
-		tween.tween_property(playerCam,"rotation",  Vector3(deg_to_rad(-10),playerCam.rotation.y + deg_to_rad(60),playerCam.rotation.z),0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-		tween.tween_property(player,"rotation", Vector3(0,atan2(direction.x,direction.y),0),0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-		tween.tween_property(self,"rotation", Vector3(0,atan2(direction.x,direction.y),0),0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(playerCam,"rotation", Vector3(deg_to_rad(-10),playerCam.rotation.y + deg_to_rad(60),playerCam.rotation.z),0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(playerModel,"rotation", Vector3(0,target_player_rotation - PI * sign(target_player_rotation),0),0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(self,"rotation", Vector3(0,target_player_rotation,0),0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 		await State.create_textbox(Dialogue.get_dialogue(dialogue_key))
 		
 		var tween2 = create_tween().set_parallel(true)
 		tween2.tween_property(playerCam, "rotation", State.saved_camera_rotation, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-		tween2.tween_property(player,"rotation", saved_rotation, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+		tween2.tween_property(playerModel,"rotation", saved_rotation, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 		tween2.tween_property(self,"rotation", saved_rotation_self, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 		await tween2.finished
 		State.reset_player_to_normal(false)

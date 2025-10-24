@@ -43,18 +43,18 @@ func get_spawn_point():
 
 ##Used for respawning the player without resetting the room (For unrecoverable falls)
 func respawn_player():
+	unpausable = true
 	LevelManager.set_session_timer_ignore_pauses(true)
 	get_tree().paused = true
-	unpausable = true
 	var tween = create_tween()
 	tween.tween_property(get_player(),"position",Vector3(get_player().position.x,get_spawn_point().y,get_player().position.z),1).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SPRING)
 	await tween.finished
 	var tween2 = create_tween()
 	tween2.tween_property(get_player(),"position",Vector3(get_spawn_point().x,get_player().position.y,get_spawn_point().z),1).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUINT)
 	await tween2.finished
-	unpausable = false
 	get_tree().paused = false
 	LevelManager.set_session_timer_ignore_pauses(false)
+	unpausable = false
 
 ##Restores the player's health.
 func reset_player_stats():

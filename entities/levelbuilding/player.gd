@@ -18,7 +18,7 @@ var COYOTE_TIME = 0.08
 var JUMP_BUFFER_TIME = 0.14
 var JUMP_CHAIN_GRACE_TIME = 0.1
 var SUPERDASH_GRACE_TIME = 0.2
-var INVINCIBILITY_TIME = 0.5
+var INVINCIBILITY_TIME = 0.2
 var look_sensitivity = 1500
 
 var saved_delta = 0.0167
@@ -48,6 +48,7 @@ var dashing = false
 
 var floating = false
 var descending = false
+var descending_anim = false
 
 var last_safe_position:Vector3
 var health:int = 4
@@ -109,7 +110,7 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector3.ZERO
 		descend_rest_timer.start()
 		descending = false
-	
+	descending_anim = descending or not descend_rest_timer.is_stopped()
 	handle_jump(Input.is_action_just_pressed("jump"))
 	if dash(Input.is_action_just_pressed("dash"),last_saved_direction) and dash_attack_timer.is_stopped():
 		await get_tree().create_timer(0.1).timeout
@@ -128,7 +129,7 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, direction.z * SPEED, SPEED * 0.3)
 			last_saved_direction = direction
 			var dir_vector:Vector2 = Vector2(direction.x,direction.z)
-			StrawberryModel.rotation.y = rotate_toward(StrawberryModel.rotation.y, -dir_vector.angle() + deg_to_rad(90), delta * 10)
+			StrawberryModel.rotation.y = wrapf(rotate_toward(StrawberryModel.rotation.y, -dir_vector.angle() + deg_to_rad(90), delta * 10),-PI,PI)
 			any_move_input = true
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -138,7 +139,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func handle_animations():
-	if descending:
+	if descending_anim:
 		StrawberryAnim.play("strawberry_anims/Strawberry_Descend_Animation")
 		return
 	if dash_attacking:
@@ -167,7 +168,10 @@ func hurt(unrecoverable:bool=false):
 		return
 	HUD.update_health()
 	if unrecoverable:
+		inv_frames_timer.start(2)
 		await State.respawn_player()
+	else:
+		inv_frames_timer.start(0.5)
 
 func kill():
 	LevelManager.set_session_timer_ignore_pauses(true)
