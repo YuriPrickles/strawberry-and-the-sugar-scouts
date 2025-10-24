@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://tbhvjb08sxvy"]
+
+[ext_resource type="PackedScene" uid="uid://c35ncakt6hlnx" path="res://assets/strawberry/strawberry.glb" id="1_h58s7"]
+[ext_resource type="Texture2D" uid="uid://dy7e2xpr6hsan" path="res://addons/Tex_SkinHair.png" id="2_ecgix"]
+[ext_resource type="Texture2D" uid="uid://db2v32wjkq3ww" path="res://assets/strawberry/Tex_Clothes.png" id="3_pt3x6"]
+[ext_resource type="Texture2D" uid="uid://cqio2ujanx7iq" path="res://assets/strawberry/Tex_Eyes.png" id="4_ml3pa"]
+[ext_resource type="Texture2D" uid="uid://cnxxiekwyc2gl" path="res://assets/strawberry/Tex_Mouth.png" id="5_twgrh"]
+[ext_resource type="AnimationLibrary" uid="uid://chfbhpo3q614x" path="res://assets/strawberry/strawberry animations.glb" id="6_q3s40"]
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktb0w"]
+albedo_texture = ExtResource("2_ecgix")
+metallic_specular = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45l47"]
+albedo_texture = ExtResource("3_pt3x6")
+metallic_specular = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyhp4"]
+transparency = 1
+albedo_texture = ExtResource("4_ml3pa")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlq5q"]
+transparency = 1
+albedo_texture = ExtResource("5_twgrh")
+
+[node name="strawberry" instance=ExtResource("1_h58s7")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0, -0.17320132, -0.13639587)
+bones/1/position = Vector3(0, 0.9999997, 0)
+bones/5/rotation = Quaternion(-0.0071953787, -0.007633122, -0.95923656, 0.2824098)
+bones/6/rotation = Quaternion(0.0017553272, -1.1949925e-07, -1.3436763e-08, 0.9999985)
+bones/7/rotation = Quaternion(-0.02627239, 4.906446e-10, -1.8461456e-08, 0.9996548)
+bones/8/rotation = Quaternion(-0.0071953963, 0.007633126, 0.95923656, 0.2824098)
+bones/9/rotation = Quaternion(0.0017553272, 1.2010881e-07, 1.28215465e-08, 0.9999985)
+bones/10/rotation = Quaternion(-0.026272392, 4.3920945e-10, 1.8393346e-08, 0.9996548)
+bones/11/rotation = Quaternion(0.66931325, 0.14301743, 0.7193323, 0.11885675)
+bones/12/rotation = Quaternion(0.0034055845, -1.7340353e-06, 0.32236624, 0.9466089)
+bones/13/rotation = Quaternion(-0.024136612, 0.00032050605, -0.01346204, 0.99961805)
+bones/15/rotation = Quaternion(-0.6747131, 0.1441932, 0.7141715, -0.118024446)
+bones/16/rotation = Quaternion(0.0034055852, 1.7358252e-06, -0.3223663, 0.9466089)
+bones/17/rotation = Quaternion(-0.024136612, -0.00032050663, 0.013462045, 0.99961805)
+bones/19/rotation = Quaternion(0.6797517, 0.27329135, 0.6805915, -0.006684541)
+bones/20/rotation = Quaternion(-0.68490523, 0.27349466, 0.67530245, 0.008498922)
+bones/21/position = Vector3(-8.916379e-18, 3.0328014, 0.52492523)
+bones/21/rotation = Quaternion(0.9959106, 1.07699165e-08, 1.1872187e-07, 0.090344556)
+bones/22/rotation = Quaternion(0.004421221, 0.04719522, -0.26374754, 0.9634264)
+bones/23/rotation = Quaternion(0.0044211457, -0.047195446, 0.26374763, 0.96342635)
+bones/24/position = Vector3(1.8475701, 3.187979, -5.306484e-08)
+bones/24/rotation = Quaternion(6.717942e-08, 0, 0, 1)
+bones/25/position = Vector3(1.8667922, 3.9475014, -5.306484e-08)
+bones/25/rotation = Quaternion(6.717942e-08, 0, 0, 1)
+bones/26/position = Vector3(0, 3.0328007, 0.5249252)
+bones/26/rotation = Quaternion(0.9959106, 1.0769839e-08, 1.1872187e-07, 0.09034453)
+bones/27/rotation = Quaternion(0.0044212295, 0.047195207, -0.26374757, 0.9634263)
+bones/28/rotation = Quaternion(0.004421153, -0.047195442, 0.2637476, 0.96342635)
+
+[node name="Body" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ktb0w")
+
+[node name="Clothes" parent="Armature/Skeleton3D" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_45l47")
+
+[node name="Eyes" parent="Armature/Skeleton3D" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_xyhp4")
+
+[node name="Mouth" parent="Armature/Skeleton3D" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_mlq5q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"strawberry animations": ExtResource("6_q3s40")
+}

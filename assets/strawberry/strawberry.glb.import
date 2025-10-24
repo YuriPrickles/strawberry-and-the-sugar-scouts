@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c35ncakt6hlnx"
-path="res://.godot/imported/strawberry.glb-24e768cf1add91e5c587254d6360e7d0.scn"
+path="res://.godot/imported/strawberry.glb-d61fb805c148f897865e5e453fd8293e.scn"
 
 [deps]
 
-source_file="res://assets/models_and_textures/strawberry/strawberry.glb"
-dest_files=["res://.godot/imported/strawberry.glb-24e768cf1add91e5c587254d6360e7d0.scn"]
+source_file="res://assets/strawberry/strawberry.glb"
+dest_files=["res://.godot/imported/strawberry.glb-d61fb805c148f897865e5e453fd8293e.scn"]
 
 [params]
 

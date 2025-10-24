@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqio2ujanx7iq"
-path.s3tc="res://.godot/imported/Tex_Eyes.png-765eb3eda19c38df11603074f046c8de.s3tc.ctex"
+uid="uid://db2v32wjkq3ww"
+path.s3tc="res://.godot/imported/Tex_Clothes.png-6eafe17490273ff25d275a4ccbff16ad.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models_and_textures/strawberry/Tex_Eyes.png"
-dest_files=["res://.godot/imported/Tex_Eyes.png-765eb3eda19c38df11603074f046c8de.s3tc.ctex"]
+source_file="res://assets/strawberry/Tex_Clothes.png"
+dest_files=["res://.godot/imported/Tex_Clothes.png-6eafe17490273ff25d275a4ccbff16ad.s3tc.ctex"]
 
 [params]
 
