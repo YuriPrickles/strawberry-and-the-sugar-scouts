@@ -1,12 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://tbhvjb08sxvy"]
 
-[ext_resource type="PackedScene" uid="uid://c35ncakt6hlnx" path="res://assets/strawberry/strawberry.glb" id="1_h58s7"]
+[ext_resource type="PackedScene" uid="uid://c35ncakt6hlnx" path="res://assets/models_and_textures/strawberry/strawberry.glb" id="1_h58s7"]
 [ext_resource type="Texture2D" uid="uid://dy7e2xpr6hsan" path="res://addons/Tex_SkinHair.png" id="2_ecgix"]
-[ext_resource type="Texture2D" uid="uid://db2v32wjkq3ww" path="res://assets/strawberry/Tex_Clothes.png" id="3_pt3x6"]
-[ext_resource type="Texture2D" uid="uid://cqio2ujanx7iq" path="res://assets/strawberry/Tex_Eyes.png" id="4_ml3pa"]
-[ext_resource type="Texture2D" uid="uid://cnxxiekwyc2gl" path="res://assets/strawberry/Tex_Mouth.png" id="5_twgrh"]
-[ext_resource type="AnimationLibrary" uid="uid://chfbhpo3q614x" path="res://assets/strawberry/strawberry animations.glb" id="6_q3s40"]
-
+[ext_resource type="Texture2D" uid="uid://db2v32wjkq3ww" path="res://assets/models_and_textures/strawberry/Tex_Clothes.png" id="3_pt3x6"]
+[ext_resource type="Texture2D" uid="uid://cqio2ujanx7iq" path="res://assets/models_and_textures/strawberry/Tex_Eyes.png" id="4_ml3pa"]
+[ext_resource type="Texture2D" uid="uid://cnxxiekwyc2gl" path="res://assets/models_and_textures/strawberry/Tex_Mouth.png" id="5_twgrh"]
+[ext_resource type="AnimationLibrary" uid="uid://dcc7mpcxc4gpa" path="res://assets/models_and_textures/strawberry/strawberry_animations.tres" id="6_ti3mn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktb0w"]
 albedo_texture = ExtResource("2_ecgix")
@@ -24,7 +23,7 @@ albedo_texture = ExtResource("4_ml3pa")
 transparency = 1
 albedo_texture = ExtResource("5_twgrh")
 
-[node name="strawberry" instance=ExtResource("1_h58s7")]
+[node name="Strawberry" instance=ExtResource("1_h58s7")]
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/0/position = Vector3(0, -0.17320132, -0.13639587)
@@ -70,5 +69,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_mlq5q")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 libraries = {
-&"strawberry animations": ExtResource("6_q3s40")
+&"strawberry_anims": ExtResource("6_ti3mn")
 }

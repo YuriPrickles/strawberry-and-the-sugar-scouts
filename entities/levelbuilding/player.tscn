@@ -1,8 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ct4oayuwaygvk"]
 
 [ext_resource type="Script" uid="uid://pvnmuhfk13og" path="res://entities/levelbuilding/player.gd" id="1_4flbx"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
+[ext_resource type="PackedScene" uid="uid://tbhvjb08sxvy" path="res://assets/models_and_textures/strawberry/character_model_strawberry.tscn" id="2_nggpa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_merdl"]
 albedo_color = Color(0, 0, 0, 1)
@@ -12,6 +11,8 @@ material = SubResource("StandardMaterial3D_merdl")
 size = Vector3(1, 1, 0.1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
+radius = 0.2
+height = 1.0
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_4flbx")
@@ -20,14 +21,13 @@ script = ExtResource("1_4flbx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
-mesh = SubResource("CapsuleMesh_sh265")
 
 [node name="pointer" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 0, 0, -1.5)
+transform = Transform3D(-1, -1.509958e-07, 6.600236e-15, 0, -4.371139e-08, -1, 1.509958e-07, -1, 4.371139e-08, 0, 0, -1.5)
 mesh = SubResource("PrismMesh_merdl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CapsuleShape3D_4flbx")
 
 [node name="CameraPivot" type="Marker3D" parent="."]
@@ -35,3 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 0.8660249, 0.5, 0, -0.5, 0.8660249, 0, 1, 0)
 
 [node name="PlayerCamera" type="Camera3D" parent="CameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4641, 7.19616)
+fov = 61.927513
+
+[node name="Strawberry" parent="." instance=ExtResource("2_nggpa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)

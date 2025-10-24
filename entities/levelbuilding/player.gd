@@ -2,6 +2,8 @@ class_name Player
 extends CharacterBody3D
 
 @onready var CameraPivot:Marker3D = $CameraPivot
+@onready var StrawberryModel:Node3D = $Strawberry
+@onready var StrawberryAnim:AnimationPlayer = $Strawberry/AnimationPlayer
 
 var SPEED = 7
 var DASH_SPEED = 24
@@ -37,6 +39,7 @@ var dashes = 1
 var max_dashes = 1
 var dashing = false
 var floating = false
+var descending = false
 
 var last_safe_position:Vector3
 var health:int = 4
@@ -74,7 +77,7 @@ func _physics_process(delta: float) -> void:
 	if not can_move: return
 	handle_float(Input.is_action_pressed("float"))
 	saved_delta = delta
-	if not is_on_floor():
+	if not is_on_floor() and not descending:
 		if not dashing:
 			velocity += get_gravity() * delta * 4
 			if is_falling():
@@ -86,14 +89,18 @@ func _physics_process(delta: float) -> void:
 			velocity.y = clamp(velocity.y, 0, INF)
 	else:
 		dashes = max_dashes
-		
+	
+	if is_on_floor() and descending:
+		descending = false
+	
+	handle_descend(Input.is_action_just_pressed("descend"))
 	handle_jump(Input.is_action_just_pressed("jump"))
 	dash(Input.is_action_just_pressed("dash"),last_saved_direction)
 	
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if not dashing:
+	if not dashing or not descending:
 		if direction:
 			velocity.x = move_toward(velocity.x, direction.x * SPEED, SPEED * 0.3) 
 			velocity.z = move_toward(velocity.z, direction.z * SPEED, SPEED * 0.3)
@@ -103,7 +110,30 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 			any_move_input = false
+	handle_animations()
 	move_and_slide()
+
+func handle_animations():
+	if descending:
+		StrawberryAnim.play("strawberry_anims/Strawberry_Descend_Animation")
+		return
+	if dashing:
+		StrawberryAnim.play("strawberry_anims/Strawberry_Dash_Animation")
+		return
+	if floating:
+		StrawberryAnim.play("strawberry_anims/Strawberry_Glide_Animation")
+		return
+	if is_falling():
+		StrawberryAnim.play("strawberry_anims/Strawberry_Fall_Animation")
+		return
+	if is_jumping:
+		StrawberryAnim.play("strawberry_anims/Strawberry_Jump_Animation")
+		return
+	if any_move_input:
+		StrawberryAnim.play("strawberry_anims/Strawberry_Run_Animation")
+		return
+	else:
+		StrawberryAnim.play("strawberry_anims/Strawberry_Idle_Animation-loop")
 
 func hurt(unrecoverable:bool=false):
 	health -= 1
@@ -140,7 +170,12 @@ func dash(dash_input:bool, direction):
 		dashing = false
 
 func is_falling():
-	return velocity.y <= 0.4 and not is_on_floor()
+	return velocity.y <= 0.4 and not is_on_floor() and not descending
+
+func handle_descend(descend_input):
+	if not is_on_floor() and descend_input:
+		velocity.y = -30
+		descending = true
 
 func handle_float(float_input:bool):
 	if is_falling() and float_input:
