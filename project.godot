@@ -30,6 +30,12 @@ Transitioner="*res://entities/transitioner.tscn"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[file_customization]
+
+folder_colors={
+"res://assets/models_and_textures/": "pink"
+}
+
 [input]
 
 forward={
