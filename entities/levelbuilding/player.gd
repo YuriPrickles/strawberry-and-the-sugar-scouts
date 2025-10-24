@@ -6,8 +6,11 @@ extends CharacterBody3D
 @onready var StrawberryAnim:AnimationPlayer = $Strawberry/AnimationPlayer
 
 var SPEED = 7
-var DASH_SPEED = 24
+var DASH_SPEED = 32
 var DASH_COOLDOWN = 0.2
+var DASH_ATTACK = 0.2 ##Similar to hit indie platformer Celeste, dash attack is the small window of time where the player is still considered dashing even after the dash has ended.
+var DESCEND_SPEED = 30
+var DESCEND_REST_TIME = 0.2
 var JUMP_VELOCITY = 8
 var FALL_VELOCITY = 16
 var FLOAT_VELOCITY = 3
@@ -26,6 +29,8 @@ var dash_cooldown_timer:Timer = Timer.new()
 var jump_chain_grace:Timer = Timer.new()
 var superdash_grace:Timer = Timer.new()
 var inv_frames_timer:Timer = Timer.new()
+var dash_attack_timer:Timer = Timer.new()
+var descend_rest_timer:Timer = Timer.new()
 
 var is_going_up:bool = false
 var is_jumping: bool = false
@@ -35,9 +40,12 @@ var max_jump_chain = 2
 
 var any_move_input:bool = false
 var last_saved_direction:Vector3 = Vector3(1,0,0)
+
 var dashes = 1
 var max_dashes = 1
+var dash_attacking = false ##Handles interactions with dashable things.
 var dashing = false
+
 var floating = false
 var descending = false
 
@@ -46,6 +54,7 @@ var health:int = 4
 var max_health:int = 4
 
 var can_move = true
+var direction:Vector3
 
 func _init() -> void:
 	coyote_time.one_shot = true
@@ -54,6 +63,8 @@ func _init() -> void:
 	jump_chain_grace.one_shot = true
 	superdash_grace.one_shot = true
 	inv_frames_timer.one_shot = true
+	dash_attack_timer.one_shot = true
+	descend_rest_timer.one_shot = true
 	
 	coyote_time.wait_time = COYOTE_TIME
 	juffer.wait_time = JUMP_BUFFER_TIME
@@ -61,6 +72,8 @@ func _init() -> void:
 	jump_chain_grace.wait_time = JUMP_CHAIN_GRACE_TIME
 	superdash_grace.wait_time = SUPERDASH_GRACE_TIME
 	inv_frames_timer.wait_time = INVINCIBILITY_TIME
+	dash_attack_timer.wait_time = DASH_ATTACK
+	descend_rest_timer.wait_time = DESCEND_REST_TIME
 	
 	coyote_time.name = "CoyoteTimer"
 	juffer.name = "Juffer"
@@ -68,6 +81,8 @@ func _init() -> void:
 	jump_chain_grace.name = "JumpChainGraceTimer"
 	superdash_grace.name = "SuperdashGraceTimer"
 	inv_frames_timer.name = "InvincibilityTimer"
+	dash_attack_timer.name = "DashAttackTimer"
+	descend_rest_timer.name = "DescendRestTimer"
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -91,20 +106,29 @@ func _physics_process(delta: float) -> void:
 		dashes = max_dashes
 	
 	if is_on_floor() and descending:
+		velocity = Vector3.ZERO
+		descend_rest_timer.start()
 		descending = false
 	
-	handle_descend(Input.is_action_just_pressed("descend"))
 	handle_jump(Input.is_action_just_pressed("jump"))
-	dash(Input.is_action_just_pressed("dash"),last_saved_direction)
+	if dash(Input.is_action_just_pressed("dash"),last_saved_direction) and dash_attack_timer.is_stopped():
+		await get_tree().create_timer(0.1).timeout
+		dashing = false
+		dash_attack_timer.start()
+		await dash_attack_timer.timeout
+		dash_attacking = false
+	handle_descend(Input.is_action_just_pressed("descend"))
 	
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if not dashing or not descending:
+	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized().rotated(CameraPivot.position,CameraPivot.rotation.y)
+	if not dashing and not descending and descend_rest_timer.is_stopped():
 		if direction:
 			velocity.x = move_toward(velocity.x, direction.x * SPEED, SPEED * 0.3) 
 			velocity.z = move_toward(velocity.z, direction.z * SPEED, SPEED * 0.3)
 			last_saved_direction = direction
+			var dir_vector:Vector2 = Vector2(direction.x,direction.z)
+			StrawberryModel.rotation.y = rotate_toward(StrawberryModel.rotation.y, -dir_vector.angle() + deg_to_rad(90), delta * 10)
 			any_move_input = true
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -117,7 +141,7 @@ func handle_animations():
 	if descending:
 		StrawberryAnim.play("strawberry_anims/Strawberry_Descend_Animation")
 		return
-	if dashing:
+	if dash_attacking:
 		StrawberryAnim.play("strawberry_anims/Strawberry_Dash_Animation")
 		return
 	if floating:
@@ -158,23 +182,26 @@ func kill():
 	get_tree().paused = false
 	LevelManager.set_session_timer_ignore_pauses(false)
 
-func dash(dash_input:bool, direction):
+func dash(dash_input:bool, dash_direction) -> bool:
 	if dashes > 0 and dash_input and dash_cooldown_timer.is_stopped():
 		dashing = true
-		velocity.x = direction.x * DASH_SPEED
-		velocity.z = direction.z * DASH_SPEED
+		dash_attacking = true
+		velocity.x = dash_direction.x * DASH_SPEED
+		velocity.z = dash_direction.z * DASH_SPEED
+		var dir_vector:Vector2 = Vector2(dash_direction.x,dash_direction.z)
+		StrawberryModel.rotation.y = rotate_toward(StrawberryModel.rotation.y, -dir_vector.angle() + deg_to_rad(90), 10000)
 		dashes -= 1
 		dash_cooldown_timer.start()
 		superdash_grace.start()
-		await get_tree().create_timer(0.1).timeout
-		dashing = false
+		return true
+	return false
 
 func is_falling():
 	return velocity.y <= 0.4 and not is_on_floor() and not descending
 
 func handle_descend(descend_input):
 	if not is_on_floor() and descend_input:
-		velocity.y = -30
+		velocity.y = -DESCEND_SPEED
 		descending = true
 
 func handle_float(float_input:bool):
@@ -254,7 +281,7 @@ func _input(event: InputEvent) -> void:
 		if event is InputEventMouseMotion:
 			CameraPivot.rotation.x -= event.relative.y / look_sensitivity
 			CameraPivot.rotation.x = clamp(CameraPivot.rotation.x, deg_to_rad(-90), deg_to_rad(0))
-			rotation.y -= event.relative.x / look_sensitivity
+			CameraPivot.rotation.y -= event.relative.x / look_sensitivity
 
 func add_timers():
 	get_tree().root.add_child.call_deferred(juffer)
@@ -263,3 +290,5 @@ func add_timers():
 	get_tree().root.add_child.call_deferred(jump_chain_grace)
 	get_tree().root.add_child.call_deferred(superdash_grace)
 	get_tree().root.add_child.call_deferred(inv_frames_timer)
+	get_tree().root.add_child.call_deferred(dash_attack_timer)
+	get_tree().root.add_child.call_deferred(descend_rest_timer)

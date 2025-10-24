@@ -24,6 +24,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="pointer" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(-1, -1.509958e-07, 6.600236e-15, 0, -4.371139e-08, -1, 1.509958e-07, -1, 4.371139e-08, 0, 0, -1.5)
+visible = false
 mesh = SubResource("PrismMesh_merdl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
