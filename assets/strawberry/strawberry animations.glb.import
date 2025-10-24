@@ -1,15 +1,15 @@
 [remap]
 
-importer="scene"
+importer="animation_library"
 importer_version=1
-type="PackedScene"
-uid="uid://c35ncakt6hlnx"
-path="res://.godot/imported/strawberry.glb-f375b5981a58d55cf38c932070a3f758.scn"
+type="AnimationLibrary"
+uid="uid://chfbhpo3q614x"
+path="res://.godot/imported/strawberry animations.glb-0c3bd10137786bc9804c54e3c431e23c.res"
 
 [deps]
 
-source_file="res://character models/strawberry model/strawberry.glb"
-dest_files=["res://.godot/imported/strawberry.glb-f375b5981a58d55cf38c932070a3f758.scn"]
+source_file="res://assets/strawberry/strawberry animations.glb"
+dest_files=["res://.godot/imported/strawberry animations.glb-0c3bd10137786bc9804c54e3c431e23c.res"]
 
 [params]
 

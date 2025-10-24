@@ -1,11 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://tbhvjb08sxvy"]
 
-[ext_resource type="PackedScene" uid="uid://c35ncakt6hlnx" path="res://character models/strawberry model/strawberry.glb" id="1_h58s7"]
+[ext_resource type="PackedScene" uid="uid://c35ncakt6hlnx" path="res://assets/strawberry/strawberry.glb" id="1_h58s7"]
 [ext_resource type="Texture2D" uid="uid://dy7e2xpr6hsan" path="res://addons/Tex_SkinHair.png" id="2_ecgix"]
-[ext_resource type="Texture2D" uid="uid://db2v32wjkq3ww" path="res://character models/strawberry model/Tex_Clothes.png" id="3_pt3x6"]
-[ext_resource type="Texture2D" uid="uid://cqio2ujanx7iq" path="res://character models/strawberry model/Tex_Eyes.png" id="4_ml3pa"]
-[ext_resource type="Texture2D" uid="uid://cnxxiekwyc2gl" path="res://character models/strawberry model/Tex_Mouth.png" id="5_twgrh"]
-[ext_resource type="AnimationLibrary" uid="uid://chfbhpo3q614x" path="res://character models/strawberry model/strawberry animations.glb" id="6_q3s40"]
+[ext_resource type="Texture2D" uid="uid://db2v32wjkq3ww" path="res://assets/strawberry/Tex_Clothes.png" id="3_pt3x6"]
+[ext_resource type="Texture2D" uid="uid://cqio2ujanx7iq" path="res://assets/strawberry/Tex_Eyes.png" id="4_ml3pa"]
+[ext_resource type="Texture2D" uid="uid://cnxxiekwyc2gl" path="res://assets/strawberry/Tex_Mouth.png" id="5_twgrh"]
+[ext_resource type="AnimationLibrary" uid="uid://chfbhpo3q614x" path="res://assets/strawberry/strawberry animations.glb" id="6_q3s40"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktb0w"]
 albedo_texture = ExtResource("2_ecgix")
