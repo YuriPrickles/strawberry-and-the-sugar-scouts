@@ -103,7 +103,7 @@ func _physics_process(delta: float) -> void:
 					velocity.y -= FALL_VELOCITY * delta
 		else:
 			velocity.y = clamp(velocity.y, 0, INF)
-	else:
+	elif not dashing:
 		dashes = max_dashes
 	
 	if is_on_floor() and descending:
@@ -112,9 +112,7 @@ func _physics_process(delta: float) -> void:
 		descending = false
 	descending_anim = descending or not descend_rest_timer.is_stopped()
 	handle_jump(Input.is_action_just_pressed("jump"))
-	if dash(Input.is_action_just_pressed("dash"),last_saved_direction) and dash_attack_timer.is_stopped():
-		await get_tree().create_timer(0.1).timeout
-		dashing = false
+	if await dash(Input.is_action_just_pressed("dash"),last_saved_direction) and dash_attack_timer.is_stopped():
 		dash_attack_timer.start()
 		await dash_attack_timer.timeout
 		dash_attacking = false
@@ -187,7 +185,7 @@ func kill():
 	LevelManager.set_session_timer_ignore_pauses(false)
 
 func dash(dash_input:bool, dash_direction) -> bool:
-	if dashes > 0 and dash_input and dash_cooldown_timer.is_stopped():
+	if not dashing and dashes > 0 and dash_input and dash_cooldown_timer.is_stopped():
 		dashing = true
 		dash_attacking = true
 		velocity.x = dash_direction.x * DASH_SPEED
@@ -197,6 +195,8 @@ func dash(dash_input:bool, dash_direction) -> bool:
 		dashes -= 1
 		dash_cooldown_timer.start()
 		superdash_grace.start()
+		await get_tree().create_timer(0.1).timeout
+		dashing = false
 		return true
 	return false
 

@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://doe1r3kxhbvno"]
+[gd_scene load_steps=10 format=4 uid="uid://doe1r3kxhbvno"]
 
-[ext_resource type="MeshLibrary" uid="uid://qvh4b5fjos1v" path="res://meshlibs/test_meshlib.tres" id="1_ea16h"]
+[ext_resource type="MeshLibrary" uid="uid://yqj6jdbkk8vd" path="res://meshlibs/test_placeholdertiles.tres" id="1_7q02i"]
 [ext_resource type="Script" uid="uid://dp3kyxixyhgvt" path="res://entities/levelbuilding/base_room.gd" id="2_pajsp"]
+[ext_resource type="TileSet" uid="uid://bxseou1w2480d" path="res://assets/placeholder_tiles/Autotile_tileset.tres" id="3_7q02i"]
 [ext_resource type="PackedScene" uid="uid://khtyojs3w74o" path="res://entities/levelbuilding/spawn_point.tscn" id="3_ea16h"]
 [ext_resource type="PackedScene" uid="uid://pxp73vkmmqbo" path="res://entities/levelbuilding/kill_trigger.tscn" id="4_23oby"]
+[ext_resource type="Script" uid="uid://cqx55iw26lbyf" path="res://addons/grid_map_layer/scripts/grid_map_layer.gd" id="6_adl4c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ea16h"]
 
@@ -24,13 +26,16 @@ fog_enabled = true
 adjustment_enabled = true
 
 [node name="Room" type="GridMap" node_paths=PackedStringArray("spawn_points")]
-mesh_library = ExtResource("1_ea16h")
-cell_size = Vector3(1, 1, 1)
+mesh_library = ExtResource("1_7q02i")
+cell_size = Vector3(2, 1, 2)
+cell_center_y = false
 data = {
-"cells": PackedInt32Array(65535, 65535, 0, 65535, 0, 0, 0, 0, 0, 0, 65535, 0)
+"cells": PackedInt32Array(0, 65535, 1441805, 65535, 65535, 1441805, 65534, 0, 1048588, 65535, 0, 1441805, 65534, 65535, 1048588, 65535, 1, 655372, 1, 65535, 1441804, 0, 65534, 12, 65535, 65534, 12, 65534, 65534, 10, 1, 65534, 1441802, 65534, 1, 1048586, 0, 0, 1441805, 0, 1, 655372, 1, 0, 1441804, 1, 1, 655370)
 }
 script = ExtResource("2_pajsp")
 spawn_points = [NodePath("DefaultSpawn")]
+tile_set = ExtResource("3_7q02i")
+metadata/_custom_type_script = "uid://d2l82c6jisvlk"
 metadata/_editor_floor_ = Vector3(0, 0, 4)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -44,5 +49,12 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="KillTrigger" parent="." instance=ExtResource("4_23oby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
-trigger_size = Vector3(900, 1, 900)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -52, 0)
+trigger_size = Vector3(9000, 100, 9000)
+
+[node name="GridMapLayer" type="TileMapLayer" parent="." node_paths=PackedStringArray("target_gridmap")]
+tile_map_data = PackedByteArray("AAAAAAAAAAAJAAIAAAAAAP//AAAJAAIAAAD/////AAAJAAIAAAD//wAAAAAJAAIAAAD//wEAAAAJAAMAAAAAAAEAAAAJAAMAAAABAAAAAAALAAIAAAABAP//AAALAAIAAAAAAP7/AAAKAAAAAAD///7/AAAKAAAAAAD+//7/AAAIAAAAAAABAP7/AAALAAAAAAABAAEAAAALAAMAAAD+////AAAIAAEAAAD+/wAAAAAIAAEAAAD+/wEAAAAIAAMAAAA=")
+tile_set = ExtResource("3_7q02i")
+script = ExtResource("6_adl4c")
+target_gridmap = NodePath("..")
+metadata/_custom_type_script = "uid://cqx55iw26lbyf"

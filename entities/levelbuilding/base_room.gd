@@ -1,6 +1,6 @@
 @tool
 class_name Room
-extends GridMap
+extends GridMapLayerBaker
 
 ##Add all your room's spawn points to this array.[br]
 ##This will give them their own IDs, which are their indices in the array.
@@ -12,6 +12,9 @@ var room_transitions:Array[RoomTransition]
 var entered_spawn_point:SpawnPoint = null
 
 func _ready() -> void:
+	for gridlayer in get_children():
+		if gridlayer is GridMapLayer:
+			gridlayer.hide()
 	if Engine.is_editor_hint(): return
 	if spawn_points.size() <= 0:
 		assert(false, "Please assign at least one Spawn Point to the room!\nHow does this happen? You're given a DefaultSpawn!")
