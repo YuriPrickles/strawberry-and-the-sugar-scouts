@@ -1,4 +1,4 @@
-[gd_resource type="MeshLibrary" load_steps=67 format=4 uid="uid://yqj6jdbkk8vd"]
+[gd_resource type="MeshLibrary" load_steps=78 format=4 uid="uid://yqj6jdbkk8vd"]
 
 [ext_resource type="Texture2D" uid="uid://btief4uhmfgdp" path="res://assets/placeholder_tiles/Basic Tiles_Untitled.png" id="1_ce0cj"]
 
@@ -54,6 +54,9 @@ data = {
 [sub_resource type="ImageTexture" id="ImageTexture_mrpkq"]
 image = SubResource("Image_ce0cj")
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2jw1x"]
+data = PackedVector3Array(0.5, 1, 0.5, 0, 1, 1, 0, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 1, 0, 1, 1, 0.5, 1, 0.5, 0.5183, 1, 0.7951, 0.5, 1, 1, 0, 1, 0.5, 0, 1, 1, -0.5, 1, 1, 0.5, 1, 0.5, 0.61179996, 1, 0.61179996, 0.5183, 1, 0.7951, 0.61179996, 1, 0.61179996, 0.5, 1, 0.5, 0.7951, 1, 0.5183, 0.7951, 1, 0.5183, 0.5, 1, 0.5, 1, 1, 0.5, 1, 1, 0, 1, 1, 0.5, 0.5, 1, 0.5, 1, 1, 0, 0.5, 1, 0.5, 0.5, 1, 0, 0.5, 1, 0, 0.5, 1, 0.5, 0, 1, 0.5, 1, 1, -0.5, 1, 1, 0, 0.5, 1, 0, 1, 1, -0.5, 0.5, 1, 0, 0.5, 1, -0.5, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0, 0.5, 1, 0, 0, 1, 0.5, 0, 1, 0, 0.5, 1, -0.5, 0, 1, 0, 0, 1, -0.5, 0, 1, 0.5, -0.5, 1, 1, -0.5, 1, 0.5, 0, 1, 0, 0, 1, 0.5, -0.5, 1, 0.5, -0.5183, 1, 0.7951, -0.5, 1, 0.5, -0.5, 1, 1, -0.5, 1, 0.5, -0.5183, 1, 0.7951, -0.61179996, 1, 0.61179996, -0.5, 1, 0.5, -0.61179996, 1, 0.61179996, -0.7951, 1, 0.5183, -0.5, 1, 0.5, -0.7951, 1, 0.5183, -1, 1, 0.5, 0, 1, -0.5, 0, 1, 0, -0.5, 1, 0, 0, 1, 0, -0.5, 1, 0.5, -0.5, 1, 0, -0.5, 1, 0, -0.5, 1, 0.5, -1, 1, 0.5, 0, 1, -0.5, -0.5, 1, 0, -0.5, 1, -0.5, -0.5, 1, 0, -1, 1, 0.5, -1, 1, 0, -0.5, 1, -0.5, -0.5, 1, 0, -1, 1, 0, -0.5, 1, -0.5, -1, 1, 0, -1, 1, -0.5, -0.5, 0, 0.5, 0, 0, 1, 0, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 1, 0, 0, 1, -0.5, 0, 0.5, -0.5183, 0, 0.7951, -0.5, 0, 1, 0, 0, 0.5, 0, 0, 1, 0.5, 0, 1, -0.5, 0, 0.5, -0.61179996, 0, 0.61179996, -0.5183, 0, 0.7951, -0.61179996, 0, 0.61179996, -0.5, 0, 0.5, -0.7951, 0, 0.5183, -0.7951, 0, 0.5183, -0.5, 0, 0.5, -1, 0, 0.5, -1, 0, 0, -1, 0, 0.5, -0.5, 0, 0.5, -1, 0, 0, -0.5, 0, 0.5, -0.5, 0, 0, -0.5, 0, 0, -0.5, 0, 0.5, 0, 0, 0.5, -1, 0, -0.5, -1, 0, 0, -0.5, 0, 0, -1, 0, -0.5, -0.5, 0, 0, -0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 0, 0, 0, 0, 0, -0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, -0.5, 0, -0.5, 0, 0, 0, 0, 0, -0.5, 0, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0.5, 0.5183, 0, 0.7951, 0.5, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, 0.5183, 0, 0.7951, 0.61179996, 0, 0.61179996, 0.5, 0, 0.5, 0.61179996, 0, 0.61179996, 0.7951, 0, 0.5183, 0.5, 0, 0.5, 0.7951, 0, 0.5183, 1, 0, 0.5, 0, 0, -0.5, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0.5, 0, 0.5, 0.5, 0, 0, 0.5, 0, 0, 0.5, 0, 0.5, 1, 0, 0.5, 0, 0, -0.5, 0.5, 0, 0, 0.5, 0, -0.5, 0.5, 0, 0, 1, 0, 0.5, 1, 0, 0, 0.5, 0, -0.5, 0.5, 0, 0, 1, 0, 0, 0.5, 0, -0.5, 1, 0, 0, 1, 0, -0.5, -0.5, 0, -0.5, -1, 1, -0.5, -1, 0, -0.5, -0.5, 0, -0.5, -0.5, 1, -0.5, -1, 1, -0.5, -0.5, 1, -0.5, -0.5, 0, -0.5, 0, 0, -0.5, -0.5, 1, -0.5, 0, 0, -0.5, 0, 1, -0.5, 0, 0, -0.5, 0.5, 1, -0.5, 0, 1, -0.5, 0, 0, -0.5, 0.5, 0, -0.5, 0.5, 1, -0.5, 0.5, 0, -0.5, 1, 1, -0.5, 0.5, 1, -0.5, 0.5, 0, -0.5, 1, 0, -0.5, 1, 1, -0.5, -0.5, 0, 1, -0.5183, 1, 0.7951, -0.5, 1, 1, -0.5, 0, 1, -0.5183, 0, 0.7951, -0.5183, 1, 0.7951, -0.5183, 0, 0.7951, -0.61179996, 1, 0.61179996, -0.5183, 1, 0.7951, -0.5183, 0, 0.7951, -0.61179996, 0, 0.61179996, -0.61179996, 1, 0.61179996, -0.61179996, 0, 0.61179996, -0.7951, 1, 0.5183, -0.61179996, 1, 0.61179996, -0.61179996, 0, 0.61179996, -0.7951, 0, 0.5183, -0.7951, 1, 0.5183, -0.7951, 0, 0.5183, -1, 1, 0.5, -0.7951, 1, 0.5183, -0.7951, 0, 0.5183, -1, 0, 0.5, -1, 1, 0.5, 0.5, 1, 1, 0.5183, 0, 0.7951, 0.5, 0, 1, 0.5, 1, 1, 0.5183, 1, 0.7951, 0.5183, 0, 0.7951, 0.5183, 1, 0.7951, 0.61179996, 0, 0.61179996, 0.5183, 0, 0.7951, 0.5183, 1, 0.7951, 0.61179996, 1, 0.61179996, 0.61179996, 0, 0.61179996, 0.61179996, 1, 0.61179996, 0.7951, 0, 0.5183, 0.61179996, 0, 0.61179996, 0.61179996, 1, 0.61179996, 0.7951, 1, 0.5183, 0.7951, 0, 0.5183, 0.7951, 1, 0.5183, 1, 0, 0.5, 0.7951, 0, 0.5183, 0.7951, 1, 0.5183, 1, 1, 0.5, 1, 0, 0.5)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_lq8iq"]
 _surfaces = [{
 "aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
@@ -98,6 +101,15 @@ data = {
 [sub_resource type="ImageTexture" id="ImageTexture_d8oyn"]
 image = SubResource("Image_bsll5")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dlakj"]
+points = PackedVector3Array(-0.4908547, 0.009241756, -0.045942508, 0.4908496, 0.99077487, 0.045944065, 0.47557315, 0.99078095, 0.12264718, 0.47557315, 0.009219067, 0.12264718, 0.046015956, 0.00935691, -0.4908353, -0.3536013, 0.9918201, -0.35359803, -0.19821016, 0.98772395, 0.45734867, 0.046015956, 0.00935691, 0.4908353, 0.33528173, 0.98762196, -0.36576423, -0.49085, 0.99075353, 0.045942068, -0.353542, 0.008262409, 0.35353872, 0.19809677, 0.9877335, 0.45735765, 0.45739698, 0.012202486, -0.1981379, -0.3536013, 0.008179932, -0.35359803, -0.045943417, 0.99066234, -0.49085453, 0.33523124, 0.012451462, 0.36570916, -0.4573533, 0.9877277, 0.19810954, 0.19809817, 0.012263022, -0.4573609, -0.4574051, 0.98778296, -0.19813198, -0.19821157, 0.012272559, -0.45735195, 0.36573082, 0.9874751, 0.33519882, 0.45739698, 0.9877975, -0.1981379, -0.4573533, 0.012272276, 0.19810954, 0.19809817, 0.987737, -0.4573609, -0.19821016, 0.012276033, 0.45734867, -0.045943417, 0.99066234, 0.49085453, -0.353542, 0.9917376, 0.35353872, 0.36577228, 0.012469629, -0.33523682, 0.4908543, 0.00922046, -0.0459445, -0.4574051, 0.012217044, -0.19813198, 0.45734516, 0.0122577585, 0.19811544, -0.19821157, 0.98772746, -0.45735195)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74k04"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_ce0cj")
+roughness = 0.5
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_xa7lc"]
 _surfaces = [{
 "aabb": AABB(-0.9999999, 0, -1, 2, 1, 2),
@@ -122,7 +134,7 @@ _surfaces = [{
 "index_count": 228,
 "index_data": PackedByteArray("NAAZAB4ANAAYABkANQA0AB4ANQAeAB8ANgAYADQANgAUABgANwA0ADUANwA2ADQAOAA1AB8AOAAfACIAIQA4ACIAIQAiACMAIAA4ACEAOQA1ADgAIAA5ADgAOQA3ADUAHQA5ACAAHQA6ADkAOgA3ADkAHAA6AB0AGwA6ABwAOgAbABoAOgAaABcAOgA7ADcAFwA7ADoAOwA2ADcAFwAWADsAOwA8ADYAFgA8ADsAPAAUADYAFgASADwAPAATABQAEgATADwAEgAVABMAPQAFAAMAPQAHAAUAPgA9AAMAPgADAAEAPwAHAD0APwANAAcAQAA9AD4AQAA/AD0AQQA+AAEAQQABAAIABABBAAIABgBBAAQAQQAGAAgAQQAIAAkACgBBAAkAQgA+AEEACgBCAEEAQgBAAD4ACwBCAAoACwBDAEIAQwBAAEIADABDAAsADAAAAEMAQwBEAEAAAABEAEMARAA/AEAAAAAOAEQARABFAD8ADgBFAEQARQANAD8ADgAPAEUARQAQAA0ADwAQAEUADwARABAAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEA"),
 "lods": [1e-10, PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAAAFAAMABgAAAAQAAAAHAAUAAAAGAAgAAAAIAAkACgAAAAkACwAAAAoADAAAAAsAAAANAAcADgANAAAADgAPAA0ADwAQAA0ADwARABAAEgATABQAEgAVABMAFgASABQAFgAUABcAFwAUABgAFwAYABkAGQAaABcAGQAbABoAGwAZABwAHAAZAB0AHQAZAB4AHQAeAB8AIAAdAB8AIAAfACEAIQAfACIAIQAiACMAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEA")],
-"material": SubResource("StandardMaterial3D_k3kkx"),
+"material": SubResource("StandardMaterial3D_74k04"),
 "name": "Material.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -159,7 +171,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_l61h1"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_rsuty"]
 resource_name = "Basic Tiles_Cube_101"
 _surfaces = [{
 "aabb": AABB(-0.5, 0, -0.5000001, 1.5, 1, 1.5),
@@ -187,8 +199,11 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_jjlxg"]
+[sub_resource type="ImageTexture" id="ImageTexture_8f6mk"]
 image = SubResource("Image_3iqmp")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ykliu"]
+data = PackedVector3Array(0.5, 0, 0.5, 1, 0, 1, 1, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, 1, 1, 0, 1, 0.5, 0, 0, 0.5, 0, 0.5, 1, 0, 0.5, 0.5, 0, 0, 1, 0, 0.5, 1, 0, 0, 0.5, 0, -0.5, 0.5, 0, 0, 1, 0, 0, 0.5, 0, -0.5, 1, 0, 0, 1, 0, -0.5, 0, 0, -0.5, 0.5, 0, 0, 0.5, 0, -0.5, 0, 0, -0.5, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0.5, 0, 0.5, 0.5, 0, 0, -0.19129999, 0, -0.46199998, 0, 0, 0, 0, 0, -0.5, 0, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0.5, 0, 0, 0.5, 0, 0, 1, 0.5, 0, 1, -0.46199998, 0, -0.19129999, 0, 0, 0, -0.19129999, 0, -0.46199998, -0.46199998, 0, -0.19129999, -0.19129999, 0, -0.46199998, -0.3536, 0, -0.3536, 0, 0, 0, -0.46199998, 0, -0.19129999, -0.5, 0, 0, -0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, -0.5, 0, 0, -0.5, 0, 0.5, 0, 0, 0.5, -0.5, 0, 0.5, 0, 0, 1, 0, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 1, 0, 0, 1, 0.5, 1, 0.5, 0, 1, 1, 0, 1, 0.5, 0, 1, 0.5, 0, 1, 1, -0.5, 1, 1, 0, 1, 0.5, -0.5, 1, 1, -0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 1, 0, 1, 1, 1, 1, 0.5, 0.5, 1, 1, 0.5, 1, 0.5, 1, 1, 0.5, 1, 1, 1, 0.5, 1, 1, 1, 1, 0, 1, 1, 0.5, 0.5, 1, 0.5, 1, 1, 0, 0.5, 1, 0.5, 0.5, 1, 0, 0.5, 1, 0, 0.5, 1, 0.5, 0, 1, 0.5, 1, 1, -0.5, 1, 1, 0, 0.5, 1, 0, 1, 1, -0.5, 0.5, 1, 0, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0.5, 0, 1, 0, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0.5, -0.5, 1, 0.5, 0.5, 1, -0.5, 0, 1, 0, 0, 1, -0.5, 0, 1, 0, -0.5, 1, 0.5, -0.5, 1, 0, 0, 1, 0, -0.19129999, 1, -0.46199998, 0, 1, -0.5, -0.46199998, 1, -0.19129999, 0, 1, 0, -0.5, 1, 0, -0.19129999, 1, -0.46199998, 0, 1, 0, -0.46199998, 1, -0.19129999, -0.19129999, 1, -0.46199998, -0.46199998, 1, -0.19129999, -0.3536, 1, -0.3536, -0.5, 0, 1, -0.5, 1, 0.5, -0.5, 1, 1, -0.5, 0, 1, -0.5, 0, 0.5, -0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 1, 0, -0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 0, 0, -0.5, 1, 0, 0.5, 0, -0.5, 0, 1, -0.5, 0, 0, -0.5, 0.5, 0, -0.5, 0.5, 1, -0.5, 0, 1, -0.5, 0.5, 1, -0.5, 0.5, 0, -0.5, 1, 0, -0.5, 0.5, 1, -0.5, 1, 0, -0.5, 1, 1, -0.5, 0, 1, -0.5, -0.19129999, 0, -0.46199998, 0, 0, -0.5, 0, 1, -0.5, -0.19129999, 1, -0.46199998, -0.19129999, 0, -0.46199998, -0.19129999, 1, -0.46199998, -0.3536, 0, -0.3536, -0.19129999, 0, -0.46199998, -0.19129999, 1, -0.46199998, -0.3536, 1, -0.3536, -0.3536, 0, -0.3536, -0.3536, 1, -0.3536, -0.46199998, 0, -0.19129999, -0.3536, 0, -0.3536, -0.3536, 1, -0.3536, -0.46199998, 1, -0.19129999, -0.46199998, 0, -0.19129999, -0.46199998, 1, -0.19129999, -0.5, 0, 0, -0.46199998, 0, -0.19129999, -0.46199998, 1, -0.19129999, -0.5, 1, 0, -0.5, 0, 0)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_oasnc"]
 _surfaces = [{
@@ -205,7 +220,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_8xw5h"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jjlxg"]
 resource_name = "Basic Tiles_Cube_102"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 1, 2),
@@ -233,8 +248,11 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_gr00w"]
+[sub_resource type="ImageTexture" id="ImageTexture_wngjc"]
 image = SubResource("Image_ebuo2")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oywhi"]
+data = PackedVector3Array(0.5, 0, 0.5, 1, 0, 1, 1, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, 1, 1, 0, 1, 0.5, 0, 0, 0.5, 0, 0.5, 1, 0, 0.5, 0.5, 0, 0, 1, 0, 0.5, 1, 0, 0, 0, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, 0, 0, 0.5, 0, 0, 1, 0.5, 0, 1, 0, 0, 0, 0.5, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, 0, 1, 0, 0, 0.5, 0, -0.5, 1, 0, 0, 1, 0, -0.5, 0.7951, 0, -0.5183, 0.5, 0, -0.5, 1, 0, -0.5, 0.61179996, 0, -0.61179996, 0.5, 0, -0.5, 0.7951, 0, -0.5183, 0.5, 0, -0.5, 0.61179996, 0, -0.61179996, 0.5183, 0, -0.7951, 0.5, 0, -0.5, 0.5183, 0, -0.7951, 0.5, 0, -1, 0, 0, -1, 0.5, 0, -0.5, 0.5, 0, -1, 0, 0, -0.5, 0.5, 0, 0, 0.5, 0, -0.5, 0, 0, -1, 0, 0, -0.5, 0.5, 0, -0.5, 0, 0, -0.5, 0, 0, 0, 0.5, 0, 0, -0.5, 0, -1, 0, 0, -0.5, 0, 0, -1, -0.5, 0, -1, -0.5, 0, -0.5, 0, 0, -0.5, -0.5, 0, -0.5, 0, 0, 0, 0, 0, -0.5, -0.5183, 0, -0.7951, -0.5, 0, -0.5, -0.5, 0, -1, -0.61179996, 0, -0.61179996, -0.5, 0, -0.5, -0.5183, 0, -0.7951, -0.5, 0, -0.5, -0.61179996, 0, -0.61179996, -0.7951, 0, -0.5183, -0.5, 0, -0.5, -0.7951, 0, -0.5183, -1, 0, -0.5, -0.5, 0, -0.5, -0.5, 0, 0, 0, 0, 0, -1, 0, -0.5, -0.5, 0, 0, -0.5, 0, -0.5, -0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, -1, 0, -0.5, -1, 0, 0, -0.5, 0, 0, -0.5, 0, 0, -0.5, 0, 0.5, 0, 0, 0.5, -1, 0, 0, -0.5, 0, 0.5, -0.5, 0, 0, -0.5, 0, 0.5, 0, 0, 1, 0, 0, 0.5, -1, 0, 0, -1, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 1, 0, 0, 1, -1, 0, 0.5, -0.5, 0, 1, -0.5, 0, 0.5, -1, 0, 0.5, -1, 0, 1, -0.5, 0, 1, -0.5, 1, 0.5, -1, 1, 1, -1, 1, 0.5, -0.5, 1, 0.5, -0.5, 1, 1, -1, 1, 1, -0.5, 1, 0, -0.5, 1, 0.5, -1, 1, 0.5, -0.5, 1, 0, -1, 1, 0.5, -1, 1, 0, 0, 1, 0.5, -0.5, 1, 1, -0.5, 1, 0.5, 0, 1, 0.5, 0, 1, 1, -0.5, 1, 1, 0, 1, 0, -0.5, 1, 0.5, -0.5, 1, 0, 0, 1, 0, 0, 1, 0.5, -0.5, 1, 0.5, -0.5, 1, -0.5, -0.5, 1, 0, -1, 1, 0, -0.5, 1, -0.5, -1, 1, 0, -1, 1, -0.5, -0.7951, 1, -0.5183, -0.5, 1, -0.5, -1, 1, -0.5, -0.61179996, 1, -0.61179996, -0.5, 1, -0.5, -0.7951, 1, -0.5183, -0.5, 1, -0.5, -0.61179996, 1, -0.61179996, -0.5183, 1, -0.7951, -0.5, 1, -0.5, -0.5183, 1, -0.7951, -0.5, 1, -1, 0, 1, -1, -0.5, 1, -0.5, -0.5, 1, -1, 0, 1, -0.5, -0.5, 1, 0, -0.5, 1, -0.5, 0, 1, -1, 0, 1, -0.5, -0.5, 1, -0.5, 0, 1, -0.5, 0, 1, 0, -0.5, 1, 0, 0.5, 1, -1, 0, 1, -0.5, 0, 1, -1, 0.5, 1, -1, 0.5, 1, -0.5, 0, 1, -0.5, 0.5, 1, -0.5, 0, 1, 0, 0, 1, -0.5, 0.5183, 1, -0.7951, 0.5, 1, -0.5, 0.5, 1, -1, 0.61179996, 1, -0.61179996, 0.5, 1, -0.5, 0.5183, 1, -0.7951, 0.5, 1, -0.5, 0.61179996, 1, -0.61179996, 0.7951, 1, -0.5183, 0.5, 1, -0.5, 0.7951, 1, -0.5183, 1, 1, -0.5, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0, 1, 1, -0.5, 0.5, 1, 0, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0.5, 0, 1, 0, 1, 1, -0.5, 1, 1, 0, 0.5, 1, 0, 0.5, 1, 0, 0.5, 1, 0.5, 0, 1, 0.5, 1, 1, 0, 0.5, 1, 0.5, 0.5, 1, 0, 0.5, 1, 0.5, 0, 1, 1, 0, 1, 0.5, 1, 1, 0, 1, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 1, 0, 1, 1, 1, 1, 0.5, 0.5, 1, 1, 0.5, 1, 0.5, 1, 1, 0.5, 1, 1, 1, 0.5, 1, 1, -0.5, 1, -1, -0.5183, 0, -0.7951, -0.5, 0, -1, -0.5, 1, -1, -0.5183, 1, -0.7951, -0.5183, 0, -0.7951, -0.5183, 1, -0.7951, -0.61179996, 0, -0.61179996, -0.5183, 0, -0.7951, -0.5183, 1, -0.7951, -0.61179996, 1, -0.61179996, -0.61179996, 0, -0.61179996, -0.61179996, 1, -0.61179996, -0.7951, 0, -0.5183, -0.61179996, 0, -0.61179996, -0.61179996, 1, -0.61179996, -0.7951, 1, -0.5183, -0.7951, 0, -0.5183, -0.7951, 1, -0.5183, -1, 0, -0.5, -0.7951, 0, -0.5183, -0.7951, 1, -0.5183, -1, 1, -0.5, -1, 0, -0.5, 1, 1, -0.5, 0.7951, 0, -0.5183, 1, 0, -0.5, 1, 1, -0.5, 0.7951, 1, -0.5183, 0.7951, 0, -0.5183, 0.7951, 1, -0.5183, 0.61179996, 0, -0.61179996, 0.7951, 0, -0.5183, 0.7951, 1, -0.5183, 0.61179996, 1, -0.61179996, 0.61179996, 0, -0.61179996, 0.61179996, 1, -0.61179996, 0.5183, 0, -0.7951, 0.61179996, 0, -0.61179996, 0.61179996, 1, -0.61179996, 0.5183, 1, -0.7951, 0.5183, 0, -0.7951, 0.5183, 1, -0.7951, 0.5, 0, -1, 0.5183, 0, -0.7951, 0.5183, 1, -0.7951, 0.5, 1, -1, 0.5, 0, -1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3up2l"]
 _surfaces = [{
@@ -251,7 +269,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jklio"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_gr00w"]
 resource_name = "Basic Tiles_Cube_103"
 _surfaces = [{
 "aabb": AABB(-1, 0, -0.5, 2, 1, 1.5),
@@ -279,8 +297,11 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_ujehj"]
+[sub_resource type="ImageTexture" id="ImageTexture_8k26b"]
 image = SubResource("Image_d8oyn")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0fgcb"]
+points = PackedVector3Array(-1, 0, -0.5, -1, 0, 1, -1, 1, -0.5, 1, 0, -0.5, -1, 1, 1, 1, 0, 1, 1, 1, -0.5, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_widcn"]
 _surfaces = [{
@@ -297,7 +318,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ld8es"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ujehj"]
 resource_name = "Basic Tiles_Cube_104"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 1, 2),
@@ -325,7 +346,7 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_iahxc"]
+[sub_resource type="ImageTexture" id="ImageTexture_0d64q"]
 image = SubResource("Image_74k04")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_wcgcy"]
@@ -343,7 +364,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_p0b0c"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_iahxc"]
 resource_name = "Basic Tiles_Cube_105"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 1, 2),
@@ -371,7 +392,7 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_02tli"]
+[sub_resource type="ImageTexture" id="ImageTexture_tx6d2"]
 image = SubResource("Image_cmv27")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_nh7rq"]
@@ -388,7 +409,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_gngkf"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_02tli"]
 resource_name = "Basic Tiles_Cube_091"
 _surfaces = [{
 "aabb": AABB(-0.5, 0, -1, 1, 1, 1),
@@ -415,8 +436,11 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_76qmg"]
+[sub_resource type="ImageTexture" id="ImageTexture_s7dwc"]
 image = SubResource("Image_rsuty")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dfej0"]
+data = PackedVector3Array(0, 0, -1, 0.5, 0, -0.5, 0.5, 0, -1, 0, 0, -1, 0, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -1, 0, 0, -0.5, 0, 0, -1, -0.5, 0, -1, -0.5, 0, -0.5, 0, 0, -0.5, -0.4619, 0, -0.3087, 0, 0, -0.5, -0.5, 0, -0.5, 0, 0, -0.5, -0.4619, 0, -0.3087, -0.19139999, 0, -0.0381, -0.19139999, 0, -0.0381, -0.4619, 0, -0.3087, -0.3536, 0, -0.14649999, 0, 0, -0.5, -0.19139999, 0, -0.0381, 0, 0, 0, 0, 0, 0, 0.5, 0, -0.5, 0, 0, -0.5, 0.5, 0, -0.5, 0, 0, 0, 0.35349998, 0, -0.14649999, 0.35349998, 0, -0.14649999, 0, 0, 0, 0.19129999, 0, -0.0381, 0.5, 0, -0.5, 0.35349998, 0, -0.14649999, 0.4619, 0, -0.3087, 0, 1, -1, -0.5, 1, -0.5, -0.5, 1, -1, 0, 1, -1, 0, 1, -0.5, -0.5, 1, -0.5, 0.5, 1, -1, 0, 1, -0.5, 0, 1, -1, 0.5, 1, -1, 0.5, 1, -0.5, 0, 1, -0.5, 0.4619, 1, -0.3087, 0, 1, -0.5, 0.5, 1, -0.5, 0, 1, -0.5, 0.4619, 1, -0.3087, 0.19129999, 1, -0.0381, 0.19129999, 1, -0.0381, 0.4619, 1, -0.3087, 0.35349998, 1, -0.14649999, 0, 1, -0.5, 0.19129999, 1, -0.0381, 0, 1, 0, 0, 1, 0, -0.5, 1, -0.5, 0, 1, -0.5, -0.5, 1, -0.5, 0, 1, 0, -0.3536, 1, -0.14649999, -0.3536, 1, -0.14649999, 0, 1, 0, -0.19139999, 1, -0.0381, -0.5, 1, -0.5, -0.3536, 1, -0.14649999, -0.4619, 1, -0.3087, -0.5, 0, -1, -0.5, 1, -0.5, -0.5, 0, -0.5, -0.5, 0, -1, -0.5, 1, -1, -0.5, 1, -0.5, 0.5, 1, -1, 0.5, 0, -0.5, 0.5, 1, -0.5, 0.5, 1, -1, 0.5, 0, -1, 0.5, 0, -0.5, 0, 0, 0, -0.19139999, 1, -0.0381, 0, 1, 0, 0, 0, 0, -0.19139999, 0, -0.0381, -0.19139999, 1, -0.0381, -0.19139999, 0, -0.0381, -0.3536, 1, -0.14649999, -0.19139999, 1, -0.0381, -0.19139999, 0, -0.0381, -0.3536, 0, -0.14649999, -0.3536, 1, -0.14649999, -0.3536, 0, -0.14649999, -0.4619, 1, -0.3087, -0.3536, 1, -0.14649999, -0.3536, 0, -0.14649999, -0.4619, 0, -0.3087, -0.4619, 1, -0.3087, -0.4619, 0, -0.3087, -0.5, 1, -0.5, -0.4619, 1, -0.3087, -0.4619, 0, -0.3087, -0.5, 0, -0.5, -0.5, 1, -0.5, 0, 1, 0, 0.19129999, 0, -0.0381, 0, 0, 0, 0, 1, 0, 0.19129999, 1, -0.0381, 0.19129999, 0, -0.0381, 0.19129999, 1, -0.0381, 0.35349998, 0, -0.14649999, 0.19129999, 0, -0.0381, 0.19129999, 1, -0.0381, 0.35349998, 1, -0.14649999, 0.35349998, 0, -0.14649999, 0.35349998, 1, -0.14649999, 0.4619, 0, -0.3087, 0.35349998, 0, -0.14649999, 0.35349998, 1, -0.14649999, 0.4619, 1, -0.3087, 0.4619, 0, -0.3087, 0.4619, 1, -0.3087, 0.5, 0, -0.5, 0.4619, 0, -0.3087, 0.4619, 1, -0.3087, 0.5, 1, -0.5, 0.5, 0, -0.5)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cgp1a"]
 _surfaces = [{
@@ -433,7 +457,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cnlky"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_76qmg"]
 resource_name = "Basic Tiles_Cube_092"
 _surfaces = [{
 "aabb": AABB(-0.5, 0, -1, 1, 1, 2),
@@ -461,8 +485,11 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_bldae"]
+[sub_resource type="ImageTexture" id="ImageTexture_lda8w"]
 image = SubResource("Image_l61h1")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pldiv"]
+data = PackedVector3Array(0, 0, -1, 0.5, 0, -0.5, 0.5, 0, -1, 0, 0, -1, 0, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -1, 0, 0, -0.5, 0, 0, -1, 0, 0, -0.5, 0.5, 0, 0, 0.5, 0, -0.5, -0.5, 0, -1, -0.5, 0, -0.5, 0, 0, -0.5, 0, 0, -0.5, 0, 0, 0, 0.5, 0, 0, -0.5, 0, -0.5, 0, 0, 0, 0, 0, -0.5, 0, 0, 0, 0.5, 0, 0.5, 0.5, 0, 0, -0.5, 0, -0.5, -0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0.5, -0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, -0.5, 0, 0, -0.5, 0, 0.5, 0, 0, 0.5, 0, 0, 0.5, 0, 0, 1, 0.5, 0, 1, -0.5, 0, 0.5, 0, 0, 1, 0, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 1, 0, 0, 1, -0.5, 1, 0, -0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 1, 0, -0.5, 0, 0, -0.5, 0, -0.5, -0.5, 0, -1, -0.5, 1, -0.5, -0.5, 0, -0.5, -0.5, 0, -1, -0.5, 1, -1, -0.5, 1, -0.5, 0, 1, -0.5, -0.5, 1, 0, -0.5, 1, -0.5, 0, 1, -1, -0.5, 1, -0.5, -0.5, 1, -1, 0, 1, -1, 0, 1, -0.5, -0.5, 1, -0.5, 0.5, 1, -1, 0, 1, -0.5, 0, 1, -1, 0.5, 1, -1, 0.5, 1, -0.5, 0, 1, -0.5, 0, 1, -0.5, 0, 1, 0, -0.5, 1, 0, 0.5, 1, -0.5, 0, 1, 0, 0, 1, -0.5, 0, 1, 0, -0.5, 1, 0.5, -0.5, 1, 0, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0.5, -0.5, 1, 0.5, 0.5, 1, 0, 0, 1, 0.5, 0, 1, 0, 0, 1, 0.5, -0.5, 1, 1, -0.5, 1, 0.5, 0.5, 1, 0, 0.5, 1, 0.5, 0, 1, 0.5, 0, 1, 0.5, 0, 1, 1, -0.5, 1, 1, 0.5, 1, 0.5, 0, 1, 1, 0, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 1, 0, 1, 1, 0.5, 0, 0, 0.5, 1, -0.5, 0.5, 0, -0.5, 0.5, 0, 0, 0.5, 1, 0, 0.5, 1, -0.5, 0.5, 1, -1, 0.5, 0, -0.5, 0.5, 1, -0.5, 0.5, 1, -1, 0.5, 0, -1, 0.5, 0, -0.5, 0.5, 1, 0.5, 0.5, 0, 0, 0.5, 0, 0.5, 0.5, 1, 0.5, 0.5, 1, 0, 0.5, 0, 0, 0.5, 0, 1, 0.5, 1, 0.5, 0.5, 0, 0.5, 0.5, 0, 1, 0.5, 1, 1, 0.5, 1, 0.5, -0.5, 0, 1, -0.5, 1, 0.5, -0.5, 1, 1, -0.5, 0, 1, -0.5, 0, 0.5, -0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 1, 0, -0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 0, 0, -0.5, 1, 0)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ud6do"]
 _surfaces = [{
@@ -479,7 +506,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_3jpb6"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_bldae"]
 resource_name = "Basic Tiles_Cube_094"
 _surfaces = [{
 "aabb": AABB(-0.49999994, 0, -0.49999994, 1.5, 1, 1.5),
@@ -507,8 +534,11 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_jphp7"]
+[sub_resource type="ImageTexture" id="ImageTexture_duxyq"]
 image = SubResource("Image_8f6mk")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e4kqj"]
+data = PackedVector3Array(0.5, 1, 0.5, 0, 1, 1, 0, 1, 0.5, 0, 1, 0.5, 0, 1, 1, -0.5, 1, 1, 0.5, 1, 0.5, 0.5, 1, 1, 0, 1, 1, 0, 1, 0.5, -0.5, 1, 1, -0.5, 1, 0.5, 0.5, 1, 0.5, 0.5183, 1, 0.7951, 0.5, 1, 1, 0.5, 1, 0.5, 0.61179996, 1, 0.61179996, 0.5183, 1, 0.7951, 0.61179996, 1, 0.61179996, 0.5, 1, 0.5, 0.7951, 1, 0.5183, 0.7951, 1, 0.5183, 0.5, 1, 0.5, 1, 1, 0.5, 1, 1, 0, 1, 1, 0.5, 0.5, 1, 0.5, 1, 1, 0, 0.5, 1, 0.5, 0.5, 1, 0, 0.5, 1, 0, 0.5, 1, 0.5, 0, 1, 0.5, 1, 1, -0.5, 1, 1, 0, 0.5, 1, 0, 1, 1, -0.5, 0.5, 1, 0, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0.5, 0, 1, 0, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0.5, -0.5, 1, 0.5, 0.5, 1, -0.5, 0, 1, 0, 0, 1, -0.5, 0, 1, 0, -0.5, 1, 0.5, -0.5, 1, 0, 0, 1, 0, -0.19129999, 1, -0.46199998, 0, 1, -0.5, -0.46199998, 1, -0.19129999, 0, 1, 0, -0.5, 1, 0, -0.19129999, 1, -0.46199998, 0, 1, 0, -0.46199998, 1, -0.19129999, -0.19129999, 1, -0.46199998, -0.46199998, 1, -0.19129999, -0.3536, 1, -0.3536, -0.5, 0, 0.5, 0, 0, 1, 0, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 1, 0, 0, 1, 0, 0, 0.5, 0, 0, 1, 0.5, 0, 1, -0.5, 0, 0, -0.5, 0, 0.5, 0, 0, 0.5, -0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0.5, 0.5183, 0, 0.7951, 0.5, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, 0.5183, 0, 0.7951, 0.61179996, 0, 0.61179996, 0.5, 0, 0.5, 0.61179996, 0, 0.61179996, 0.7951, 0, 0.5183, 0.5, 0, 0.5, 0.7951, 0, 0.5183, 1, 0, 0.5, 0, 0, 0, -0.46199998, 0, -0.19129999, -0.5, 0, 0, 0.5, 0, 0, 0.5, 0, 0.5, 1, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0.5, 0, 0, 0.5, 0, 0, 1, 0, 0.5, 1, 0, 0, -0.46199998, 0, -0.19129999, 0, 0, 0, -0.19129999, 0, -0.46199998, -0.46199998, 0, -0.19129999, -0.19129999, 0, -0.46199998, -0.3536, 0, -0.3536, -0.19129999, 0, -0.46199998, 0, 0, 0, 0, 0, -0.5, 0, 0, -0.5, 0, 0, 0, 0.5, 0, 0, 0, 0, -0.5, 0.5, 0, 0, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, 0, 1, 0, 0, 0.5, 0, -0.5, 1, 0, 0, 1, 0, -0.5, 0.5, 1, -0.5, 1, 0, -0.5, 1, 1, -0.5, 0.5, 1, -0.5, 0.5, 0, -0.5, 1, 0, -0.5, 0.5, 0, -0.5, 0.5, 1, -0.5, 0, 1, -0.5, 0.5, 0, -0.5, 0, 1, -0.5, 0, 0, -0.5, -0.5, 0, 1, -0.5, 1, 0.5, -0.5, 1, 1, -0.5, 0, 1, -0.5, 0, 0.5, -0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 1, 0, -0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 0, 0, -0.5, 1, 0, 0, 1, -0.5, -0.19129999, 0, -0.46199998, 0, 0, -0.5, 0, 1, -0.5, -0.19129999, 1, -0.46199998, -0.19129999, 0, -0.46199998, -0.19129999, 1, -0.46199998, -0.3536, 0, -0.3536, -0.19129999, 0, -0.46199998, -0.19129999, 1, -0.46199998, -0.3536, 1, -0.3536, -0.3536, 0, -0.3536, -0.3536, 1, -0.3536, -0.46199998, 0, -0.19129999, -0.3536, 0, -0.3536, -0.3536, 1, -0.3536, -0.46199998, 1, -0.19129999, -0.46199998, 0, -0.19129999, -0.46199998, 1, -0.19129999, -0.5, 0, 0, -0.46199998, 0, -0.19129999, -0.46199998, 1, -0.19129999, -0.5, 1, 0, -0.5, 0, 0, 0.5, 1, 1, 0.5183, 0, 0.7951, 0.5, 0, 1, 0.5, 1, 1, 0.5183, 1, 0.7951, 0.5183, 0, 0.7951, 0.5183, 1, 0.7951, 0.61179996, 0, 0.61179996, 0.5183, 0, 0.7951, 0.5183, 1, 0.7951, 0.61179996, 1, 0.61179996, 0.61179996, 0, 0.61179996, 0.61179996, 1, 0.61179996, 0.7951, 0, 0.5183, 0.61179996, 0, 0.61179996, 0.61179996, 1, 0.61179996, 0.7951, 1, 0.5183, 0.7951, 0, 0.5183, 0.7951, 1, 0.5183, 1, 0, 0.5, 0.7951, 0, 0.5183, 0.7951, 1, 0.5183, 1, 1, 0.5, 1, 0, 0.5)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_x37yb"]
 _surfaces = [{
@@ -525,7 +555,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_8ad3h"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jphp7"]
 resource_name = "Basic Tiles_Cube_095"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 1, 2),
@@ -546,14 +576,14 @@ shadow_mesh = SubResource("ArrayMesh_x37yb")
 
 [sub_resource type="Image" id="Image_jjlxg"]
 data = {
-"data": PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADn2OH/59fg/+nU4f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADn1t//5tXe/+bW3v/m1t7/5tff/+fX3//o1t7/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOnV3//m2N7/5tbe/+bV3f/m1N3/5tTd/+bV3P/m19r/5tfb/+bZ3P/m2t7/59nf/+nU3/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOjX3v/m297/5tre/+bb3//m2t7/5tjd/+bW3P/m1tr/5tbZ/+bW2v/m2Nv/5tjc/+bY3P/m193/5tfe/+fW3v/o1N//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOjX3v/m2Nv/5tfa/+bX2v/m2dz/5tre/+bZ3v/m2N7/5tfd/+bX3f/m19z/5tfb/+bX2//m1tz/5tbd/+bW3f/m1t3/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5tTe/+bV3//m1uD/5tbg/+bW4P/m1+D/5tff/+bY3//m2N//5tjf/+bY3//m2d//5trg/+ba4P/m2+H/5trg/+bZ4P/m2d//5tjf/+bY3//m2N//5trg/+ba4P/m2uH/5trg/+ba3//l2N7/5Nfd/+TX3f/k193/5Nfd/+TX3f/k193/5dbe/+bW3v/m1t7/5tbe/+bW3v/m1t7/5tbe/+bX3v/m197/5tbe/+bV3v/m1d7/5tbe/+bW3v/m1t7/5tXd/+bU3f/m1Nz/5tTc/+bV3f/nns7/55fH/+eKvP/ne6//52+k/wAAAAAAAAAAAAAAAAAAAADn0N7/5tXe/+bX3v/m197/5tfe/+bW3//m19//5tnf/+ba3//m2t//5trf/+ba3//m2t//5tng/+ba4P/m2+H/5trh/+bZ4P/m2d//5tng/+bZ4P/m2eD/5trg/+ba4P/m2+H/5trg/+ba4P/m2uH/5trh/+XZ4P/l2N//5Nfd/+TX3f/k193/5dfe/+bX3v/m1t7/5tfe/+bX3v/m197/5tfe/+bX3f/m2N7/5tne/+bX3v/m1t7/5tXe/+bV3v/m1t7/5tXe/+bU3v/m1N7/5tXe/+bU3f/nn83/55bG/+eKu//ne67/52+k/+dxpf8AAAAAAAAAAAAAAADn0N7/5tXe/+bX3v/m2N7/5tje/+bX3v/m193/5tfd/+bY3v/m2d//5tnf/+bZ3//m2d//5tjf/+bX3v/m19//5tjf/+bX3v/m2N//5tnf/+bY3v/m2N7/5trf/+bZ3//m2N//5tnf/+bY3//m2N//5tjg/+ba4f/m2+L/5tvi/+bb4v/l2+L/5drg/+bZ3//m2N//5tje/+bY3v/m197/5tfe/+bX3f/m2N3/5tne/+bY3v/m2N7/5tbd/+bW3v/l197/5dfe/+XW3v/l1t7/5dbe/+bT3f/noc3/55vK/+eKu//ne67/53Kn/+d3q//neaz/AAAAAAAAAADn1N7/5tfe/+bX3v/m197/5tbe/+bX3v/m193/5tne/+bY3v/m2N3/5tne/+bX3f/m1t3/5tfe/+bW3v/m197/5tff/+bX3v/m19//5tjf/+bZ3//m2d7/5tre/+ba3v/m2d7/5tje/+bX3v/m197/5tbe/+bX3//m2OD/5tnh/+bZ4f/m2uL/5tzi/+bc4//m3OL/5tzi/+bb4f/l2+D/5drf/+XY3v/l2N3/5dfc/+XX3f/l1tz/5dbc/+XW3f/l1d//5dff/+XY4P/l19//5dbe/+fR3f/noc3/557L/+eRwv/nf7H/53uu/+d9sP/nhLb/54O1/wAAAADm4On/5t3k/+ba4f/m2N//5tfe/+bX3v/m2N7/5tfd/+bX3f/m193/5tbd/+bW3f/m1t3/5tbe/+bW3v/m19//5tjg/+bY4P/m2N//5tff/+bX3v/m197/5tfe/+bX3v/m197/5tje/+bY3//m2N//5tff/+bX3//m2OD/5tng/+XY4P/l2N//5drg/+Xb4f/l3OL/5dzi/+Xb4v/l2+L/5dzj/+Xc4//l3OP/5dvh/+Xa3//l2d7/5djd/+XX3v/l1d7/5dbf/+XV3v/l1N7/5dXf/+fQ3f/noc3/553K/+eXxf/nhrj/54G0/+eGuP/nibr/54q7/+eJu/+SZYL/6N7p/+bk7P/m5Oz/5uDo/+be5f/m3eP/5tvg/+ba4P/m3OL/5tvg/+ba3//m2N7/5tfe/+bW3v/m1t7/5tfe/+bY3//m2uH/5trh/+bX3//m1t7/5tbe/+bW3v/m1t7/5tbe/+XW3v/l1t7/5dff/+XY3//l19//5djg/+XZ4f/l2OD/5djf/+Xa4f/l2+H/5dzi/+Xc4v/l2+D/5dng/+XY4P/l2uH/5dri/+XZ4f/l2uH/5dri/+Xb4v/l3OP/5dvi/+XY4P/l1d//5dPe/+fO3f/nnMn/55nG/+eSwf/njb3/54W3/+eQwP/njb7/54u8/+eFt//ni7z/klt7/5Jffv+SYoD/kmSC/5JnhP/n4Of/5ufs/+bm6//m6e7/5unu/+bj6f/m3eP/5tff/+bW3v/m1t7/5tbe/+bW3v/m1t7/5tbe/+bX3v/l2N7/5dfe/+XY3v/l2N7/5dje/+XX3//l19//5dfe/+XX3v/l197/5dff/+XW3v/l2N//5djg/+XY4P/l2eH/5drh/+XZ4f/l2N//5djg/+XZ4P/l2eH/5drh/+Xa4f/l2uH/5drh/+XZ4f/l2eL/5dri/+XZ4v/l1+D/5dXf/+jN3v/nmsf/5428/+eGuP/nhrj/54i5/+eQwP/nlcX/54i6/+d8rv/nfK7/54Gy/5JUdP+SVXX/kld2/5Jaef+SYoD/kmeE/5JnhP+SZ4T/5+Xs/+bq8P/m6O3/5uDm/+bd5P/m2uH/5djf/+XX3//l1t7/5dXe/+XV3v/l197/5dje/+XY3v/l197/5dfe/+XY3//l2eD/5drh/+XZ4f/l2OD/5djf/+XY3//l19//5dbe/+XW3v/l1t7/5dbe/+XX3//l19//5dff/+XX3//l2OD/5dng/+Xa4f/l2+L/5dvi/+Xa4v/l2uP/5dri/+Xa4v/l2uL/5tfh/+eezf/mmsb/54y7/+d9r//nfbH/54a4/+eNvP/nmcj/54u8/+d3q//nb6T/53ao/+d7rf+STG3/kkhq/5JMbf+STm//klZ2/5Jhf/+SZoP/kmeE/5JnhP+SZ4T/kmWE/5JlhP/n4uf/5eTp/+Xe5P/l2eH/5dri/+XZ4f/l1+D/5dbf/+XU3v/l1t//5dff/+XX3//l19//5djf/+Xa4f/l3OP/5dnh/+XY3//l19//5dff/+XX3//l19//5dfe/+XX3v/l19//5djf/+XY4P/l2eD/5dnh/+XZ4f/l2eH/5dng/+XY3//l2N//5djg/+XZ4f/l2eL/5tbh/+edzP/nk8T/5pC+/+d8rv/neKv/54O1/+eMu//nk8H/55XE/+d+sf/nbaP/53Wo/+d8rv/neaz/kkVm/5JAYv+SQmX/kkhq/5JLbf+ST3H/klh5/5Jhf/+SZIH/kmWD/5Jkg/+SYID/kmB//5Jigf+SY4P/59nh/+be5P/l4OX/5d3j/+Xa4f/l2OD/5dfg/+XX3//l2N//5dff/+XX3//l19//5djg/+XZ4P/l2N//5dff/+XX3//l2OD/5dng/+XY4P/l2d//5drh/+Xa4f/l2uH/5dvi/+Xa4v/l2uL/5dng/+XZ3//l2N7/5dfe/+XX3v/l197/5tTe/+ecy//nkcL/54S3/+aGtv/nc6f/54Cy/+eLu//nj73/5469/+eIuf/nc6j/53So/+eCtP/nhLb/54Gz/5JHaP+SQWT/kkdo/5JKa/+STG7/kk5x/5JQc/+SV3f/klx7/5Jeff+SXX3/kll5/5JXd/+SWHj/klt7/5Jefv+SYID/kmKC/5Jkg//m0tz/5drh/+Xb4v/l2+P/5dvi/+XZ4P/l2N//5dff/+XX3//l19//5dff/+XX3//l2eD/5drh/+Xa4f/l2uD/5drg/+Xa4P/l2d//5dnf/+XZ4P/l2uD/5dng/+XZ3//l2N//5djf/+XZ3v/l197/5tPe/+eby//nkMH/54K1/+d0qf/nf6//532v/+eKuv/nirr/54S0/+eCs//nfrD/53On/+d+sP/nibv/54i5/+eJu/+SVHP/kk5u/5JUc/+SU3L/klJy/5JQcv+ST3D/kk1w/5JPcv+SUnP/klR0/5JRcf+STG3/kklq/5JNbv+SUXP/klV2/5JZev+SXXz/kl5+/5JjgP+SZoP/59fh/+bc5f/l2+P/5djg/+XX3//l197/5dfe/+XX3//l19//5dff/+XY3//l2N//5dfe/+XY3v/l193/5dfd/+XX3f/l193/5dbd/+XW3f/l1t3/5dbd/+XX3f/l1t3/59Le/+eayv/nkMH/54Gz/+dxp//nbqP/54Sz/+eJuf/njrz/53ut/+d1qf/nd6v/53eq/+d4qv/niLn/54m7/+eHuf/niLn/kl57/5Jdev+SXXr/klt5/5JYdv+SVnX/klV1/5JUdP+SUnL/klBx/5JQcP+ST2//kk1u/5JKa/+SRWf/kkZp/5JLbf+STnD/klFz/5JVdf+SWXn/klx7/5Jgfv+SYoD/kmWD/+jH1P/m0Nr/5dLb/+XU2//l1dz/5dXd/+XV3f/l1t3/5dbd/+XW3f/l193/5dfd/+XW3f/l1t3/5dbd/+XW3f/l1t3/5dbd/+XW3f/l1N3/6M3d/+eezP/nj8D/54Cy/+dzqP/ncqf/53eq/+eNuv/nj73/53+w/+dvpP/neKv/53yv/+d3qf/nhbf/54m6/+eHuP/nibr/54a3/5Jdev+SXHn/klh3/5JWdP+SVnX/klZ1/5JWdv+SW3n/klt5/5JZeP+SWXj/klx7/5JZeP+SUnL/kklq/5JDZf+SQmX/kkRn/5JHaf+SSmz/klRz/5JSc/+SVHT/kld3/5JefP+SZoT/kmeE/5JnhP+SZ4T/58HM/+bK0//lz9j/5dPb/+XT2//l1dz/5dbd/+XX3v/l193/5djd/+XW3P/l1dz/5dbd/+XW3f/l1N3/56HO/+egzP/nl8b/54O1/+d7rv/nea3/54G0/+eCtP/nlMD/54i4/+dyp//nfK7/54q6/+eHuP/nh7j/54+//+eJuv/nirv/55HA/+eHuP+SVHL/kk9u/5JLbP+SSGn/kkRm/5JFZv+SS2v/klh3/5Jhfv+SYoD/kmOB/5JhgP+SYX//klp6/5JWdv+STm//kkZo/5JBZP+SPmL/kkBk/5JMbf+SRmf/kklr/5JMbv+SUXL/klx7/5Jjgf+SZoT/kmeE/5JnhP+SZYT/kmSD/+i0x//mxNL/5c7Y/+XT2//l1dz/5dbc/+XX3P/l1tz/5dXc/+XU2//m0tv/56HN/+efy//nm8j/542+/+d/sv/ng7X/54e5/+eKvP/nibr/55TA/+d9rv/ne67/55G//+eWxP/nkcD/55PD/+eRwf/nibr/55nH/+eayP/nkcD/kkts/5JEZv+SQGP/kkVn/5JGZ/+SQ2X/kkBj/5JHaP+SU3P/kl17/5JhgP+SXXz/klp5/5Jbev+SWnn/kld3/5JTdP+ST3D/kkZn/5JDZP+SSGn/kj9h/5JAY/+SRmn/kkps/5JMb/+SU3X/kl19/5JigP+SZIL/kmSC/5JhgP+SXn3/kmCA/5Jigv+SZIP/5sHR/+XJ1v/lztj/5dTb/+XW3P/m09v/55/M/+edyf/nlMP/55LB/+eFt//njb3/54y+/+eMvf/nhrj/54u8/+eRvf/neq3/54y+/+eax//nk8H/54u7/+eUxP/nibr/54++/+eiz//noM3/553K/5JJa/+SRmj/kkts/5JTdP+SVXX/klFx/5JKa/+SQWT/kkVn/5JQcP+SWHj/klJy/5JOb/+SUXL/klNz/5JZeP+SWnr/kll4/5JTcv+STGv/kktr/5I/Yv+SSGn/kkpr/5JNb/+STXD/kk9y/5JTdf+SWXn/klx7/5Jce/+SWnn/klV1/5JVdv+SWHn/klt8/5Jefv+SYID/kmKC/+i7zf/nxtb/557K/+eTwf/ni7z/54e5/+eIuv/ni7v/55nI/+eMvf/ngbP/53yv/+eAsv/nibj/54Cy/+eSxP/nksH/54e4/+eEtv/nirv/54S0/+eXxf/npND/56PQ/+el0f+SUXL/kk5w/5JWd/+SW3z/kl9+/5Jjf/+SXnv/klFx/5JCZf+SQGP/kkxu/5JIav+SRWf/kkZo/5JBZP+SSGn/klJy/5JZeP+SW3r/klZ1/5JZd/+SUXD/klRz/5JVdP+SU3P/klJz/5JQcf+STnD/kk1w/5JQcv+SUnP/klJy/5JNbv+SR2j/kkpr/5JOcP+SUnT/kld4/5Jaev+SXHz/kmB//+eSwP/ng7T/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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJJnhP+SZ4T/kmeE/5JnhP+SZ4T/kmSB/+ei0f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACSZ4T/kmeE/5JnhP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="),
+"data": PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADn2OH/59fg/+nU4f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADn1t//5tXe/+bW3v/m1t7/5tff/+fX3//o1t7/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOnV3//m2N7/5tbe/+bV3f/m1N3/5tTd/+bV3P/m19r/5tfb/+bZ3P/m2t7/59nf/+nU3/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOjX3v/m297/5tre/+bb3//m2t7/5tjd/+bW3P/m1tr/5tbZ/+bW2v/m2Nv/5tjc/+bY3P/m193/5tfe/+fW3v/o1N//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOjX3v/m2Nv/5tfa/+bX2v/m2dz/5tre/+bZ3v/m2N7/5tfd/+bX3f/m19z/5tfb/+bX2//m1tz/5tbd/+bW3f/m1t3/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5tTe/+bV3//m1uD/5tbg/+bW4P/m1+D/5tff/+bY3//m2N//5tjf/+bY3//m2d//5trg/+ba4P/m2+H/5trg/+bZ4P/m2d//5tjf/+bY3//m2N//5trg/+ba4P/m2uH/5trg/+ba3//l2N7/5Nfd/+TX3f/k193/5Nfd/+TX3f/k193/5dbe/+bW3v/m1t7/5tbe/+bW3v/m1t7/5tbe/+bX3v/m197/5tbe/+bV3v/m1d7/5tbe/+bW3v/m1t7/5tXd/+bU3f/m1Nz/5tTc/+bV3f/nns7/55fH/+eKvP/ne6//52+k/wAAAAAAAAAAAAAAAAAAAADn0N7/5tXe/+bX3v/m197/5tfe/+bW3//m19//5tnf/+ba3//m2t//5trf/+ba3//m2t//5tng/+ba4P/m2+H/5trh/+bZ4P/m2d//5tng/+bZ4P/m2eD/5trg/+ba4P/m2+H/5trg/+ba4P/m2uH/5trh/+XZ4P/l2N//5Nfd/+TX3f/k193/5dfe/+bX3v/m1t7/5tfe/+bX3v/m197/5tfe/+bX3f/m2N7/5tne/+bX3v/m1t7/5tXe/+bV3v/m1t7/5tXe/+bU3v/m1N7/5tXe/+bU3f/nn83/55bG/+eKu//ne67/52+k/+dxpf8AAAAAAAAAAAAAAADn0N7/5tXe/+bX3v/m2N7/5tje/+bX3v/m193/5tfd/+bY3v/m2d//5tnf/+bZ3//m2d//5tjf/+bX3v/m19//5tjf/+bX3v/m2N//5tnf/+bY3v/m2N7/5trf/+bZ3//m2N//5tnf/+bY3//m2N//5tjg/+ba4f/m2+L/5tvi/+bb4v/l2+L/5drg/+bZ3//m2N//5tje/+bY3v/m197/5tfe/+bX3f/m2N3/5tne/+bY3v/m2N7/5tbd/+bW3v/l197/5dfe/+XW3v/l1t7/5dbe/+bT3f/noc3/55vK/+eKu//ne67/53Kn/+d3q//neaz/AAAAAAAAAADn1N7/5tfe/+bX3v/m197/5tbe/+bX3v/m193/5tne/+bY3v/m2N3/5tne/+bX3f/m1t3/5tfe/+bW3v/m197/5tff/+bX3v/m19//5tjf/+bZ3//m2d7/5tre/+ba3v/m2d7/5tje/+bX3v/m197/5tbe/+bX3//m2OD/5tnh/+bZ4f/m2uL/5tzi/+bc4//m3OL/5tzi/+bb4f/l2+D/5drf/+XY3v/l2N3/5dfc/+XX3f/l1tz/5dbc/+XW3f/l1d//5dff/+XY4P/l19//5dbe/+fR3f/noc3/557L/+eRwv/nf7H/53uu/+d9sP/nhLb/54O1/wAAAADm4On/5t3k/+ba4f/m2N//5tfe/+bX3v/m2N7/5tfd/+bX3f/m193/5tbd/+bW3f/m1t3/5tbe/+bW3v/m19//5tjg/+bY4P/m2N//5tff/+bX3v/m197/5tfe/+bX3v/m197/5tje/+bY3//m2N//5tff/+bX3//m2OD/5tng/+XY4P/l2N//5drg/+Xb4f/l3OL/5dzi/+Xb4v/l2+L/5dzj/+Xc4//l3OP/5dvh/+Xa3//l2d7/5djd/+XX3v/l1d7/5dbf/+XV3v/l1N7/5dXf/+fQ3f/noc3/553K/+eXxf/nhrj/54G0/+eGuP/nibr/54q7/+eJu/+SZYL/6N7p/+bk7P/m5Oz/5uDo/+be5f/m3eP/5tvg/+ba4P/m3OL/5tvg/+ba3//m2N7/5tfe/+bW3v/m1t7/5tfe/+bY3//m2uH/5trh/+bX3//m1t7/5tbe/+bW3v/m1t7/5tbe/+XW3v/l1t7/5dff/+XY3//l19//5djg/+XZ4f/l2OD/5djf/+Xa4f/l2+H/5dzi/+Xc4v/l2+D/5dng/+XY4P/l2uH/5dri/+XZ4f/l2uH/5dri/+Xb4v/l3OP/5dvi/+XY4P/l1d//5dPe/+fO3f/nnMn/55nG/+eSwf/njb3/54W3/+eQwP/njb7/54u8/+eFt//ni7z/klt7/5Jffv+SYoD/kmSC/5JnhP/n4Of/5ufs/+bm6//m6e7/5unu/+bj6f/m3eP/5tff/+bW3v/m1t7/5tbe/+bW3v/m1t7/5tbe/+bX3v/l2N7/5dfe/+XY3v/l2N7/5dje/+XX3//l19//5dfe/+XX3v/l197/5dff/+XW3v/l2N//5djg/+XY4P/l2eH/5drh/+XZ4f/l2N//5djg/+XZ4P/l2eH/5drh/+Xa4f/l2uH/5drh/+XZ4f/l2eL/5dri/+XZ4v/l1+D/5dXf/+jN3v/nmsf/5428/+eGuP/nhrj/54i5/+eQwP/nlcX/54i6/+d8rv/nfK7/54Gy/5JUdP+SVXX/kld2/5Jaef+SYoD/kmeE/5JnhP+SZ4T/5+Xs/+bq8P/m6O3/5uDm/+bd5P/m2uH/5djf/+XX3//l1t7/5dXe/+XV3v/l197/5dje/+XY3v/l197/5dfe/+XY3//l2eD/5drh/+XZ4f/l2OD/5djf/+XY3//l19//5dbe/+XW3v/l1t7/5dbe/+XX3//l19//5dff/+XX3//l2OD/5dng/+Xa4f/l2+L/5dvi/+Xa4v/l2uP/5dri/+Xa4v/l2uL/5tfh/+eezf/mmsb/54y7/+d9r//nfbH/54a4/+eNvP/nmcj/54u8/+d3q//nb6T/53ao/+d7rf+STG3/kkhq/5JMbf+STm//klZ2/5Jhf/+SZoP/kmeE/5JnhP+SZ4T/kmWE/5JlhP/n4uf/5eTp/+Xe5P/l2eH/5dri/+XZ4f/l1+D/5dbf/+XU3v/l1t//5dff/+XX3//l19//5djf/+Xa4f/l3OP/5dnh/+XY3//l19//5dff/+XX3//l19//5dfe/+XX3v/l19//5djf/+XY4P/l2eD/5dnh/+XZ4f/l2eH/5dng/+XY3//l2N//5djg/+XZ4f/l2eL/5tbh/+edzP/nk8T/5pC+/+d8rv/neKv/54O1/+eMu//nk8H/55XE/+d+sf/nbaP/53Wo/+d8rv/neaz/kkVm/5JAYv+SQmX/kkhq/5JLbf+ST3H/klh5/5Jhf/+SZIH/kmWD/5Jkg/+SYID/kmB//5Jigf+SY4P/59nh/+be5P/l4OX/5d3j/+Xa4f/l2OD/5dfg/+XX3//l2N//5dff/+XX3//l19//5djg/+XZ4P/l2N//5dff/+XX3//l2OD/5dng/+XY4P/l2d//5drh/+Xa4f/l2uH/5dvi/+Xa4v/l2uL/5dng/+XZ3//l2N7/5dfe/+XX3v/l197/5tTe/+ecy//nkcL/54S3/+aGtv/nc6f/54Cy/+eLu//nj73/5469/+eIuf/nc6j/53So/+eCtP/nhLb/54Gz/5JHaP+SQWT/kkdo/5JKa/+STG7/kk5x/5JQc/+SV3f/klx7/5Jeff+SXX3/kll5/5JXd/+SWHj/klt7/5Jefv+SYID/kmKC/5Jkg//m0tz/5drh/+Xb4v/l2+P/5dvi/+XZ4P/l2N//5dff/+XX3//l19//5dff/+XX3//l2eD/5drh/+Xa4f/l2uD/5drg/+Xa4P/l2d//5dnf/+XZ4P/l2uD/5dng/+XZ3//l2N//5djf/+XZ3v/l197/5tPe/+eby//nkMH/54K1/+d0qf/nf6//532v/+eKuv/nirr/54S0/+eCs//nfrD/53On/+d+sP/nibv/54i5/+eJu/+SVHP/kk5u/5JUc/+SU3L/klJy/5JQcv+ST3D/kk1w/5JPcv+SUnP/klR0/5JRcf+STG3/kklq/5JNbv+SUXP/klV2/5JZev+SXXz/kl5+/5JjgP+SZoP/59fh/+bc5f/l2+P/5djg/+XX3//l197/5dfe/+XX3//l19//5dff/+XY3//l2N//5dfe/+XY3v/l193/5dfd/+XX3f/l193/5dbd/+XW3f/l1t3/5dbd/+XX3f/l1t3/59Le/+eayv/nkMH/54Gz/+dxp//nbqP/54Sz/+eJuf/njrz/53ut/+d1qf/nd6v/53eq/+d4qv/niLn/54m7/+eHuf/niLn/kl57/5Jdev+SXXr/klt5/5JYdv+SVnX/klV1/5JUdP+SUnL/klBx/5JQcP+ST2//kk1u/5JKa/+SRWf/kkZp/5JLbf+STnD/klFz/5JVdf+SWXn/klx7/5Jgfv+SYoD/kmWD/+jH1P/m0Nr/5dLb/+XU2//l1dz/5dXd/+XV3f/l1t3/5dbd/+XW3f/l193/5dfd/+XW3f/l1t3/5dbd/+XW3f/l1t3/5dbd/+XW3f/l1N3/6M3d/+eezP/nj8D/54Cy/+dzqP/ncqf/53eq/+eNuv/nj73/53+w/+dvpP/neKv/53yv/+d3qf/nhbf/54m6/+eHuP/nibr/54a3/5Jdev+SXHn/klh3/5JWdP+SVnX/klZ1/5JWdv+SW3n/klt5/5JZeP+SWXj/klx7/5JZeP+SUnL/kklq/5JDZf+SQmX/kkRn/5JHaf+SSmz/klRz/5JSc/+SVHT/kld3/5JefP+SZoT/kmeE/5JnhP+SZ4T/58HM/+bK0//lz9j/5dPb/+XT2//l1dz/5dbd/+XX3v/l193/5djd/+XW3P/l1dz/5dbd/+XW3f/l1N3/56HO/+egzP/nl8b/54O1/+d7rv/nea3/54G0/+eCtP/nlMD/54i4/+dyp//nfK7/54q6/+eHuP/nh7j/54+//+eJuv/nirv/55HA/+eHuP+SVHL/kk9u/5JLbP+SSGn/kkRm/5JFZv+SS2v/klh3/5Jhfv+SYoD/kmOB/5JhgP+SYX//klp6/5JWdv+STm//kkZo/5JBZP+SPmL/kkBk/5JMbf+SRmf/kklr/5JMbv+SUXL/klx7/5Jjgf+SZoT/kmeE/5JnhP+SZYT/kmSD/+i0x//mxNL/5c7Y/+XT2//l1dz/5dbc/+XX3P/l1tz/5dXc/+XU2//m0tv/56HN/+efy//nm8j/542+/+d/sv/ng7X/54e5/+eKvP/nibr/55TA/+d9rv/ne67/55G//+eWxP/nkcD/55PD/+eRwf/nibr/55nH/+eayP/nkcD/kkts/5JEZv+SQGP/kkVn/5JGZ/+SQ2X/kkBj/5JHaP+SU3P/kl17/5JhgP+SXXz/klp5/5Jbev+SWnn/kld3/5JTdP+ST3D/kkZn/5JDZP+SSGn/kj9h/5JAY/+SRmn/kkps/5JMb/+SU3X/kl19/5JigP+SZIL/kmSC/5JhgP+SXn3/kmCA/5Jigv+SZIP/5sHR/+XJ1v/lztj/5dTb/+XW3P/m09v/55/M/+edyf/nlMP/55LB/+eFt//njb3/54y+/+eMvf/nhrj/54u8/+eRvf/neq3/54y+/+eax//nk8H/54u7/+eUxP/nibr/54++/+eiz//noM3/553K/5JJa/+SRmj/kkts/5JTdP+SVXX/klFx/5JKa/+SQWT/kkVn/5JQcP+SWHj/klJy/5JOb/+SUXL/klNz/5JZeP+SWnr/kll4/5JTcv+STGv/kktr/5I/Yv+SSGn/kkpr/5JNb/+STXD/kk9y/5JTdf+SWXn/klx7/5Jce/+SWnn/klV1/5JVdv+SWHn/klt8/5Jefv+SYID/kmKC/+i7zf/nxtb/557K/+eTwf/ni7z/54e5/+eIuv/ni7v/55nI/+eMvf/ngbP/53yv/+eAsv/nibj/54Cy/+eSxP/nksH/54e4/+eEtv/nirv/54S0/+eXxf/npND/56PQ/+el0f+SUXL/kk5w/5JWd/+SW3z/kl9+/5Jjf/+SXnv/klFx/5JCZf+SQGP/kkxu/5JIav+SRWf/kkZo/5JBZP+SSGn/klJy/5JZeP+SW3r/klZ1/5JZd/+SUXD/klRz/5JVdP+SU3P/klJz/5JQcf+STnD/kk1w/5JQcv+SUnP/klJy/5JNbv+SR2j/kkpr/5JOcP+SUnT/kld4/5Jaev+SXHz/kmB//+eSwP/ng7T/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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJJnhP+SZ4T/kmeE/5JnhP+SZ4T/kmSB/+ei0f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACSZ4T/kmeE/5JnhP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="),
 "format": "RGBA8",
 "height": 64,
 "mipmaps": false,
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_4epqq"]
+[sub_resource type="ImageTexture" id="ImageTexture_6y6hc"]
 image = SubResource("Image_jjlxg")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ep8ln"]
@@ -571,7 +601,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_uuym2"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_4epqq"]
 resource_name = "Basic Tiles_Cube_096"
 _surfaces = [{
 "aabb": AABB(-1, 0, -1, 2, 1, 2),
@@ -599,8 +629,11 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_1q72d"]
+[sub_resource type="ImageTexture" id="ImageTexture_s77ld"]
 image = SubResource("Image_8xw5h")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bi1nh"]
+data = PackedVector3Array(0.5, 1, 0.5, 0, 1, 1, 0, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 1, 0, 1, 1, 0.5, 1, 0.5, 0.5183, 1, 0.7951, 0.5, 1, 1, 0, 1, 0.5, 0, 1, 1, -0.5, 1, 1, 0.5, 1, 0.5, 0.61179996, 1, 0.61179996, 0.5183, 1, 0.7951, 0.61179996, 1, 0.61179996, 0.5, 1, 0.5, 0.7951, 1, 0.5183, 0.7951, 1, 0.5183, 0.5, 1, 0.5, 1, 1, 0.5, 1, 1, 0, 1, 1, 0.5, 0.5, 1, 0.5, 1, 1, 0, 0.5, 1, 0.5, 0.5, 1, 0, 0.5, 1, 0, 0.5, 1, 0.5, 0, 1, 0.5, 1, 1, -0.5, 1, 1, 0, 0.5, 1, 0, 0, 1, 0.5, -0.5, 1, 1, -0.5, 1, 0.5, -0.5183, 1, 0.7951, -0.5, 1, 0.5, -0.5, 1, 1, -0.5, 1, 0.5, -0.5183, 1, 0.7951, -0.61179996, 1, 0.61179996, -0.5, 1, 0.5, -0.61179996, 1, 0.61179996, -0.7951, 1, 0.5183, -0.5, 1, 0.5, -0.7951, 1, 0.5183, -1, 1, 0.5, 1, 1, -0.5, 0.5, 1, 0, 0.5, 1, -0.5, 0.5, 1, -0.5, 0.7951, 1, -0.5183, 1, 1, -0.5, 0.5, 1, -0.5, 0.61179996, 1, -0.61179996, 0.7951, 1, -0.5183, 0.61179996, 1, -0.61179996, 0.5, 1, -0.5, 0.5183, 1, -0.7951, 0.5183, 1, -0.7951, 0.5, 1, -0.5, 0.5, 1, -1, -0.5, 1, 0, -0.5, 1, 0.5, -1, 1, 0.5, -0.5, 1, 0, -1, 1, 0.5, -1, 1, 0, 0, 1, 0, -0.5, 1, 0.5, -0.5, 1, 0, 0, 1, 0, 0, 1, 0.5, -0.5, 1, 0.5, 0.5, 1, 0, 0, 1, 0.5, 0, 1, 0, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0, 0.5, 1, -1, 0.5, 1, -0.5, 0, 1, -0.5, 0.5, 1, -0.5, 0, 1, 0, 0, 1, -0.5, 0, 1, -0.5, 0, 1, 0, -0.5, 1, 0, 0.5, 1, -1, 0, 1, -0.5, 0, 1, -1, -0.5, 1, -0.5, -0.5, 1, 0, -1, 1, 0, 0, 1, -0.5, -0.5, 1, 0, -0.5, 1, -0.5, 0, 1, -1, 0, 1, -0.5, -0.5, 1, -0.5, -0.5, 1, -0.5, -1, 1, 0, -1, 1, -0.5, 0, 1, -1, -0.5, 1, -0.5, -0.5, 1, -1, -0.7951, 1, -0.5183, -0.5, 1, -0.5, -1, 1, -0.5, -0.5, 1, -0.5, -0.5183, 1, -0.7951, -0.5, 1, -1, -0.61179996, 1, -0.61179996, -0.5, 1, -0.5, -0.7951, 1, -0.5183, -0.5, 1, -0.5, -0.61179996, 1, -0.61179996, -0.5183, 1, -0.7951, -0.5, 0, 0.5, 0, 0, 1, 0, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 1, 0, 0, 1, -0.5, 0, 0.5, -0.5183, 0, 0.7951, -0.5, 0, 1, 0, 0, 0.5, 0, 0, 1, 0.5, 0, 1, -0.5, 0, 0.5, -0.61179996, 0, 0.61179996, -0.5183, 0, 0.7951, -0.61179996, 0, 0.61179996, -0.5, 0, 0.5, -0.7951, 0, 0.5183, -0.7951, 0, 0.5183, -0.5, 0, 0.5, -1, 0, 0.5, -1, 0, 0, -1, 0, 0.5, -0.5, 0, 0.5, -1, 0, 0, -0.5, 0, 0.5, -0.5, 0, 0, -0.5, 0, 0, -0.5, 0, 0.5, 0, 0, 0.5, -1, 0, -0.5, -1, 0, 0, -0.5, 0, 0, 0, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, 0.5183, 0, 0.7951, 0.5, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, 0.5183, 0, 0.7951, 0.61179996, 0, 0.61179996, 0.5, 0, 0.5, 0.61179996, 0, 0.61179996, 0.7951, 0, 0.5183, 0.5, 0, 0.5, 0.7951, 0, 0.5183, 1, 0, 0.5, -1, 0, -0.5, -0.5, 0, 0, -0.5, 0, -0.5, -0.5, 0, -0.5, -0.7951, 0, -0.5183, -1, 0, -0.5, -0.5, 0, -0.5, -0.61179996, 0, -0.61179996, -0.7951, 0, -0.5183, -0.61179996, 0, -0.61179996, -0.5, 0, -0.5, -0.5183, 0, -0.7951, -0.5183, 0, -0.7951, -0.5, 0, -0.5, -0.5, 0, -1, 0.5, 0, 0, 0.5, 0, 0.5, 1, 0, 0.5, 0.5, 0, 0, 1, 0, 0.5, 1, 0, 0, 0, 0, 0, 0.5, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0.5, -0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, -0.5, 0, -0.5, -0.5, 0, 0, 0, 0, 0, -0.5, 0, -1, -0.5, 0, -0.5, 0, 0, -0.5, -0.5, 0, -0.5, 0, 0, 0, 0, 0, -0.5, 0, 0, -0.5, 0, 0, 0, 0.5, 0, 0, -0.5, 0, -1, 0, 0, -0.5, 0, 0, -1, 0.5, 0, -0.5, 0.5, 0, 0, 1, 0, 0, 0, 0, -0.5, 0.5, 0, 0, 0.5, 0, -0.5, 0, 0, -1, 0, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 1, 0, 0, 1, 0, -0.5, 0, 0, -1, 0.5, 0, -0.5, 0.5, 0, -1, 0.7951, 0, -0.5183, 0.5, 0, -0.5, 1, 0, -0.5, 0.5, 0, -0.5, 0.5183, 0, -0.7951, 0.5, 0, -1, 0.61179996, 0, -0.61179996, 0.5, 0, -0.5, 0.7951, 0, -0.5183, 0.5, 0, -0.5, 0.61179996, 0, -0.61179996, 0.5183, 0, -0.7951, -0.5, 0, 1, -0.5183, 1, 0.7951, -0.5, 1, 1, -0.5, 0, 1, -0.5183, 0, 0.7951, -0.5183, 1, 0.7951, -0.5183, 0, 0.7951, -0.61179996, 1, 0.61179996, -0.5183, 1, 0.7951, -0.5183, 0, 0.7951, -0.61179996, 0, 0.61179996, -0.61179996, 1, 0.61179996, -0.61179996, 0, 0.61179996, -0.7951, 1, 0.5183, -0.61179996, 1, 0.61179996, -0.61179996, 0, 0.61179996, -0.7951, 0, 0.5183, -0.7951, 1, 0.5183, -0.7951, 0, 0.5183, -1, 1, 0.5, -0.7951, 1, 0.5183, -0.7951, 0, 0.5183, -1, 0, 0.5, -1, 1, 0.5, -0.5, 1, -1, -0.5183, 0, -0.7951, -0.5, 0, -1, -0.5, 1, -1, -0.5183, 1, -0.7951, -0.5183, 0, -0.7951, -0.5183, 1, -0.7951, -0.61179996, 0, -0.61179996, -0.5183, 0, -0.7951, -0.5183, 1, -0.7951, -0.61179996, 1, -0.61179996, -0.61179996, 0, -0.61179996, -0.61179996, 1, -0.61179996, -0.7951, 0, -0.5183, -0.61179996, 0, -0.61179996, -0.61179996, 1, -0.61179996, -0.7951, 1, -0.5183, -0.7951, 0, -0.5183, -0.7951, 1, -0.5183, -1, 0, -0.5, -0.7951, 0, -0.5183, -0.7951, 1, -0.5183, -1, 1, -0.5, -1, 0, -0.5, 1, 1, -0.5, 0.7951, 0, -0.5183, 1, 0, -0.5, 1, 1, -0.5, 0.7951, 1, -0.5183, 0.7951, 0, -0.5183, 0.7951, 1, -0.5183, 0.61179996, 0, -0.61179996, 0.7951, 0, -0.5183, 0.7951, 1, -0.5183, 0.61179996, 1, -0.61179996, 0.61179996, 0, -0.61179996, 0.61179996, 1, -0.61179996, 0.5183, 0, -0.7951, 0.61179996, 0, -0.61179996, 0.61179996, 1, -0.61179996, 0.5183, 1, -0.7951, 0.5183, 0, -0.7951, 0.5183, 1, -0.7951, 0.5, 0, -1, 0.5183, 0, -0.7951, 0.5183, 1, -0.7951, 0.5, 1, -1, 0.5, 0, -1, 0.5, 1, 1, 0.5183, 0, 0.7951, 0.5, 0, 1, 0.5, 1, 1, 0.5183, 1, 0.7951, 0.5183, 0, 0.7951, 0.5183, 1, 0.7951, 0.61179996, 0, 0.61179996, 0.5183, 0, 0.7951, 0.5183, 1, 0.7951, 0.61179996, 1, 0.61179996, 0.61179996, 0, 0.61179996, 0.61179996, 1, 0.61179996, 0.7951, 0, 0.5183, 0.61179996, 0, 0.61179996, 0.61179996, 1, 0.61179996, 0.7951, 1, 0.5183, 0.7951, 0, 0.5183, 0.7951, 1, 0.5183, 1, 0, 0.5, 0.7951, 0, 0.5183, 0.7951, 1, 0.5183, 1, 1, 0.5, 1, 0, 0.5)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_13oyn"]
 _surfaces = [{
@@ -617,7 +650,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_gjnvg"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_1q72d"]
 resource_name = "Basic Tiles_Cube_097"
 _surfaces = [{
 "aabb": AABB(-0.9999999, 0, -1, 2, 1, 2),
@@ -645,7 +678,7 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_44og7"]
+[sub_resource type="ImageTexture" id="ImageTexture_qhbhw"]
 image = SubResource("Image_wngjc")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_r7h70"]
@@ -663,7 +696,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_550kf"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_44og7"]
 resource_name = "Basic Tiles_Cube_098"
 _surfaces = [{
 "aabb": AABB(-0.5000001, 0, -1, 1.5, 1, 2),
@@ -691,8 +724,11 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_ahxas"]
+[sub_resource type="ImageTexture" id="ImageTexture_au2w5"]
 image = SubResource("Image_gr00w")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mtuit"]
+data = PackedVector3Array(0.5, 0, 0.5, 1, 0, 1, 1, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, 1, 1, 0, 1, 0.5, 0, 0, 0.5, 0, 0.5, 1, 0, 0.5, 0.5, 0, 0, 1, 0, 0.5, 1, 0, 0, 0, 0, 0.5, 0.5, 0, 1, 0.5, 0, 0.5, 0, 0, 0.5, 0, 0, 1, 0.5, 0, 1, -0.5, 0, 0.5, 0, 0, 1, 0, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 1, 0, 0, 1, -0.5, 0, 0, -0.5, 0, 0.5, 0, 0, 0.5, 0, 0, 0, 0, 0, 0.5, 0.5, 0, 0.5, -0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0, 0.5, 0, 0.5, 0.5, 0, 0, -0.5, 0, -0.5, -0.5, 0, 0, 0, 0, 0, -0.5, 0, -0.5, 0, 0, 0, 0, 0, -0.5, 0, 0, -0.5, 0, 0, 0, 0.5, 0, 0, -0.5, 0, -1, -0.5, 0, -0.5, 0, 0, -0.5, -0.5, 0, -1, 0, 0, -0.5, 0, 0, -1, 0, 0, -0.5, 0.5, 0, 0, 0.5, 0, -0.5, 0, 0, -1, 0, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, 0, 1, 0, 0, 0, 0, -1, 0.5, 0, -0.5, 0.5, 0, -1, 0.5, 0, -0.5, 1, 0, 0, 1, 0, -0.5, 0.5, 0, -0.5, 0.5183, 0, -0.7951, 0.5, 0, -1, 0.7951, 0, -0.5183, 0.5, 0, -0.5, 1, 0, -0.5, 0.5, 0, -0.5, 0.61179996, 0, -0.61179996, 0.5183, 0, -0.7951, 0.61179996, 0, -0.61179996, 0.5, 0, -0.5, 0.7951, 0, -0.5183, 0.5, 1, 0.5, 0, 1, 1, 0, 1, 0.5, 0, 1, 0.5, 0, 1, 1, -0.5, 1, 1, 0, 1, 0.5, -0.5, 1, 1, -0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 1, 0, 1, 1, 1, 1, 0.5, 0.5, 1, 1, 0.5, 1, 0.5, 1, 1, 0.5, 1, 1, 1, 0.5, 1, 1, 1, 1, 0, 1, 1, 0.5, 0.5, 1, 0.5, 1, 1, 0, 0.5, 1, 0.5, 0.5, 1, 0, 0.5, 1, 0, 0.5, 1, 0.5, 0, 1, 0.5, 1, 1, -0.5, 1, 1, 0, 0.5, 1, 0, 0, 1, 0, 0, 1, 0.5, -0.5, 1, 0.5, 0.5, 1, 0, 0, 1, 0.5, 0, 1, 0, 0, 1, 0, -0.5, 1, 0.5, -0.5, 1, 0, 1, 1, -0.5, 0.5, 1, 0, 0.5, 1, -0.5, 0.5, 1, -0.5, 0.5, 1, 0, 0, 1, 0, 0.5, 1, -0.5, 0.7951, 1, -0.5183, 1, 1, -0.5, 0.5, 1, -0.5, 0.61179996, 1, -0.61179996, 0.7951, 1, -0.5183, 0.61179996, 1, -0.61179996, 0.5, 1, -0.5, 0.5183, 1, -0.7951, 0.5183, 1, -0.7951, 0.5, 1, -0.5, 0.5, 1, -1, 0, 1, -0.5, 0, 1, 0, -0.5, 1, 0, 0.5, 1, -0.5, 0, 1, 0, 0, 1, -0.5, 0.5, 1, -1, 0.5, 1, -0.5, 0, 1, -0.5, 0, 1, -0.5, -0.5, 1, 0, -0.5, 1, -0.5, 0.5, 1, -1, 0, 1, -0.5, 0, 1, -1, 0, 1, -1, 0, 1, -0.5, -0.5, 1, -0.5, 0, 1, -1, -0.5, 1, -0.5, -0.5, 1, -1, -0.5, 0, -1, -0.5, 1, -0.5, -0.5, 0, -0.5, -0.5, 0, -1, -0.5, 1, -1, -0.5, 1, -0.5, -0.5, 1, 0, -0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 1, 0, -0.5, 0, 0, -0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 1, 0, -0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 0, 0, -0.5, 1, 0, -0.5, 0, 1, -0.5, 0, 0.5, -0.5, 1, 0.5, -0.5, 0, 1, -0.5, 1, 0.5, -0.5, 1, 1, 1, 1, -0.5, 0.7951, 0, -0.5183, 1, 0, -0.5, 1, 1, -0.5, 0.7951, 1, -0.5183, 0.7951, 0, -0.5183, 0.7951, 1, -0.5183, 0.61179996, 0, -0.61179996, 0.7951, 0, -0.5183, 0.7951, 1, -0.5183, 0.61179996, 1, -0.61179996, 0.61179996, 0, -0.61179996, 0.61179996, 1, -0.61179996, 0.5183, 0, -0.7951, 0.61179996, 0, -0.61179996, 0.61179996, 1, -0.61179996, 0.5183, 1, -0.7951, 0.5183, 0, -0.7951, 0.5183, 1, -0.7951, 0.5, 0, -1, 0.5183, 0, -0.7951, 0.5183, 1, -0.7951, 0.5, 1, -1, 0.5, 0, -1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8dqqc"]
 _surfaces = [{
@@ -709,7 +745,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_l666g"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ahxas"]
 resource_name = "Basic Tiles_Cube_099"
 _surfaces = [{
 "aabb": AABB(-0.5000001, 0, -0.9999999, 1.5, 1, 1.9999999),
@@ -737,7 +773,7 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_k4pjj"]
+[sub_resource type="ImageTexture" id="ImageTexture_ddy5u"]
 image = SubResource("Image_jklio")
 
 [resource]
@@ -745,7 +781,7 @@ item/0/name = "T Junction"
 item/0/mesh = SubResource("ArrayMesh_ce0cj")
 item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/0/mesh_cast_shadow = 1
-item/0/shapes = []
+item/0/shapes = [SubResource("ConcavePolygonShape3D_2jw1x"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/0/navigation_layers = 1
 item/0/preview = SubResource("ImageTexture_mrpkq")
@@ -753,74 +789,74 @@ item/1/name = "Single"
 item/1/mesh = SubResource("ArrayMesh_3iqmp")
 item/1/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/1/mesh_cast_shadow = 1
-item/1/shapes = []
+item/1/shapes = [SubResource("ConvexPolygonShape3D_dlakj"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/1/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/1/navigation_layers = 1
 item/1/preview = SubResource("ImageTexture_d8oyn")
 item/2/name = "Double End"
-item/2/mesh = SubResource("ArrayMesh_gngkf")
+item/2/mesh = SubResource("ArrayMesh_02tli")
 item/2/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/2/mesh_cast_shadow = 1
-item/2/shapes = []
+item/2/shapes = [SubResource("ConcavePolygonShape3D_dfej0"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/2/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/2/navigation_layers = 1
-item/2/preview = SubResource("ImageTexture_76qmg")
+item/2/preview = SubResource("ImageTexture_s7dwc")
 item/3/name = "Double"
-item/3/mesh = SubResource("ArrayMesh_cnlky")
+item/3/mesh = SubResource("ArrayMesh_76qmg")
 item/3/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/3/mesh_cast_shadow = 1
-item/3/shapes = []
+item/3/shapes = [SubResource("ConcavePolygonShape3D_pldiv"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/3/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/3/navigation_layers = 1
-item/3/preview = SubResource("ImageTexture_bldae")
+item/3/preview = SubResource("ImageTexture_lda8w")
 item/4/name = "T Junction Corner"
-item/4/mesh = SubResource("ArrayMesh_3jpb6")
+item/4/mesh = SubResource("ArrayMesh_bldae")
 item/4/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/4/mesh_cast_shadow = 1
-item/4/shapes = []
+item/4/shapes = [SubResource("ConcavePolygonShape3D_e4kqj"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/4/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/4/navigation_layers = 1
-item/4/preview = SubResource("ImageTexture_jphp7")
+item/4/preview = SubResource("ImageTexture_duxyq")
 item/5/name = "Template"
-item/5/mesh = SubResource("ArrayMesh_8ad3h")
+item/5/mesh = SubResource("ArrayMesh_jphp7")
 item/5/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/5/mesh_cast_shadow = 1
 item/5/shapes = []
 item/5/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/5/navigation_layers = 1
-item/5/preview = SubResource("ImageTexture_4epqq")
+item/5/preview = SubResource("ImageTexture_6y6hc")
 item/6/name = "Cross Junction"
-item/6/mesh = SubResource("ArrayMesh_uuym2")
+item/6/mesh = SubResource("ArrayMesh_4epqq")
 item/6/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/6/mesh_cast_shadow = 1
-item/6/shapes = []
+item/6/shapes = [SubResource("ConcavePolygonShape3D_bi1nh"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/6/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/6/navigation_layers = 1
-item/6/preview = SubResource("ImageTexture_1q72d")
+item/6/preview = SubResource("ImageTexture_s77ld")
 item/7/name = "J Junction Corner"
-item/7/mesh = SubResource("ArrayMesh_gjnvg")
+item/7/mesh = SubResource("ArrayMesh_1q72d")
 item/7/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/7/mesh_cast_shadow = 1
 item/7/shapes = []
 item/7/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/7/navigation_layers = 1
-item/7/preview = SubResource("ImageTexture_44og7")
+item/7/preview = SubResource("ImageTexture_qhbhw")
 item/8/name = "J Junction A"
-item/8/mesh = SubResource("ArrayMesh_550kf")
+item/8/mesh = SubResource("ArrayMesh_44og7")
 item/8/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/8/mesh_cast_shadow = 1
-item/8/shapes = []
+item/8/shapes = [SubResource("ConcavePolygonShape3D_mtuit"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/8/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/8/navigation_layers = 1
-item/8/preview = SubResource("ImageTexture_ahxas")
+item/8/preview = SubResource("ImageTexture_au2w5")
 item/9/name = "J Junction B"
-item/9/mesh = SubResource("ArrayMesh_l666g")
+item/9/mesh = SubResource("ArrayMesh_ahxas")
 item/9/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/9/mesh_cast_shadow = 1
 item/9/shapes = []
 item/9/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/9/navigation_layers = 1
-item/9/preview = SubResource("ImageTexture_k4pjj")
+item/9/preview = SubResource("ImageTexture_ddy5u")
 item/10/name = "J Junction Center"
 item/10/mesh = SubResource("ArrayMesh_74k04")
 item/10/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -830,42 +866,42 @@ item/10/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
 item/10/navigation_layers = 1
 item/10/preview = SubResource("ImageTexture_rsuty")
 item/11/name = "Corner"
-item/11/mesh = SubResource("ArrayMesh_l61h1")
+item/11/mesh = SubResource("ArrayMesh_rsuty")
 item/11/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/11/mesh_cast_shadow = 1
-item/11/shapes = []
+item/11/shapes = [SubResource("ConcavePolygonShape3D_ykliu"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/11/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/11/navigation_layers = 1
-item/11/preview = SubResource("ImageTexture_jjlxg")
+item/11/preview = SubResource("ImageTexture_8f6mk")
 item/12/name = "Thick T Junction"
-item/12/mesh = SubResource("ArrayMesh_8xw5h")
+item/12/mesh = SubResource("ArrayMesh_jjlxg")
 item/12/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/12/mesh_cast_shadow = 1
-item/12/shapes = []
+item/12/shapes = [SubResource("ConcavePolygonShape3D_oywhi"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/12/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/12/navigation_layers = 1
-item/12/preview = SubResource("ImageTexture_gr00w")
+item/12/preview = SubResource("ImageTexture_wngjc")
 item/13/name = "Wall Edge"
-item/13/mesh = SubResource("ArrayMesh_jklio")
+item/13/mesh = SubResource("ArrayMesh_gr00w")
 item/13/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/13/mesh_cast_shadow = 1
-item/13/shapes = []
+item/13/shapes = [SubResource("ConvexPolygonShape3D_0fgcb"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)]
 item/13/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/13/navigation_layers = 1
-item/13/preview = SubResource("ImageTexture_ujehj")
+item/13/preview = SubResource("ImageTexture_8k26b")
 item/14/name = "Center"
-item/14/mesh = SubResource("ArrayMesh_ld8es")
+item/14/mesh = SubResource("ArrayMesh_ujehj")
 item/14/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/14/mesh_cast_shadow = 1
 item/14/shapes = []
 item/14/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/14/navigation_layers = 1
-item/14/preview = SubResource("ImageTexture_iahxc")
+item/14/preview = SubResource("ImageTexture_0d64q")
 item/15/name = "B Junction"
-item/15/mesh = SubResource("ArrayMesh_p0b0c")
+item/15/mesh = SubResource("ArrayMesh_iahxc")
 item/15/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/15/mesh_cast_shadow = 1
 item/15/shapes = []
 item/15/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/15/navigation_layers = 1
-item/15/preview = SubResource("ImageTexture_02tli")
+item/15/preview = SubResource("ImageTexture_tx6d2")

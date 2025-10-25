@@ -30,6 +30,10 @@ Transitioner="*res://entities/transitioner.tscn"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/grid_map_layer/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
