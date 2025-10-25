@@ -1,10 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://doe1r3kxhbvno"]
 
 <<<<<<< Updated upstream:entities/base_room.tscn
+<<<<<<< Updated upstream:entities/base_room.tscn
 [ext_resource type="MeshLibrary" uid="uid://qvh4b5fjos1v" path="res://meshlibs/test_meshlib.tres" id="1_ea16h"]
 [ext_resource type="Script" uid="uid://dp3kyxixyhgvt" path="res://entities/base_room.gd" id="2_pajsp"]
 [ext_resource type="PackedScene" uid="uid://khtyojs3w74o" path="res://entities/spawn_point.tscn" id="3_ea16h"]
 =======
+=======
+>>>>>>> Stashed changes:entities/levelbuilding/base_room.tscn
 [ext_resource type="MeshLibrary" path="res://meshlibs/test_placeholdertiles.tres" id="1_23oby"]
 [ext_resource type="Script" uid="uid://dp3kyxixyhgvt" path="res://entities/levelbuilding/base_room.gd" id="2_pajsp"]
 [ext_resource type="PackedScene" uid="uid://khtyojs3w74o" path="res://entities/levelbuilding/spawn_point.tscn" id="3_ea16h"]
