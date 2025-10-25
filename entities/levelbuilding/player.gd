@@ -161,10 +161,10 @@ func handle_animations():
 func hurt(unrecoverable:bool=false):
 	health -= 1
 	LevelManager.current_session.damage_taken += 1
-	if health < 0:
+	HUD.update_health()
+	if health < 1:
 		await kill()
 		return
-	HUD.update_health()
 	if unrecoverable:
 		inv_frames_timer.start(2)
 		await State.respawn_player()

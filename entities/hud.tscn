@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqtkq8vj56msv"]
+[gd_scene load_steps=11 format=3 uid="uid://dqtkq8vj56msv"]
 
 [ext_resource type="Script" uid="uid://cudlro0rbi1dh" path="res://entities/hud.gd" id="1_nhrkl"]
+[ext_resource type="Texture2D" uid="uid://bkkbvujcx5201" path="res://assets/hud_assets/piemeter_4.png" id="2_cdv6k"]
+[ext_resource type="Texture2D" uid="uid://c0rltj64n38mn" path="res://assets/hud_assets/piemeter_1.png" id="2_fpuge"]
+[ext_resource type="Texture2D" uid="uid://clwl8u21f7nl3" path="res://assets/hud_assets/piemeter_2.png" id="3_agiu6"]
+[ext_resource type="Texture2D" uid="uid://c7aof254l33ul" path="res://assets/hud_assets/pienumber_4.png" id="3_mcea6"]
+[ext_resource type="Texture2D" uid="uid://do08m1sgp3a2m" path="res://assets/hud_assets/piemeter_3.png" id="4_i51r8"]
+[ext_resource type="Texture2D" uid="uid://c7yletby657ik" path="res://assets/hud_assets/pienumber_0.png" id="6_u6mqm"]
+[ext_resource type="Texture2D" uid="uid://dup7pvv3oor5o" path="res://assets/hud_assets/pienumber_1.png" id="7_qf8fp"]
+[ext_resource type="Texture2D" uid="uid://bc76uolol3p73" path="res://assets/hud_assets/pienumber_2.png" id="8_l5644"]
+[ext_resource type="Texture2D" uid="uid://bg7t58hmjda20" path="res://assets/hud_assets/pienumber_3.png" id="9_cp3i1"]
 
 [node name="HUD" type="Control"]
 process_mode = 3
@@ -12,6 +21,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_nhrkl")
+pie_array = Array[Texture]([ExtResource("2_fpuge"), ExtResource("3_agiu6"), ExtResource("4_i51r8"), ExtResource("2_cdv6k")])
+pie_num_array = Array[Texture]([ExtResource("6_u6mqm"), ExtResource("7_qf8fp"), ExtResource("8_l5644"), ExtResource("9_cp3i1"), ExtResource("3_mcea6")])
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -38,16 +49,17 @@ custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
 alignment = 1
 
 [node name="PieSliceCount" type="RichTextLabel" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
 clip_contents = false
 layout_mode = 2
 mouse_filter = 2
@@ -56,6 +68,18 @@ text = "[font_size=64]"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+
+[node name="PieTexture" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_cdv6k")
+expand_mode = 1
+
+[node name="PieNumber" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_mcea6")
+expand_mode = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2

@@ -1,6 +1,6 @@
 [gd_scene load_steps=51 format=4 uid="uid://dd2enqwloqw6x"]
 
-[ext_resource type="Texture2D" uid="uid://d0kkqdmgvnren" path="res://assets/placeholder_tiles/Basic Tiles_Untitled.png" id="1_2jw1x"]
+[ext_resource type="Texture2D" uid="uid://d0kkqdmgvnren" path="res://assets/models_and_textures/placeholder_tiles/Basic Tiles_Untitled.png" id="1_2jw1x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3kkx"]
 resource_name = "Material.001"

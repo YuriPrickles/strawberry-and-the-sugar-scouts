@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://byi8sawl66y2h"
-path="res://.godot/imported/Basic Tiles.glb-dac7a20220d2396da105be45cefe643f.scn"
+path="res://.godot/imported/Basic Tiles.glb-5b0d189c2c15e6be889336b2649a8281.scn"
 
 [deps]
 
-source_file="res://assets/placeholder_tiles/Basic Tiles.glb"
-dest_files=["res://.godot/imported/Basic Tiles.glb-dac7a20220d2396da105be45cefe643f.scn"]
+source_file="res://assets/models_and_textures/placeholder_tiles/Basic Tiles.glb"
+dest_files=["res://.godot/imported/Basic Tiles.glb-5b0d189c2c15e6be889336b2649a8281.scn"]
 
 [params]
 

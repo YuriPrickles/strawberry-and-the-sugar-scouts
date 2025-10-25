@@ -1,4 +1,6 @@
 @tool
+##Base scene for all the rooms of a level.[br][br]
+##You can put as many Spawn Points as needed, but the default spawn cannot be removed.[br][br]
 class_name Room
 extends GridMapLayerBaker
 
@@ -12,10 +14,10 @@ var room_transitions:Array[RoomTransition]
 var entered_spawn_point:SpawnPoint = null
 
 func _ready() -> void:
+	if Engine.is_editor_hint(): return
 	for gridlayer in get_children():
 		if gridlayer is GridMapLayer:
 			gridlayer.hide()
-	if Engine.is_editor_hint(): return
 	if spawn_points.size() <= 0:
 		assert(false, "Please assign at least one Spawn Point to the room!\nHow does this happen? You're given a DefaultSpawn!")
 	entered_spawn_point = spawn_points[0] if entered_spawn_point == null else entered_spawn_point

@@ -14,12 +14,10 @@ func scale_kill_area(size:Vector3):
 	kill_area.scale = size
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is Player and will_hurt and State.get_player().inv_frames_timer.is_stopped():
+	if body is Player:
 		body.hurt(true)
-		will_hurt = false
 	pass # Replace with function body.
 
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
-	will_hurt = true
 	pass # Replace with function body.

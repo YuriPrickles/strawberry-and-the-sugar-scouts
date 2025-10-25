@@ -2,7 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://yqj6jdbkk8vd" path="res://meshlibs/test_placeholdertiles.tres" id="1_7q02i"]
 [ext_resource type="Script" uid="uid://dp3kyxixyhgvt" path="res://entities/levelbuilding/base_room.gd" id="2_pajsp"]
-[ext_resource type="TileSet" uid="uid://bxseou1w2480d" path="res://assets/placeholder_tiles/Autotile_tileset.tres" id="3_7q02i"]
+[ext_resource type="TileSet" uid="uid://bxseou1w2480d" path="res://assets/models_and_textures/placeholder_tiles/Autotile_tileset.tres" id="3_7q02i"]
 [ext_resource type="PackedScene" uid="uid://khtyojs3w74o" path="res://entities/levelbuilding/spawn_point.tscn" id="3_ea16h"]
 [ext_resource type="PackedScene" uid="uid://pxp73vkmmqbo" path="res://entities/levelbuilding/kill_trigger.tscn" id="4_23oby"]
 [ext_resource type="Script" uid="uid://cqx55iw26lbyf" path="res://addons/grid_map_layer/scripts/grid_map_layer.gd" id="6_adl4c"]

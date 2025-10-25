@@ -37,7 +37,8 @@ enabled=PackedStringArray("res://addons/grid_map_layer/plugin.cfg")
 [file_customization]
 
 folder_colors={
-"res://assets/models_and_textures/": "pink"
+"res://assets/models_and_textures/": "pink",
+"res://entities/levelbuilding/": "teal"
 }
 
 [input]

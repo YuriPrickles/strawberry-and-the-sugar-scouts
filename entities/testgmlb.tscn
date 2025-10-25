@@ -2,7 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://yqj6jdbkk8vd" path="res://meshlibs/test_placeholdertiles.tres" id="1_3gmy7"]
 [ext_resource type="Script" uid="uid://d2l82c6jisvlk" path="res://addons/grid_map_layer/scripts/grid_map_layer_baker.gd" id="2_b806a"]
-[ext_resource type="TileSet" uid="uid://bxseou1w2480d" path="res://assets/placeholder_tiles/Autotile_tileset.tres" id="3_puqin"]
+[ext_resource type="TileSet" uid="uid://bxseou1w2480d" path="res://assets/models_and_textures/placeholder_tiles/Autotile_tileset.tres" id="3_puqin"]
 
 [node name="GridMapLayerBaker" type="GridMap"]
 mesh_library = ExtResource("1_3gmy7")

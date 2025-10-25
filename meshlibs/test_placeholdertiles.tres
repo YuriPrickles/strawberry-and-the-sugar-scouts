@@ -1,6 +1,6 @@
 [gd_resource type="MeshLibrary" load_steps=83 format=4 uid="uid://yqj6jdbkk8vd"]
 
-[ext_resource type="Texture2D" uid="uid://d0kkqdmgvnren" path="res://assets/placeholder_tiles/Basic Tiles_Untitled.png" id="1_ce0cj"]
+[ext_resource type="Texture2D" uid="uid://d0kkqdmgvnren" path="res://assets/models_and_textures/placeholder_tiles/Basic Tiles_Untitled.png" id="1_ce0cj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3kkx"]
 resource_name = "Material.001"

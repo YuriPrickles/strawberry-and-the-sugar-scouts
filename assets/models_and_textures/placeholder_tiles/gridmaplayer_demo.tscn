@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=4 uid="uid://bvcbk7ijax1lj"]
 
-[ext_resource type="TileSet" uid="uid://bxseou1w2480d" path="res://assets/placeholder_tiles/Autotile_tileset.tres" id="1_v3ymm"]
+[ext_resource type="TileSet" uid="uid://bxseou1w2480d" path="res://assets/models_and_textures/placeholder_tiles/Autotile_tileset.tres" id="1_v3ymm"]
 [ext_resource type="Script" uid="uid://cqx55iw26lbyf" path="res://addons/grid_map_layer/scripts/grid_map_layer.gd" id="2_aispk"]
 [ext_resource type="MeshLibrary" uid="uid://yqj6jdbkk8vd" path="res://meshlibs/test_placeholdertiles.tres" id="3_rfoll"]
+
 
 [node name="Node3D" type="Node3D"]
 
