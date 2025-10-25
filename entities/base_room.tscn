@@ -1,8 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://doe1r3kxhbvno"]
 
+<<<<<<< Updated upstream:entities/base_room.tscn
 [ext_resource type="MeshLibrary" uid="uid://qvh4b5fjos1v" path="res://meshlibs/test_meshlib.tres" id="1_ea16h"]
 [ext_resource type="Script" uid="uid://dp3kyxixyhgvt" path="res://entities/base_room.gd" id="2_pajsp"]
 [ext_resource type="PackedScene" uid="uid://khtyojs3w74o" path="res://entities/spawn_point.tscn" id="3_ea16h"]
+=======
+[ext_resource type="MeshLibrary" path="res://meshlibs/test_placeholdertiles.tres" id="1_23oby"]
+[ext_resource type="Script" uid="uid://dp3kyxixyhgvt" path="res://entities/levelbuilding/base_room.gd" id="2_pajsp"]
+[ext_resource type="PackedScene" uid="uid://khtyojs3w74o" path="res://entities/levelbuilding/spawn_point.tscn" id="3_ea16h"]
+[ext_resource type="PackedScene" uid="uid://pxp73vkmmqbo" path="res://entities/levelbuilding/kill_trigger.tscn" id="4_23oby"]
+>>>>>>> Stashed changes:entities/levelbuilding/base_room.tscn
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ea16h"]
 
@@ -23,10 +30,11 @@ fog_enabled = true
 adjustment_enabled = true
 
 [node name="Room" type="GridMap" node_paths=PackedStringArray("spawn_points")]
-mesh_library = ExtResource("1_ea16h")
-cell_size = Vector3(1, 1, 1)
+mesh_library = ExtResource("1_23oby")
+cell_size = Vector3(2, 1, 2)
+cell_center_y = false
 data = {
-"cells": PackedInt32Array(65535, 65535, 0, 65535, 0, 0, 0, 0, 0, 0, 65535, 0)
+"cells": PackedInt32Array(0, 0, 14, 0, 65535, 14, 65535, 65535, 14, 65535, 0, 14, 65534, 65534, 11, 1, 65534, 1441803, 1, 1, 655371, 65534, 1, 1048587, 65535, 1, 655373, 0, 1, 655373, 65534, 0, 1048589, 65534, 65535, 1048589, 65535, 65534, 13, 0, 65534, 13, 1, 65535, 1441805, 1, 0, 1441805)
 }
 script = ExtResource("2_pajsp")
 spawn_points = [NodePath("DefaultSpawn")]
