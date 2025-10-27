@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7aof254l33ul"
-path="res://.godot/imported/pienumber_4.png-bbe4daffa444f1b1cc0a39fd0fd1e212.ctex"
+uid="uid://dup7pvv3oor5o"
+path="res://.godot/imported/pienumber_1.png-ab13b9d92a8e7d39509a12829c032795.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hud_assets/pienumber_4.png"
-dest_files=["res://.godot/imported/pienumber_4.png-bbe4daffa444f1b1cc0a39fd0fd1e212.ctex"]
+source_file="res://assets/hud_assets/pie_meter/pienumber_1.png"
+dest_files=["res://.godot/imported/pienumber_1.png-ab13b9d92a8e7d39509a12829c032795.ctex"]
 
 [params]
 
