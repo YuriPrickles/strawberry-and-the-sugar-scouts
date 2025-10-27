@@ -37,6 +37,7 @@ var is_jumping: bool = false
 var last_frame_on_floor:bool = false
 var jump_chain = 0
 var max_jump_chain = 2
+var force_jumping = false
 
 var any_move_input:bool = false
 var last_saved_direction:Vector3 = Vector3(1,0,0)
@@ -105,7 +106,8 @@ func _physics_process(delta: float) -> void:
 			velocity.y = clamp(velocity.y, 0, INF)
 	elif not dashing:
 		dashes = max_dashes
-	
+	if is_on_floor():
+		force_jumping = false
 	if is_on_floor() and descending:
 		velocity = Vector3.ZERO
 		descend_rest_timer.start()
@@ -230,7 +232,7 @@ func handle_jump(want_to_jump:bool) -> void:
 	last_frame_on_floor = is_on_floor()
 
 func just_landed() -> bool:
-	return is_on_floor() and not last_frame_on_floor and is_jumping
+	return is_on_floor() and not last_frame_on_floor and is_jumping and not force_jumping
 	
 func handle_juffer(want_to_jump:bool) -> void:
 	if want_to_jump and not is_on_floor():
@@ -258,6 +260,13 @@ func jump():
 		velocity.x = last_saved_direction.x * 56
 		velocity.z = last_saved_direction.z * 56
 	velocity.y = JUMP_VELOCITY * 2 * (1 + ((jump_chain - 1) * 0.4))
+
+func force_jump(jump_speed=JUMP_VELOCITY):
+	juffer.stop()
+	coyote_time.stop()
+	is_jumping = true
+	force_jumping = true
+	velocity.y = jump_speed
 
 func is_allowed_to_jump(want_to_jump:bool) -> bool:
 	return want_to_jump and (is_on_floor() or not coyote_time.is_stopped())

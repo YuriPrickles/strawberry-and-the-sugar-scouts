@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://6bnfe0c570wi"]
+
+[ext_resource type="PackedScene" uid="uid://cmrhyimtenp0n" path="res://assets/models_and_textures/level assets/hazards/jello_spring/jello_mold_model.glb" id="1_dkd3c"]
+[ext_resource type="Script" uid="uid://bjq0i3gof57uw" path="res://entities/levelbuilding/jello_spring.gd" id="1_qmqyx"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qmqyx"]
+radius = 0.75
+
+[node name="JelloSpring" type="Node3D"]
+script = ExtResource("1_qmqyx")
+
+[node name="jello_mold_model" parent="." instance=ExtResource("1_dkd3c")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.099999994, 0)
+shape = SubResource("CylinderShape3D_qmqyx")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

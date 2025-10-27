@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://bb8t27ey5jssn"]
+[gd_scene load_steps=6 format=4 uid="uid://bb8t27ey5jssn"]
 
 [ext_resource type="PackedScene" uid="uid://doe1r3kxhbvno" path="res://entities/levelbuilding/base_room.tscn" id="1_3jcf7"]
 [ext_resource type="PackedScene" uid="uid://dtint1wq42p6c" path="res://entities/levelbuilding/level_entry.tscn" id="2_5dnhx"]
 [ext_resource type="Resource" uid="uid://gtn6phdulbdx" path="res://data/level_data/test_level.tres" id="3_2u5ev"]
 [ext_resource type="PackedScene" uid="uid://dv6rcseihrnv3" path="res://entities/levelbuilding/npc.tscn" id="4_hmoyw"]
+[ext_resource type="PackedScene" uid="uid://6bnfe0c570wi" path="res://entities/levelbuilding/jello_spring.tscn" id="5_nxbp6"]
 
 [node name="Hub1" instance=ExtResource("1_3jcf7")]
 data = {
@@ -21,3 +22,9 @@ level_to_load = ExtResource("3_2u5ev")
 
 [node name="NPC" parent="." index="8" instance=ExtResource("4_hmoyw")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 1, 0)
+
+[node name="JelloSpring" parent="." index="9" instance=ExtResource("5_nxbp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -8)
+
+[node name="JelloSpring2" parent="." index="10" instance=ExtResource("5_nxbp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -8)
