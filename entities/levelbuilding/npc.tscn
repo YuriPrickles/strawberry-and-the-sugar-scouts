@@ -21,6 +21,8 @@ size = Vector3(1, 1, 0.1)
 radius = 3.5
 
 [node name="NPC" type="CharacterBody3D"]
+collision_layer = 8
+collision_mask = 2
 script = ExtResource("1_kdwfn")
 dialogue_key = "TEST_DIALOGUE"
 

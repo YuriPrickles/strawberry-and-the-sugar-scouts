@@ -32,7 +32,7 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/grid_map_layer/plugin.cfg")
+enabled=PackedStringArray("res://addons/grid_map_layer/plugin.cfg", "res://addons/gridmap-plus/plugin.cfg")
 
 [file_customization]
 
@@ -135,6 +135,14 @@ zoom_out={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":4,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="Player"
+3d_physics/layer_2="Terrain"
+3d_physics/layer_3="Hazards"
+3d_physics/layer_4="NPCs"
+3d_physics/layer_5="Triggers"
 
 [steam]
 
