@@ -1,54 +1,77 @@
-[gd_scene load_steps=2 format=3 uid="uid://cn75sgd4pqcwd"]
+[gd_scene load_steps=9 format=3 uid="uid://cn75sgd4pqcwd"]
 
 [ext_resource type="Script" uid="uid://dqhyyyblfxogh" path="res://entities/pause_menu.gd" id="1_mus2k"]
+[ext_resource type="StyleBox" uid="uid://bgck2gmvexyhl" path="res://assets/ui/menu_screen/default_menu.tres" id="1_rdx5o"]
+[ext_resource type="FontFile" uid="uid://ds3p2b65qvd6v" path="res://assets/fonts/display_text/arco.regular.ttf" id="3_mwae0"]
+[ext_resource type="StyleBox" uid="uid://bpfq7pkfat0km" path="res://assets/ui/menu_screen/default_button.tres" id="3_rdx5o"]
+[ext_resource type="StyleBox" uid="uid://dvdwlghctx7tm" path="res://assets/ui/menu_screen/pressed_button.tres" id="4_tlysj"]
+[ext_resource type="StyleBox" uid="uid://3r4xnccgaxeo" path="res://assets/ui/menu_screen/hovered_button.tres" id="5_edkqy"]
+[ext_resource type="StyleBox" uid="uid://chrcm4q0h5b0n" path="res://assets/ui/menu_screen/disabled_button.tres" id="6_edkqy"]
+
+[sub_resource type="Theme" id="Theme_tlysj"]
+Panel/styles/panel = ExtResource("1_rdx5o")
 
 [node name="PauseMenu" type="ColorRect"]
-process_mode = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 color = Color(0, 0, 0, 0.3137255)
 script = ExtResource("1_mus2k")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-custom_minimum_size = Vector2(720, 0)
+[node name="PanelContainer" type="PanelContainer" parent="."]
+process_mode = 2
 layout_mode = 1
-anchors_preset = 13
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -360.0
-offset_right = 360.0
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -442.5
+offset_right = 440.0
+offset_bottom = 442.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_tlysj")
+theme_override_styles/panel = ExtResource("1_rdx5o")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+size_flags_horizontal = 4
 mouse_filter = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 2
 alignment = 1
 
-[node name="PausedText" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+[node name="PausedText" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_mwae0")
 bbcode_enabled = true
-text = "[font_size=120][center]Paused"
+text = "[font_size=120][center][outline_size=24][outline_color=sienna]Paused"
 fit_content = true
 scroll_active = false
 
-[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
+theme_override_styles/normal = ExtResource("3_rdx5o")
+theme_override_styles/pressed = ExtResource("4_tlysj")
+theme_override_styles/hover = ExtResource("5_edkqy")
+theme_override_styles/disabled = ExtResource("6_edkqy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ContinueButton"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ContinueButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,19 +81,23 @@ grow_vertical = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="ContinueText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/ContinueButton/VBoxContainer"]
+[node name="ContinueText" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/ContinueButton/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 bbcode_enabled = true
-text = "[font_size=60][center]Continue"
+text = "[font_size=60][center][outline_size=12][outline_color=sienna]Continue"
 fit_content = true
 scroll_active = false
 
-[node name="RetryButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="RetryButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
+theme_override_styles/normal = ExtResource("3_rdx5o")
+theme_override_styles/pressed = ExtResource("4_tlysj")
+theme_override_styles/hover = ExtResource("5_edkqy")
+theme_override_styles/disabled = ExtResource("6_edkqy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/RetryButton"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/RetryButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -80,19 +107,23 @@ grow_vertical = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="RetryText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/RetryButton/VBoxContainer"]
+[node name="RetryText" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/RetryButton/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 bbcode_enabled = true
-text = "[font_size=60][center]Retry[font_size=30] (-1 Pie Slice)"
+text = "[font_size=60][center][outline_size=12][outline_color=sienna]Retry[font_size=30] (-1 Pie Slice)"
 fit_content = true
 scroll_active = false
 
-[node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="RestartButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
+theme_override_styles/normal = ExtResource("3_rdx5o")
+theme_override_styles/pressed = ExtResource("4_tlysj")
+theme_override_styles/hover = ExtResource("5_edkqy")
+theme_override_styles/disabled = ExtResource("6_edkqy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/RestartButton"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/RestartButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,19 +133,23 @@ grow_vertical = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="RestartText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/RestartButton/VBoxContainer"]
+[node name="RestartText" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/RestartButton/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 bbcode_enabled = true
-text = "[font_size=60][center]Restart Level"
+text = "[font_size=60][center][outline_size=12][outline_color=sienna]Restart Level"
 fit_content = true
 scroll_active = false
 
-[node name="ReturnButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ReturnButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
+theme_override_styles/normal = ExtResource("3_rdx5o")
+theme_override_styles/pressed = ExtResource("4_tlysj")
+theme_override_styles/hover = ExtResource("5_edkqy")
+theme_override_styles/disabled = ExtResource("6_edkqy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ReturnButton"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ReturnButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -124,15 +159,16 @@ grow_vertical = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="ReturnText" type="RichTextLabel" parent="MarginContainer/VBoxContainer/ReturnButton/VBoxContainer"]
+[node name="ReturnText" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/ReturnButton/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 mouse_filter = 2
 bbcode_enabled = true
-text = "[font_size=60][center]Return to Hub"
+text = "[font_size=60][center][outline_size=12][outline_color=sienna]Return to Hub"
 fit_content = true
 scroll_active = false
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

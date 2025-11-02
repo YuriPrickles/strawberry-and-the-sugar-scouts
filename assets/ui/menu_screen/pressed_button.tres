@@ -1,0 +1,14 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dvdwlghctx7tm"]
+
+[ext_resource type="Texture2D" uid="uid://bqspqnd4m0tvd" path="res://assets/ui/menu_screen/placeholder_menu_button.png" id="1_0k61l"]
+
+[resource]
+texture = ExtResource("1_0k61l")
+texture_margin_left = 56.0
+texture_margin_top = 56.0
+texture_margin_right = 56.0
+texture_margin_bottom = 56.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(56, 56, 488, 488)
+modulate_color = Color(0.6032517, 0.46169478, 0.44998205, 1)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfehartlf5teo"]
 
-[ext_resource type="Texture2D" uid="uid://cfoqftgvhfe13" path="res://assets/hud_assets/menu_screen/placeholder_menu_background.png" id="1_gp0ju"]
+[ext_resource type="Texture2D" uid="uid://cfoqftgvhfe13" path="res://assets/ui/menu_screen/placeholder_menu_background.png" id="1_gp0ju"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
 offset_right = 400.0

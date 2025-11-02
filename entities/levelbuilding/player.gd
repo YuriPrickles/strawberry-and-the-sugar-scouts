@@ -152,7 +152,9 @@ func handle_animations():
 		StrawberryAnim.play("strawberry_anims/Strawberry_Fall_Animation")
 		return
 	if is_jumping:
-		StrawberryAnim.play("strawberry_anims/Strawberry_Jump_Animation")
+		if last_frame_on_floor:
+			StrawberryAnim.play("strawberry_anims/Strawberry_Jump_Animation")
+			return
 		return
 	if any_move_input:
 		StrawberryAnim.play("strawberry_anims/Strawberry_Run_Animation")
@@ -207,6 +209,8 @@ func is_falling():
 
 func handle_descend(descend_input):
 	if not is_on_floor() and descend_input:
+		velocity.x = 0
+		velocity.z = 0
 		velocity.y = -DESCEND_SPEED
 		descending = true
 
@@ -295,6 +299,8 @@ func _input(event: InputEvent) -> void:
 			CameraPivot.rotation.x -= event.relative.y / look_sensitivity
 			CameraPivot.rotation.x = clamp(CameraPivot.rotation.x, deg_to_rad(-90), deg_to_rad(0))
 			CameraPivot.rotation.y -= event.relative.x / look_sensitivity
+
+
 
 func add_timers():
 	get_tree().root.add_child.call_deferred(juffer)

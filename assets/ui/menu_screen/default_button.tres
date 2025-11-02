@@ -1,0 +1,13 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bpfq7pkfat0km"]
+
+[ext_resource type="Texture2D" uid="uid://bqspqnd4m0tvd" path="res://assets/ui/menu_screen/placeholder_menu_button.png" id="1_5gj1i"]
+
+[resource]
+texture = ExtResource("1_5gj1i")
+texture_margin_left = 56.0
+texture_margin_top = 56.0
+texture_margin_right = 56.0
+texture_margin_bottom = 56.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(56, 56, 488, 488)

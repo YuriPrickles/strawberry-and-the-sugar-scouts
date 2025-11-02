@@ -38,8 +38,13 @@ enabled=PackedStringArray("res://addons/grid_map_layer/plugin.cfg", "res://addon
 
 folder_colors={
 "res://assets/models_and_textures/": "pink",
+"res://assets/ui/": "purple",
 "res://entities/levelbuilding/": "teal"
 }
+
+[gui]
+
+theme/custom="uid://1o6aqyixc7i4"
 
 [input]
 
@@ -143,6 +148,10 @@ zoom_out={
 3d_physics/layer_3="Hazards"
 3d_physics/layer_4="NPCs"
 3d_physics/layer_5="Triggers"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
 
 [steam]
 
